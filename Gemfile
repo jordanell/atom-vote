@@ -31,6 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development do
   # Access errors in the web browser
   gem 'better_errors'
+
+  # Annotate all models with DB schema
+  gem 'annotate'
 end
 
 group :staging, :production do
