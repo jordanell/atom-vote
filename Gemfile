@@ -44,7 +44,7 @@ end
 
 group :development, :test do
   # Unit testing with rspec
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '3.3.3'
 
   # Model factories
   gem 'factory_girl', '4.5.0'

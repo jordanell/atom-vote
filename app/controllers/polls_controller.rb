@@ -1,5 +1,5 @@
 class PollsController < ApplicationController
-  before_filter :fetch_poll, only: [:show]
+  before_filter :fetch_poll, only: [:show, :results]
 
   def new
     @poll = Poll.new
@@ -19,6 +19,9 @@ class PollsController < ApplicationController
   end
 
   def show
+  end
+
+  def results
   end
 
   private
