@@ -11,4 +11,6 @@
 
 class Choice < ActiveRecord::Base
   belongs_to :question
+
+  delegate :poll, to: :question
 end

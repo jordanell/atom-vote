@@ -11,9 +11,11 @@
 #
 
 class Vote < ActiveRecord::Base
-  belongs_to :poll
   belongs_to :choice
 
   validates :voter_uuid, presence: true
+  validates :choice_id, presence: true
   validates_uniqueness_of :voter_uuid, :scope => :poll_id
+
+  delegate :question, :poll, to: :choice
 end
