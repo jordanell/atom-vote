@@ -11,12 +11,12 @@ class PollsController < ApplicationController
     if @poll.save
       redirect_to poll_path(@poll.uuid)
     else
+      puts @poll.errors.inspect
       render template: 'polls/new'
     end
   end
 
   def show
-    @question = @poll.questions.first
   end
 
   private
@@ -31,9 +31,10 @@ class PollsController < ApplicationController
   end
 
   def poll_params
-    params.require(:poll).permit(questions_attributes: [
-      :title,
-      choices_attributes: [:title]
-    ])
+    params.require(:poll).permit(:title,
+      options_attributes: [
+        :text
+      ]
+    )
   end
 end

@@ -13,7 +13,7 @@
     display: none;
   }
 
-  .choice-label {
+  .option-label {
     font-size: 20px;
     color: $font-medium;
     width: 50px;
@@ -21,7 +21,7 @@
     margin-top: 32px;
   }
 
-  .poll_questions_title {
+  .poll_title {
     padding-bottom: $height-spacing;
 
     input{
@@ -32,7 +32,7 @@
     }
   }
 
-  .poll_questions_choices_title {
+  .poll_options_text {
     margin-top: $height-spacing;
     overflow: hidden;
 

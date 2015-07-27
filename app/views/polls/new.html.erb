@@ -11,14 +11,12 @@
       </div>
     <% end %>
 
-    <%= f.simple_fields_for :questions, @poll.questions.build do |q| %>
-      <%= q.input :title, label: 'Poll Question', placeholder: 'Type your question here, options below' %>
+    <%= f.input :title, label: 'Poll Question', placeholder: 'Type your question here, options below' %>
 
-      <% (1..4).each do |index| %>
-        <%= q.simple_fields_for :choices, q.object.choices.build do |c| %>
-          <span class="choice-label"><%= "#{index}." %></span>
-          <%= c.input :title, label: 'Poll Option', placeholder: 'Enter poll option' %>
-        <% end %>
+    <% (1..4).each do |index| %>
+      <%= f.simple_fields_for :options, f.object.options.build do |o| %>
+        <span class="option-label"><%= "#{index}." %></span>
+        <%= o.input :text, label: 'Poll Option', placeholder: 'Enter poll option' %>
       <% end %>
     <% end %>
 

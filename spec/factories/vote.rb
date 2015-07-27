@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :vote do
     voter_uuid SecureRandom.uuid
-    choice
+    option
+    poll
   end
 end

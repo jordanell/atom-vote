@@ -6,17 +6,17 @@ describe 'polls/new.html.erb' do
       @poll = Poll.new
     end
 
-    it 'should display the question input' do
+    it 'should display the title input' do
       render
 
-      rendered.should have_selector("input[name='poll[questions_attributes][0][title]']")
+      rendered.should have_selector("input[name='poll[title]']")
     end
 
-    it 'should display the question choice inputs' do
+    it 'should display the option inputs' do
       render
 
       (0..3).each do |index|
-        rendered.should have_selector("input[name='poll[questions_attributes][0][choices_attributes][#{index}][title]']")
+        rendered.should have_selector("input[name='poll[options_attributes][#{index}][text]']")
       end
     end
 
