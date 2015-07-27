@@ -21,7 +21,7 @@
     margin-top: 32px;
   }
 
-  .poll_title {
+  .poll_question{
     padding-bottom: $height-spacing;
 
     input{
@@ -29,6 +29,10 @@
       width: 100%;
       height: 60px;
       font-size: 30px;
+    }
+
+    .error {
+      display: none;
     }
   }
 

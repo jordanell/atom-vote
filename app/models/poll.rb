@@ -6,7 +6,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  uuid       :string           not null
-#  title      :string
+#  question   :string
 #
 
 class Poll < ActiveRecord::Base
@@ -14,8 +14,8 @@ class Poll < ActiveRecord::Base
   has_many :votes
 
   validates :uuid, presence: true
-  validates :title, presence: true
-  validates :options, length: { minimum: 2 }
+  validates :question, presence: true
+  validates :options, length: { minimum: 2, message: 'must have at least 2' }
 
   validates_associated :options
 
@@ -36,5 +36,11 @@ class Poll < ActiveRecord::Base
   def voter_uuids
     uuids = votes.map(&:voter_uuid)
     uuids.flatten.uniq
+  end
+
+  def pad_options(count = 4)
+    (0...count).each do |index|
+      options << Option.new
+    end
   end
 end

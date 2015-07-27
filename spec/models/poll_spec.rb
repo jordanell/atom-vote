@@ -6,7 +6,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  uuid       :string           not null
-#  title      :string
+#  question   :string
 #
 
 require 'rails_helper'
@@ -23,7 +23,7 @@ RSpec.describe Poll, type: :model do
   it { should respond_to(:created_at) }
   it { should respond_to(:updated_at) }
   it { should respond_to(:uuid) }
-  it { should respond_to(:title) }
+  it { should respond_to(:question) }
 
   # Associations
   it { should respond_to(:options) }
@@ -48,6 +48,15 @@ RSpec.describe Poll, type: :model do
       @vote = FactoryGirl.create(:vote, option: @option, poll: @poll)
 
       @poll.reload.voter_uuids.should eq([@vote.voter_uuid])
+    end
+  end
+
+  describe '#pad_options' do
+    it 'should pad the given number of options' do
+      @poll.pad_options(2)
+
+      # Have to use length here becuase these are volatile
+      @poll.options.length.should eq(4)
     end
   end
 end

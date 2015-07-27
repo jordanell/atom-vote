@@ -6,13 +6,15 @@ describe 'polls/new.html.erb' do
       @poll = Poll.new
     end
 
-    it 'should display the title input' do
+    it 'should display the question input' do
       render
 
-      rendered.should have_selector("input[name='poll[title]']")
+      rendered.should have_selector("input[name='poll[question]']")
     end
 
     it 'should display the option inputs' do
+      @poll.pad_options
+
       render
 
       (0..3).each do |index|

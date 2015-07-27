@@ -3,6 +3,8 @@ class PollsController < ApplicationController
 
   def new
     @poll = Poll.new
+
+    @poll.pad_options(4)
   end
 
   def create
@@ -11,7 +13,7 @@ class PollsController < ApplicationController
     if @poll.save
       redirect_to poll_path(@poll.uuid)
     else
-      puts @poll.errors.inspect
+      @poll.pad_options(4-supplied_options.length)
       render template: 'polls/new'
     end
   end
@@ -30,8 +32,19 @@ class PollsController < ApplicationController
     end
   end
 
+  def supplied_options
+    options = []
+    params[:poll][:options_attributes].each do |key, option|
+      if option['text'].try(:length) > 1
+        options.push option
+      end
+    end
+
+    options
+  end
+
   def poll_params
-    params.require(:poll).permit(:title,
+    params.require(:poll).permit(:question,
       options_attributes: [
         :text
       ]
