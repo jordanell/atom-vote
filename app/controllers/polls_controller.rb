@@ -11,7 +11,7 @@ class PollsController < ApplicationController
     if @poll.save
       redirect_to poll_path(@poll.uuid)
     else
-      render template: 'new'
+      render template: 'polls/new'
     end
   end
 

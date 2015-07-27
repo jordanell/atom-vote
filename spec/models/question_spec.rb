@@ -28,4 +28,17 @@ RSpec.describe Question, type: :model do
   # Associations
   it { should respond_to(:poll) }
   it { should respond_to(:choices) }
+
+  # Validations
+  it 'should have a title' do
+    @question.title = nil
+
+    @question.should_not be_valid
+  end
+
+  it 'should have at least two valid choices' do
+    @question.choices = []
+
+    @question.should_not be_valid
+  end
 end

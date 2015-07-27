@@ -13,6 +13,8 @@ class Poll < ActiveRecord::Base
   validates :uuid, presence: true
   validate :validate_questions
 
+  validates_associated :questions
+
   accepts_nested_attributes_for :questions
 
   before_validation(on: :create) do

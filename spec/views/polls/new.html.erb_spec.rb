@@ -19,6 +19,14 @@ describe 'polls/new.html.erb' do
         rendered.should have_selector("input[name='poll[questions_attributes][0][choices_attributes][#{index}][title]']")
       end
     end
+
+    it 'should display errors when needed' do
+      @poll.save
+
+      render
+
+      rendered.should have_content('Your poll had the following errors:')
+    end
   end
 
   context 'without poll instance variable' do
