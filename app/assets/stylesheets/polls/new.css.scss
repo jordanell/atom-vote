@@ -1,0 +1,63 @@
+.poll-form-wrapper {
+  @include outer-container;
+
+  $height-spacing: 20px;
+
+  background-color: $white-hover;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: $border-radius;
+
+  label {
+    display: none;
+  }
+
+  .choice-label {
+    font-size: 20px;
+    color: $font-medium;
+    width: 50px;
+    float: left;
+    margin-top: 32px;
+  }
+
+  .poll_questions_title {
+    padding-bottom: $height-spacing;
+
+    input{
+      padding: 0 10px;
+      width: 100%;
+      height: 60px;
+      font-size: 30px;
+    }
+  }
+
+  .poll_questions_choices_title {
+    margin-top: $height-spacing;
+    overflow: hidden;
+
+    input {
+      width: 100%;
+      font-size: 20px;
+    }
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-bottom: solid 2px #c9c9c9;
+    transition: border 0.3s;
+    background-color: $white-hover;
+  }
+
+  input[type="text"]:focus,
+  input[type="text"].focus {
+    border-bottom: solid 2px #969696;
+  }
+
+  input[type=submit] {
+    float: right;
+    margin-top: $height-spacing;
+    font-size: 15px;
+  }
+}

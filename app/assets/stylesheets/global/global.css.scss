@@ -12,3 +12,17 @@ body {
 .right {
   float: right;
 }
+
+input[type=submit] {
+  background-color: $blue;
+  border-radius: $border-radius;
+  color: $white;
+  padding: 0.75em 1em;
+  border: none;
+
+  &:hover {
+    color: $white-hover;
+    background-color: $blue-hover;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,18 @@
+<div class="poll-form-wrapper"
+  <%= simple_form_for(@poll) do |f| %>
+    <%= f.error_notification %>
+
+    <%= f.simple_fields_for :questions, @poll.questions.build do |q| %>
+      <%= q.input :title, label: 'Poll Question', placeholder: 'Type your question here, options below' %>
+
+      <% (1..4).each do |index| %>
+        <%= q.simple_fields_for :choices, q.object.choices.build do |c| %>
+          <span class="choice-label"><%= "#{index}." %></span>
+          <%= c.input :title, label: 'Poll Option', placeholder: 'Enter poll option' %>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <%= f.button :submit %>
+  <% end %>
+</div>

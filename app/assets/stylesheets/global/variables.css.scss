@@ -1,6 +1,8 @@
 // Colors
 $white: #FFFFFF;
 $white-hover: #DDDDDD;
+$blue: #477DCA;
+$blue-hover: darken($blue, 10%);
 
 // Background colors
 $background-color-dark: #2D2D2D;
@@ -11,6 +13,14 @@ $theme-color-blue: #61DAFB;
 
 // Border colors
 $border-color-medium: #666666;
+$border-color-light: #AAAAAA;
+
+// Border styles
+$border-radius: 5px;
+
+// Font colors
+$font-dark: #333333;
+$font-medium: #666666;
 
 // Screen sizes
 $small-screen: 550px;

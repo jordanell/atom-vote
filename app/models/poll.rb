@@ -12,6 +12,8 @@ class Poll < ActiveRecord::Base
 
   validate :validate_questions
 
+  accepts_nested_attributes_for :questions
+
   def voter_uuids
     uuids = []
     questions.each do |question|

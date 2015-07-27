@@ -31,6 +31,9 @@ gem 'neat', '1.7.2'
 # Font Awesome for the icon set
 gem 'font-awesome-sass', '4.3.0'
 
+# Better forms
+gem 'simple_form'
+
 group :development do
   # Access errors in the web browser
   gem 'better_errors'
