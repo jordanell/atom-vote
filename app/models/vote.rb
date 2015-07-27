@@ -3,7 +3,6 @@
 # Table name: votes
 #
 #  id         :integer          not null, primary key
-#  poll_id    :integer
 #  choice_id  :integer
 #  voter_uuid :string
 #  created_at :datetime
@@ -15,7 +14,14 @@ class Vote < ActiveRecord::Base
 
   validates :voter_uuid, presence: true
   validates :choice_id, presence: true
-  validates_uniqueness_of :voter_uuid, :scope => :poll_id
+
+  validate :unique_vote, on: :create
 
   delegate :question, :poll, to: :choice
+
+  private
+
+   def unique_vote
+    errors.add(:voter_uuid, 'has already voted') if poll.voter_uuids.include? voter_uuid
+  end
 end

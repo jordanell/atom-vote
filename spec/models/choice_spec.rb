@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: choices
+#
+#  id          :integer          not null, primary key
+#  title       :string
+#  question_id :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 require 'rails_helper'
 
 RSpec.describe Choice, type: :model do
@@ -16,6 +27,7 @@ RSpec.describe Choice, type: :model do
 
   # Associations
   it { should respond_to(:question) }
+  it { should respond_to(:votes) }
 
   # Delegates
   it { should respond_to(:poll) }
