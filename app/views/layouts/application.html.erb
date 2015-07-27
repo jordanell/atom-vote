@@ -2,13 +2,21 @@
 <html>
 <head>
   <title>AtomVote</title>
+  <%= favicon_link_tag 'favicon.png' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<%-# Render the header -%>
+<%= render partial: 'shared/header' %>
+
+<%-# Yield to the body content -%>
 <%= yield %>
+
+<%-# Render the footer -%>
+<%= render partial: 'shared/footer' %>
 
 </body>
 </html>

@@ -1,0 +1,12 @@
+// Vendor imports
+@import 'bourbon';
+@import 'neat';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+// Global imports
+@import 'global/variables';
+@import 'global/global';
+
+// Shared imports
+@import 'shared/header';

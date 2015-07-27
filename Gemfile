@@ -24,6 +24,13 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
+# Bourbon suite of tools for neat / refills etc...
+gem 'bourbon'
+gem 'neat', '1.7.2'
+
+# Font Awesome for the icon set
+gem 'font-awesome-sass', '4.3.0'
+
 group :development do
   # Access errors in the web browser
   gem 'better_errors'
@@ -41,6 +48,9 @@ group :development, :test do
 
   # Database cleaner for faster tests
   gem 'database_cleaner', '1.4.1'
+
+  # For DOM testing
+  gem 'capybara'
 end
 
 group :doc do

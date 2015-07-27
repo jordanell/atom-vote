@@ -1,0 +1,55 @@
+#header {
+  $height: 65px;
+  $padding-height: 10px;
+
+  height: calc($height + $padding-height);
+  padding: $padding-height;
+  background-color: $background-color-dark;
+
+  .navigation-wrapper {
+    @include outer-container;
+
+    img {
+      height: $height;
+      margin-right: 10px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .title {
+      color: $theme-color-blue;
+      line-height: $height;
+      font-size: 40px;
+      vertical-align: top;
+
+      @media screen and (max-width: $medium-screen) {
+        display: none
+      }
+    }
+
+    .new-poll-btn {
+      height: $height;
+      color: $white;
+      line-height: $height;
+      padding: 0 20px;
+      font-size: 20px;
+
+      a {
+        color: white;
+      }
+
+      i {
+        color: $theme-color-blue;
+        margin-right: 5px;
+      }
+
+      &:hover {
+        a {
+          color: $hover-white;
+        }
+      }
+    }
+  }
+}
