@@ -4,7 +4,7 @@ A simple voting web application
 
 ## Status
 
-![alt tag](https://circleci.com/gh/jordanell/atom-vote.png?circle-token=:circle-token)
+[![Circle CI](https://circleci.com/gh/jordanell/atom-vote.svg?style=svg&circle-token=e362bab71fc7813e947d11f8f1a59602f51b1185)](https://circleci.com/gh/jordanell/atom-vote)
 
 ## Description
 
