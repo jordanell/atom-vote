@@ -20,11 +20,18 @@ RSpec.describe Poll, type: :model do
   it { should respond_to(:id) }
   it { should respond_to(:created_at) }
   it { should respond_to(:updated_at) }
+  it { should respond_to(:uuid) }
 
   # Associations
   it { should respond_to(:questions) }
 
   # Validations
+  it 'should have a uuid' do
+    @poll.uuid = nil
+
+    @poll.should_not be_valid
+  end
+
   it 'should have at least one question' do
     @poll.questions = []
 

@@ -10,9 +10,14 @@
 class Poll < ActiveRecord::Base
   has_many :questions
 
+  validates :uuid, presence: true
   validate :validate_questions
 
   accepts_nested_attributes_for :questions
+
+  before_validation(on: :create) do
+    self.uuid = SecureRandom.urlsafe_base64
+  end
 
   def voter_uuids
     uuids = []
