@@ -42,5 +42,7 @@
 
       <%= f.button :submit, 'Vote' %>
     <% end %>
+
+    <%= button_to "Go To Results", results_poll_path(@poll.uuid), { class: 'go-to-results', method: 'get' } %>
   </div>
 </div>

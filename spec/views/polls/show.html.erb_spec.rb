@@ -30,6 +30,12 @@ describe 'polls/show.html.erb' do
         rendered.should have_content(option.text)
       end
     end
+
+    it 'should display the go to results button' do
+      render
+
+      rendered.should have_selector('input', text: 'Go To Results')
+    end
   end
 
   context 'without poll instance variable' do

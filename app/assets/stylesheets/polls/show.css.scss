@@ -32,6 +32,23 @@
       float: right;
     }
 
+    .go-to-results {
+      margin-right: 10px;
+      background-color: $grey;
+      border-radius: $border-radius;
+      color: $white;
+      padding: 0.75em 1em;
+      border: none;
+      float: right;
+      font-size: 15px;
+
+      &:hover {
+        color: $white-hover;
+        background-color: $grey-hover;
+        cursor: pointer;
+      }
+    }
+
     input[type="radio"] {
       display: none;
 
