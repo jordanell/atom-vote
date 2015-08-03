@@ -37,6 +37,7 @@ gem 'simple_form'
 group :development do
   # Access errors in the web browser
   gem 'better_errors'
+  gem 'binding_of_caller'
 
   # Annotate all models with DB schema
   gem 'annotate'

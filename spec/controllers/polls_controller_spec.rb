@@ -54,6 +54,12 @@ RSpec.describe PollsController, type: :controller do
       @params = { id: @poll.uuid }
     end
 
+    it 'assigns @vote' do
+      get :show, @params
+
+      expect(assigns(:vote)).to be_kind_of(Vote)
+    end
+
     it 'should show the poll' do
       get :show, @params
 

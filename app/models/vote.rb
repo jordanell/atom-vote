@@ -16,6 +16,7 @@ class Vote < ActiveRecord::Base
 
   validates :voter_uuid, presence: true
   validates :poll_id, presence: true
-  validates :option_id, presence: true
-  validates_uniqueness_of :voter_uuid, scope: :poll_id
+  validates :option_id, presence: { message: 'Please select an option' }
+
+  validates_uniqueness_of :voter_uuid, scope: :poll_id, message: 'You have already voted on this poll'
 end

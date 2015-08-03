@@ -4,8 +4,11 @@ class VotesController < ApplicationController
   def create
     @vote = Vote.new(vote_params)
 
+    # Attach the session id
+    @vote.voter_uuid = session.id
+
     if @vote.save
-      redirect_to results_poll_path(@vote.poll)
+      redirect_to results_poll_path(@vote.poll.uuid)
     else
       render template: 'polls/show'
     end
@@ -14,12 +17,11 @@ class VotesController < ApplicationController
   private
 
   def fetch_poll
-    @poll = Poll.find_by(uuid: params[:id])
+    @poll = Poll.find(params[:vote].try(:[], 'poll_id'))
 
-    unless @poll
-      # TODO: change this to custom 404 page.
-      raise ActionController::RoutingError.new('Not Found')
-    end
+  rescue ActiveRecord::RecordNotFound
+    # TODO: change this to custom 404 page.
+    raise ActionController::RoutingError.new('Not Found')
   end
 
   def vote_params

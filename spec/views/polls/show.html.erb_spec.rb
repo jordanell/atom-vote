@@ -22,7 +22,7 @@ describe 'polls/show.html.erb' do
 
       @poll.options.each do |option|
         if option.persisted?
-          rendered.should have_selector("input[id='vote_option_#{option.id}']")
+          rendered.should have_selector("input[id='vote_option_id_#{option.id}']")
         end
       end
     end

@@ -1,0 +1,9 @@
+.poll-results-wrapper {
+  @include outer-container;
+
+  background-color: $white-hover;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: $border-radius;
+}

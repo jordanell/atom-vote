@@ -3,15 +3,6 @@
 
 <!-- Render the poll voting options -->
 <div class="poll-show-wrapper">
-  <div class="poll-header">
-    <h2>
-      <%= @poll.question %>
-    </h2>
-    <p>
-      Pick one of the following options:
-    </p>
-  </div>
-
   <div class="poll-body">
     <%= simple_form_for(@vote) do |f| %>
       <!-- Render all the errors if needed -->
@@ -19,17 +10,31 @@
         <div class="errors-wrapper">
           <h5>Your vote had the following errors:</h5>
           <ul>
-            <% @vote.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
+            <% @vote.errors.messages.values.each do |msg| %>
+              <%msg.each do  |m| %>
+                <li><%= m %></li>
+              <% end %>
             <% end %>
           </ul>
         </div>
       <% end %>
 
+      <!-- Render the question -->
+      <div class="poll-meta">
+        <h2>
+          <%= @poll.question %>
+        </h2>
+        <p>
+          Pick one of the following options:
+        </p>
+      </div>
+
+      <!-- Render all voting options -->
       <% @poll.options.each do |option| %>
         <div class="vote-option-wrapper">
-          <%= f.radio_button :option, option.id %>
-          <label class="vote-option-text" for="vote_option_<%= option.id %>">
+          <%= f.hidden_field(:poll_id, value: @poll.id) %>
+          <%= f.radio_button :option_id, option.id %>
+          <label class="vote-option-text" for="vote_option_id_<%= option.id %>">
             <%= option.text %>
           </label>
         </div>
