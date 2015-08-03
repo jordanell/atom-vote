@@ -1,0 +1,33 @@
+.poll-share-wrapper {
+  @include outer-container;
+
+  .poll-share-inner {
+    @include span-columns(6);
+    @include shift(3);
+
+    background-color: $white-hover;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: $border-radius;
+    text-align: center;
+
+    @media screen and (max-width: $medium-screen) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+
+    @media screen and (max-width: $small-screen) {
+      @include span-columns(12);
+      @include shift(0);
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    input {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

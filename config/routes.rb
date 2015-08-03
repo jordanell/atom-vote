@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :votes, only: [:create]
+
   match ':uuid', to: 'polls#show', via: [:get]
 end

@@ -19,6 +19,7 @@ class PollsController < ApplicationController
   end
 
   def show
+    @vote = @poll.votes.build
   end
 
   def results
