@@ -16,26 +16,18 @@ describe 'polls/show.html.erb' do
     end
 
     it 'should display the options' do
-      @poll.pad_options
-
       render
 
       @poll.options.each do |option|
-        if option.persisted?
-          rendered.should have_selector("input[id='vote_option_id_#{option.id}']")
-        end
+        rendered.should have_selector("input[id='vote_option_id_#{option.id}']")
       end
     end
 
     it 'should display the option text' do
-      @poll.pad_options
-
       render
 
       @poll.options.each do |option|
-        if option.persisted?
-          rendered.should have_content(option.text)
-        end
+        rendered.should have_content(option.text)
       end
     end
   end

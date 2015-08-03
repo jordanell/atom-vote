@@ -28,4 +28,17 @@ RSpec.describe Option, type: :model do
   # Associations
   it { should respond_to(:poll) }
   it { should respond_to(:votes) }
+
+  # Public methods
+  describe '#percentage_of_votes' do
+    it 'should return the correct non zero percentage' do
+      @vote = FactoryGirl.create(:vote, option: @option, poll: @option.poll)
+
+      @option.reload.percentage_of_votes.should eq(100)
+    end
+
+    it 'should return zero' do
+      @option.reload.percentage_of_votes.should eq(0)
+    end
+  end
 end

@@ -1,7 +1,20 @@
 <!-- Render the sharing options -->
 <%= render partial: 'polls/share' %>
 
-<!-- Render the poll voting options -->
+<!-- Render the poll results -->
 <div class="poll-results-wrapper">
+  <h2>
+    <%= @poll.question %>
+  </h2>
 
+  <!-- Render the voting results -->
+  <% @poll.options.each do |option| %>
+    <div class="option-result">
+      <span class="option-text"><%= option.text %></span>
+      <div class="option-stats">
+        <span id="option_<%= option.id %>_count" class="option-count"><%= option.votes.count %> votes</span>
+        <span id="option_<%= option.id %>_percentage" class="option-percentage">(<%= option.percentage_of_votes %>%)</span>
+      </div>
+    </div>
+  <% end %>
 </div>
