@@ -6,8 +6,12 @@
   background-color: $white-hover;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 20px 75px;
   border-radius: $border-radius;
+
+  @media screen and (max-width: $small-screen) {
+    padding: 20px;
+  }
 
   label {
     display: none;
@@ -57,6 +61,7 @@
   input[type="text"]:focus,
   input[type="text"].focus {
     border-bottom: solid 2px #969696;
+    outline: none;
   }
 
   input[type=submit] {

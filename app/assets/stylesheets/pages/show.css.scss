@@ -4,8 +4,12 @@
   background-color: $white-hover;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 20px 75px;
   border-radius: $border-radius;
+
+  @media screen and (max-width: $small-screen) {
+    padding: 20px;
+  }
 
   .page-content {
     li {
