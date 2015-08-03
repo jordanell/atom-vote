@@ -30,4 +30,20 @@
       }
     }
   }
+
+  .poll-data {
+    @include span-columns(8);
+
+    @media screen and (max-width: $small-screen) {
+      @include span-columns(12);
+    }
+  }
+
+  .poll-meta {
+    @include span-columns(4);
+
+    @media screen and (max-width: $small-screen) {
+      @include span-columns(12);
+    }
+  }
 }

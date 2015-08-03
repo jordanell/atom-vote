@@ -3,18 +3,30 @@
 
 <!-- Render the poll results -->
 <div class="poll-results-wrapper">
-  <h2>
-    <%= @poll.question %>
-  </h2>
+  <div class="poll-data">
+    <h2>
+      <%= @poll.question %>
+    </h2>
 
-  <!-- Render the voting results -->
-  <% @poll.options.each do |option| %>
-    <div class="option-result">
-      <span class="option-text"><%= option.text %></span>
-      <div class="option-stats">
-        <span id="option_<%= option.id %>_count" class="option-count"><%= option.votes.count %> votes</span>
-        <span id="option_<%= option.id %>_percentage" class="option-percentage">(<%= option.percentage_of_votes %>%)</span>
+    <!-- Render the voting results -->
+    <% @poll.options.each do |option| %>
+      <div class="option-result">
+        <span class="option-text"><%= option.text %></span>
+        <div class="option-stats">
+          <span id="option_<%= option.id %>_count" class="option-count"><%= option.votes.count %> votes</span>
+          <span id="option_<%= option.id %>_percentage" class="option-percentage">(<%= option.percentage_of_votes %>%)</span>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+  <div class="poll-meta">
+    <h4>Total Votes</h4>
+    <p>
+      <%= @poll.votes.count %>
+    </p>
+    <h4>Last Vote</h4>
+    <p>
+      <%= time_ago_in_words(@poll.votes.last.created_at) %>
+    </p>
+  </div>
 </div>
