@@ -10,7 +10,7 @@
 #
 
 class Poll < ActiveRecord::Base
-  has_many :options
+  has_many :options, -> { order 'id ASC' }
   has_many :votes
 
   validates :uuid, presence: true
