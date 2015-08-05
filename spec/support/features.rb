@@ -1,4 +1,4 @@
-Dir['spec/supportfeatures/*.rb'].each {|file| require file }
+Dir['spec/support/features/*.rb'].each {|file| require file }
 
 RSpec.configure do |config|
   config.include Features::PollHelpers, type: :feature
