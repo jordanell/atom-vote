@@ -5,7 +5,9 @@ class VotesController < ApplicationController
     @vote = Vote.new(vote_params)
 
     # Attach the session id
-    @vote.voter_uuid = session.id
+    # If they don't have a session ID something bad has happened
+    # Still let them vote but attaching something random
+    @vote.voter_uuid = session.id || SecureRandom.urlsafe_base64
 
     if @vote.save
       redirect_to results_poll_path(@vote.poll.uuid)

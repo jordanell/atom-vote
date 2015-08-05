@@ -5,7 +5,7 @@ feature 'Vote gets created' do
     @poll = FactoryGirl.create(:poll)
   end
 
-  scenario 'with valid selection', pending: 'Choose is not working' do
+  scenario 'with valid selection' do
     visit poll_path(@poll.uuid)
     page.should have_content(@poll.question)
 
