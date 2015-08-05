@@ -11,8 +11,7 @@ class PagesController < ApplicationController
     @page = lookup_context.exists?("pages/_#{params[:id]}")
 
     unless @page
-      # TODO: change this to custom 404 page.
-      raise ActionController::RoutingError.new('Not Found')
+      return render_error(404)
     end
   end
 end

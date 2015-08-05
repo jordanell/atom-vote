@@ -20,8 +20,7 @@ class VotesController < ApplicationController
     @poll = Poll.find(params[:vote].try(:[], 'poll_id'))
 
   rescue ActiveRecord::RecordNotFound
-    # TODO: change this to custom 404 page.
-    raise ActionController::RoutingError.new('Not Found')
+    return render_error(404)
   end
 
   def vote_params

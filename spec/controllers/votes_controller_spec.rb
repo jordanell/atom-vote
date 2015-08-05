@@ -34,7 +34,9 @@ RSpec.describe VotesController, type: :controller do
     it 'should 404 when poll does not exist' do
       @params[:vote]['poll_id'] = "#{@poll.id + 1}"
 
-      expect { post :create, @params }.to raise_error(ActionController::RoutingError)
+      post :create, @params
+
+      response.should render_template('errors/show')
     end
   end
 end

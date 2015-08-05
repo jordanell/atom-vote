@@ -31,8 +31,7 @@ class PollsController < ApplicationController
     @poll = Poll.find_by(uuid: params[:id])
 
     unless @poll
-      # TODO: change this to custom 404 page.
-      raise ActionController::RoutingError.new('Not Found')
+      return render_error(404)
     end
   end
 

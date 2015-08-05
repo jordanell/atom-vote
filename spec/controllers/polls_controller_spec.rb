@@ -70,7 +70,9 @@ RSpec.describe PollsController, type: :controller do
     it 'should 404 when poll does not exist' do
       @params = { id: '' }
 
-      expect { get :show, @params }.to raise_error(ActionController::RoutingError)
+      get :show, @params
+
+      response.should render_template('errors/show')
     end
   end
 
@@ -91,7 +93,9 @@ RSpec.describe PollsController, type: :controller do
     it 'should 404 when poll does not exist' do
       @params = { id: '' }
 
-      expect { get :results, @params }.to raise_error(ActionController::RoutingError)
+      get :results, @params
+
+      response.should render_template('errors/show')
     end
   end
 end

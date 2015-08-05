@@ -8,6 +8,9 @@
 @import 'global/variables';
 @import 'global/global';
 
+// Error imports
+@import 'errors/show';
+
 // Shared imports
 @import 'shared/header';
 @import 'shared/footer';

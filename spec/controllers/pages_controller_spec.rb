@@ -19,7 +19,9 @@ RSpec.describe PagesController, type: :controller do
     end
 
     it 'should 404 when page does not exist' do
-      expect { get :show, { id: 'wrongslug' } }.to raise_error(ActionController::RoutingError)
+      get :show, { id: 'wrongslug' }
+
+      response.should render_template('errors/show')
     end
   end
 end
