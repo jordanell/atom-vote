@@ -19,3 +19,5 @@
 # Ignore those pesky OSX files
 *.DS_Store
 
+# Ignore the environment variables
+/.env

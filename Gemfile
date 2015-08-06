@@ -34,6 +34,9 @@ gem 'font-awesome-sass', '4.3.0'
 # Better forms
 gem 'simple_form'
 
+# Environment varibles in rake tasks
+gem 'dotenv-rails'
+
 group :development do
   # Access errors in the web browser
   gem 'better_errors'
