@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_filter :fetch_page, only: [:show]
+  before_filter :disallow_bot_crawl
 
   def show
   end
@@ -13,5 +14,9 @@ class PagesController < ApplicationController
     unless @page
       return render_error(404)
     end
+  end
+
+  def disallow_bot_crawl
+    set_meta_tags noindex: true
   end
 end

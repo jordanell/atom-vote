@@ -37,6 +37,9 @@ gem 'simple_form'
 # Environment varibles in rake tasks
 gem 'dotenv-rails'
 
+# SEO
+gem 'meta-tags'
+
 group :development do
   # Access errors in the web browser
   gem 'better_errors'
