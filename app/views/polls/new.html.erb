@@ -13,7 +13,7 @@
     <% end %>
 
     <!-- Render the question input -->
-    <%= f.input :question, label: 'Poll Question', placeholder: 'Type your question here, options below' %>
+    <%= f.input :question, label: 'Poll Question', placeholder: 'Type your question here, options below', autofocus: true %>
 
     <!-- Render all the options -->
     <% @poll.options.each_with_index do |option, index| %>

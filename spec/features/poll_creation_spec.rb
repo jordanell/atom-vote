@@ -38,3 +38,12 @@ feature 'Poll gets created' do
     page.should have_content('Your poll had the following errors:')
   end
 end
+
+feature 'Poll being built' do
+  scenario 'should auto focus the question input' do
+    visit root_path
+    page.should have_content('AtomVote')
+
+    find_field('poll[question]')[:autofocus].should be_present
+  end
+end
