@@ -39,6 +39,7 @@ gem 'dotenv-rails'
 
 # SEO
 gem 'meta-tags'
+gem 'rack-google-analytics'
 
 group :development do
   # Access errors in the web browser
