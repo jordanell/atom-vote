@@ -8,7 +8,6 @@
       <%= @poll.question %>
     </h2>
 
-    <!-- Render the voting results -->
     <% @poll.options.each do |option| %>
       <div class="option-result">
         <span class="option-text"><%= option.text %></span>

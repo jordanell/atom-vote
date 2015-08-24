@@ -44,6 +44,9 @@ gem 'gabba'
 # Charts and graphs
 gem 'chartkick'
 
+# JSON API
+gem 'active_model_serializers'
+
 group :development do
   # Access errors in the web browser
   gem 'better_errors'
