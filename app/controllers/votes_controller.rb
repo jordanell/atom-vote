@@ -11,9 +11,16 @@ class VotesController < ApplicationController
 
     if @vote.save
       Gabba::Gabba.new(GOOGLE_ANALYTICS, 'atomvote.com').event('Votes', 'Create')
-      redirect_to results_poll_path(@vote.poll.uuid)
+
+      respond_to do |format|
+        format.html { redirect_to results_poll_path(@vote.poll.uuid) }
+        format.json { render json: @vote }
+      end
     else
-      render template: 'polls/show'
+      respond_to do |format|
+        format.html { render template: 'polls/show' }
+        format.json { render json: { message: 'Vote creation failed', errors: @vote.errors.full_messages }, status: 422 }
+      end
     end
   end
 
