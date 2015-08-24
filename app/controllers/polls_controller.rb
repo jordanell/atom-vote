@@ -20,6 +20,10 @@ class PollsController < ApplicationController
   end
 
   def show
+    if @poll.votes.map(&:voter_uuid).include?(session.try(:id))
+      return redirect_to results_poll_path(@poll.uuid)
+    end
+
     @vote = @poll.votes.build
   end
 

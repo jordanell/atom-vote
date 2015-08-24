@@ -67,6 +67,15 @@ RSpec.describe PollsController, type: :controller do
       response.should render_template('polls/show')
     end
 
+    it 'should redirect to the results if you have already voted' do
+      @vote = FactoryGirl.create(:vote, poll: @poll, voter_uuid: 'my-session')
+      session.id = 'my-session'
+
+      get :show, @params
+
+      response.should redirect_to(results_poll_path(@poll.uuid))
+    end
+
     it 'should 404 when poll does not exist' do
       @params = { id: '' }
 
