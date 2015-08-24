@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Api::Slack::PollsController, type: :controller do
   describe '#create' do
     before(:each) do
-      @params = { format: 'json', text: 'Q. What option? 1. One 2. Two' }
+      @params = { format: 'json', text: 'What option? 1. One 2. Two' }
     end
 
     it 'should create the poll' do
