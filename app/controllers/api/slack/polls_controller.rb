@@ -17,7 +17,7 @@ class Api::Slack::PollsController < ApplicationController
   private
 
   def parse_text(text)
-    question = text.match(/^Q\.(.*\?)/).try(:captures)
+    question = text.match(/^(.*\?)/).try(:captures)
 
     params_for_poll = { 'poll' => { 'options_attributes' => {} } }
     params_for_poll['poll']['question'] = question.try(:[], 0).try(:strip)
