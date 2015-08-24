@@ -1,4 +1,4 @@
-class Api::Slack::PollsController < ApplicationController
+class Api::Slack::PollsController < Api::Slack::BaseController
   def create
     # Parse the input from slack
     options = parse_text(params[:text])
