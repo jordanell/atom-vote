@@ -32,10 +32,24 @@ RSpec.describe PollsController, type: :controller do
       expect { post :create, @params }.to change(Poll, :count).by(1)
     end
 
+    it 'should create the poll (json)' do
+      @params[:format] = 'json'
+
+      expect { post :create, @params }.to change(Poll, :count).by(1)
+    end
+
     it 'should redirect to the poll show page' do
       post :create, @params
 
       response.should redirect_to poll_path(assigns(:poll).uuid)
+    end
+
+    it 'should render poll json' do
+      @params[:format] = 'json'
+
+      post :create, @params
+
+      json_response['poll']['uuid'].should_not be_nil
     end
 
     it 'should fail creating poll and render new' do
@@ -44,6 +58,15 @@ RSpec.describe PollsController, type: :controller do
       expect { post :create, @params }.to_not change(Poll, :count)
 
       response.should render_template('polls/new')
+    end
+
+    it 'should fail creating poll and render json' do
+      @params[:format] = 'json'
+      @params[:poll]['question'] = ''
+
+      post :create, @params
+
+      json_response['message'].should eq('Poll creation failed')
     end
   end
 
@@ -67,6 +90,14 @@ RSpec.describe PollsController, type: :controller do
       response.should render_template('polls/show')
     end
 
+    it 'should show the poll (json)' do
+      @params[:format] = 'json'
+
+      get :show, @params
+
+      json_response['poll']['uuid'].should eq(@poll.uuid)
+    end
+
     it 'should redirect to the results if you have already voted' do
       @vote = FactoryGirl.create(:vote, poll: @poll, voter_uuid: 'my-session')
       session.id = 'my-session'
@@ -82,6 +113,15 @@ RSpec.describe PollsController, type: :controller do
       get :show, @params
 
       response.should render_template('errors/show')
+    end
+
+    it 'should 404 when poll does not exist (json)' do
+      @params = { id: '', format: 'json' }
+
+      get :show, @params
+
+      json_response['message'].should eq('An error has occurred')
+      response.code.should eq('404')
     end
   end
 

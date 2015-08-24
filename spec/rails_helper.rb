@@ -58,4 +58,7 @@ RSpec.configure do |config|
       DatabaseCleaner.clean
     end
   end
+
+  # JSON API config
+  config.include JsonApiHelpers, type: :controller
 end
