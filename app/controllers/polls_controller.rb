@@ -38,6 +38,12 @@ class PollsController < ApplicationController
     unless @poll
       return render_error(404)
     end
+
+    set_seo
+  end
+
+  def set_seo
+    set_meta_tags description: @poll.question
   end
 
   def supplied_options

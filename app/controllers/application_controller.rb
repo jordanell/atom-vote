@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
                     title: 'AtomVote',
                     type:  'website',
                     url:   'http://atomvote.com',
-                    image: 'https://s3.amazonaws.com/atomvote-production/meta/atom_vote_logo_225.png',
+                    image: 'https://s3.amazonaws.com/atomvote-production/meta/atom_vote_logo_64.png',
                   }
   end
 
