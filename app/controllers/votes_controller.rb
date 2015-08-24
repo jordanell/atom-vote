@@ -10,7 +10,6 @@ class VotesController < ApplicationController
     @vote.voter_uuid = session.id || SecureRandom.urlsafe_base64
 
     if @vote.save
-      ga_track_event('votes', 'create')
       redirect_to results_poll_path(@vote.poll.uuid)
     else
       render template: 'polls/show'

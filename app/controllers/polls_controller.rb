@@ -11,7 +11,6 @@ class PollsController < ApplicationController
     @poll = Poll.new(poll_params)
 
     if @poll.save
-      ga_track_event('polls', 'create')
       redirect_to poll_path(@poll.uuid)
     else
       @poll.pad_options(4-supplied_options.length)
