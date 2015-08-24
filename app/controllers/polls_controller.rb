@@ -11,6 +11,7 @@ class PollsController < ApplicationController
     @poll = Poll.new(poll_params)
 
     if @poll.save
+      Gabba::Gabba.new(GOOGLE_ANALYTICS, 'atomvote.com').event('Polls', 'Create')
       redirect_to poll_path(@poll.uuid)
     else
       @poll.pad_options(4-supplied_options.length)

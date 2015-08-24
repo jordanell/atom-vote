@@ -39,6 +39,7 @@ gem 'dotenv-rails'
 
 # SEO
 gem 'meta-tags'
+gem 'gabba'
 
 # Charts and graphs
 gem 'chartkick'
