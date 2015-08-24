@@ -39,7 +39,9 @@ gem 'dotenv-rails'
 
 # SEO
 gem 'meta-tags'
-gem 'rack-google-analytics'
+
+# Charts and graphs
+gem 'chartkick'
 
 group :development do
   # Access errors in the web browser

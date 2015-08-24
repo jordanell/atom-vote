@@ -1,3 +1,5 @@
+GOOGLE_ANALYTICS = 'UA-66667813-2'
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -38,7 +40,4 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-
-  # Google analytics
-  config.middleware.use Rack::GoogleAnalytics, tracker: 'UA-66667813-2'
 end
