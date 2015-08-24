@@ -1,4 +1,4 @@
-GOOGLE_ANALYTICS = 'UA-66667813-2'
+GOOGLE_ANALYTICS = 'UA-66667813-3'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
