@@ -2,6 +2,13 @@ Rails.application.routes.draw do
   # Root
   root to: 'polls#new'
 
+  # Slack API
+  namespace :api do
+    namespace :slack do
+      resource :polls, only: [:create]
+    end
+  end
+
   # Polls
   resources :polls, only: [:new, :create, :show] do
     member do
