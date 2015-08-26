@@ -1,4 +1,6 @@
 class PollsController < ApplicationController
+  include AnalyticsHelper
+
   before_filter :fetch_poll, only: [:show, :results]
 
   def new
@@ -11,7 +13,7 @@ class PollsController < ApplicationController
     @poll = Poll.new(poll_params)
 
     if @poll.save
-      Gabba::Gabba.new(GOOGLE_ANALYTICS, 'atomvote.com').event('Polls', 'Create')
+      send_event('Polls', 'Create')
 
       respond_to do |format|
         format.html { redirect_to poll_path(@poll.uuid) }

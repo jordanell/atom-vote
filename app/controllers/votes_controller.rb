@@ -1,4 +1,6 @@
 class VotesController < ApplicationController
+  include AnalyticsHelper
+
   before_filter :fetch_poll, only: [:create]
 
   def create
@@ -10,7 +12,7 @@ class VotesController < ApplicationController
     @vote.voter_uuid = session.id || SecureRandom.urlsafe_base64
 
     if @vote.save
-      Gabba::Gabba.new(GOOGLE_ANALYTICS, 'atomvote.com').event('Votes', 'Create')
+      send_event('Votes', 'Create')
 
       respond_to do |format|
         format.html { redirect_to results_poll_path(@vote.poll.uuid) }

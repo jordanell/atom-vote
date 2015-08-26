@@ -59,6 +59,12 @@ RSpec.configure do |config|
     end
   end
 
+  config.before(:each) do
+    # Stub all GA calls
+    allow_any_instance_of(Gabba::Gabba).to receive(:identify_user).and_return(true)
+    allow_any_instance_of(Gabba::Gabba).to receive(:event).and_return(true)
+  end
+
   # JSON API config
   config.include JsonApiHelpers, type: :controller
 end
