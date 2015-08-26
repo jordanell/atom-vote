@@ -68,6 +68,7 @@ group :development, :test do
 
   # For DOM testing
   gem 'capybara'
+  gem 'capybara-webkit'
 end
 
 group :doc do

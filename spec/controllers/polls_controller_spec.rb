@@ -60,6 +60,26 @@ RSpec.describe PollsController, type: :controller do
       response.should render_template('polls/new')
     end
 
+    it 'should fail and pad up to four options when less than 4 are supplied' do
+      @params[:poll]['question'] = ''
+
+      post :create, @params
+
+      controller.instance_variable_get(:@poll).options.length.should eq(4)
+    end
+
+    it 'should fail and pad up to options+1 when more than 3 are supplied' do
+      @params[:poll]['question'] = ''
+      @params[:poll][:options_attributes]['2'] = {}
+      @params[:poll][:options_attributes]['2']['text'] = 'Option 3'
+      @params[:poll][:options_attributes]['3'] = {}
+      @params[:poll][:options_attributes]['3']['text'] = 'Option 4'
+
+      post :create, @params
+
+      controller.instance_variable_get(:@poll).options.length.should eq(5)
+    end
+
     it 'should fail creating poll and render json' do
       @params[:format] = 'json'
       @params[:poll]['question'] = ''

@@ -24,6 +24,22 @@ ActiveRecord::Migration.maintain_test_schema!
 FactoryGirl.definition_file_paths = [File.expand_path('../factories', __FILE__)]
 FactoryGirl.find_definitions
 
+# Capybara config
+Capybara.javascript_driver = :webkit
+Capybara::Webkit.configure do |config|
+  # Silently return an empty 200 response for any requests to unknown URLs.
+  config.block_unknown_urls
+
+  # Timeout if requests take longer than 5 seconds
+  config.timeout = 5
+
+  # Don't raise errors when SSL certificates can't be validated
+  config.ignore_ssl_errors
+
+  # Don't load images
+  config.skip_image_loading
+end
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"

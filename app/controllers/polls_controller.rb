@@ -20,7 +20,11 @@ class PollsController < ApplicationController
         format.json { render json: @poll }
       end
     else
-      @poll.pad_options(4-supplied_options.length)
+      if supplied_options.length > 3
+        @poll.pad_options(1)
+      else
+        @poll.pad_options(4-supplied_options.length)
+      end
 
       respond_to do |format|
         format.html { render template: 'polls/new' }
