@@ -5,7 +5,7 @@ describe OptionSerializer do
     @option = FactoryGirl.create(:option)
   end
 
-  subject { OptionSerializer.new(@option).object }
+  subject { OptionSerializer.new(@option) }
 
   # Attributes
   it { should have_attributes(id: @option.id) }

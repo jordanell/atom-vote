@@ -5,7 +5,7 @@ describe PollSerializer do
     @poll = FactoryGirl.create(:poll)
   end
 
-  subject { PollSerializer.new(@poll).object }
+  subject { PollSerializer.new(@poll) }
 
   # Attributes
   it { should have_attributes(uuid: @poll.uuid) }

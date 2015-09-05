@@ -17,7 +17,7 @@ class PollsController < ApplicationController
 
       respond_to do |format|
         format.html { redirect_to poll_path(@poll.uuid) }
-        format.json { render json: @poll }
+        format.json { render json: { poll: @poll } }
       end
     else
       if supplied_options.length > 3
@@ -44,7 +44,7 @@ class PollsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: @poll }
+      format.json { render json: { poll: @poll } }
     end
   end
 

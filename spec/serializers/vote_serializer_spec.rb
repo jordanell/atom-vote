@@ -5,7 +5,7 @@ describe VoteSerializer do
     @vote = FactoryGirl.create(:vote)
   end
 
-  subject { VoteSerializer.new(@vote).object }
+  subject { VoteSerializer.new(@vote) }
 
   # Attributes
   it { should have_attributes(voter_uuid: @vote.voter_uuid) }

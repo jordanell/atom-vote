@@ -41,11 +41,13 @@ gem 'dotenv-rails'
 gem 'meta-tags'
 gem 'gabba'
 
-# Charts and graphs
-gem 'chartkick'
-
 # JSON API
 gem 'active_model_serializers'
+
+# React
+gem 'react-rails', '1.2.0'
+gem 'sprockets-coffee-react'
+gem 'es5-shim-rails'
 
 group :development do
   # Access errors in the web browser

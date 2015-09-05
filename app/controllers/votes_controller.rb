@@ -16,7 +16,7 @@ class VotesController < ApplicationController
 
       respond_to do |format|
         format.html { redirect_to results_poll_path(@vote.poll.uuid) }
-        format.json { render json: @vote }
+        format.json { render json: { vote: @vote } }
       end
     else
       respond_to do |format|

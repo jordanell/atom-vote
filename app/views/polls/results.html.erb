@@ -8,15 +8,8 @@
       <%= @poll.question %>
     </h2>
 
-    <% @poll.options.each do |option| %>
-      <div class="option-result">
-        <span class="option-text"><%= option.text %></span>
-        <div class="option-stats">
-          <span id="option_<%= option.id %>_count" class="option-count"><%= option.votes.size %> votes</span>
-          <span id="option_<%= option.id %>_percentage" class="option-percentage">(<%= option.percentage_of_votes %>%)</span>
-        </div>
-      </div>
-    <% end %>
+    <!-- React results -->
+    <%= react_component('PollResult', { poll: PollSerializer.new(@poll) }, { prerender: true }) %>
   </div>
   <div class="poll-meta">
     <h4>Total Votes</h4>

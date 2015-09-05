@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require es5-shim/es5-shim-min
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .
