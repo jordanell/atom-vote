@@ -46,7 +46,7 @@ Grant permission on these new databases to the `root` user.
     cd atom-vote
     rbenv local 2.2.2
     bundle install
-    bundle exec rake db:create
+    bundle exec rake db:migrate
 
 ### Run the server
 
