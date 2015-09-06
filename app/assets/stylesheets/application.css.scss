@@ -14,6 +14,7 @@
 // Shared imports
 @import 'shared/header';
 @import 'shared/footer';
+@import 'shared/stats';
 
 // Poll imports
 @import 'polls/new';
@@ -26,3 +27,4 @@
 
 // React components
 @import 'components/option/result';
+@import 'components/poll/meta';

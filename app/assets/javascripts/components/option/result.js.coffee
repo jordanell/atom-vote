@@ -6,15 +6,6 @@
   propTypes:
     poll:   React.PropTypes.object.isRequired
     option: React.PropTypes.object.isRequired
-    accent: React.PropTypes.string
-
-  getDefaultProps: ->
-    accent: 'black'
-
-  getColor: ->
-    switch @props.accent.toLowerCase()
-      when 'black' then '#000'
-      else '#333'
 
   getWidth: ->
     "#{@props.option.percentage_of_votes}%"

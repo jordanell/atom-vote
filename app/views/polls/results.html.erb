@@ -11,18 +11,5 @@
     <!-- React results -->
     <%= react_component('PollResult', { poll: PollSerializer.new(@poll) }) %>
   </div>
-  <div class="poll-meta">
-    <h4>Total Votes</h4>
-    <p>
-      <%= @poll.votes.size %>
-    </p>
-    <h4>Last Vote</h4>
-    <p>
-      <% if @poll.votes.size > 0 %>
-        <%= time_ago_in_words(@poll.votes.last.created_at) %>
-      <% else %>
-        Never
-      <% end %>
-    </p>
-  </div>
+  <%= react_component('PollMeta', { poll: PollSerializer.new(@poll) }) %>
 </div>
