@@ -3,13 +3,6 @@
 
 <!-- Render the poll results -->
 <div class="poll-results-wrapper">
-  <div class="poll-data">
-    <h2>
-      <%= @poll.question %>
-    </h2>
-
-    <!-- React results -->
-    <%= react_component('PollResult', { poll: PollSerializer.new(@poll) }) %>
-  </div>
-  <%= react_component('PollMeta', { poll: PollSerializer.new(@poll) }) %>
+  <!-- React results -->
+  <%= react_component('PollResults', { poll: PollSerializer.new(@poll) }) %>
 </div>

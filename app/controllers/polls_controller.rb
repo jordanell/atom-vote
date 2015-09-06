@@ -17,7 +17,7 @@ class PollsController < ApplicationController
 
       respond_to do |format|
         format.html { redirect_to poll_path(@poll.uuid) }
-        format.json { render json: { poll: @poll } }
+        format.json { render json: { poll: PollSerializer.new(@poll) } }
       end
     else
       if supplied_options.length > 3
@@ -34,7 +34,7 @@ class PollsController < ApplicationController
   end
 
   def show
-    if @poll.votes.map(&:voter_uuid).include?(session.try(:id))
+    if @poll.votes.map(&:voter_uuid).include?(session.try(:id)) && !request.xhr?
       respond_to do |format|
         format.html { return redirect_to results_poll_path(@poll.uuid) }
       end
@@ -44,7 +44,7 @@ class PollsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: { poll: @poll } }
+      format.json { render json: { poll: PollSerializer.new(@poll) } }
     end
   end
 

@@ -1,0 +1,7 @@
+.poll-result {
+  @include span-columns(8);
+
+  @media screen and (max-width: $small-screen) {
+    @include span-columns(12);
+  }
+}

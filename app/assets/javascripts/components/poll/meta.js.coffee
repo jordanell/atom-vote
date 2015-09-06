@@ -6,12 +6,21 @@
   propTypes:
     poll: React.PropTypes.object.isRequired
 
+  getInitialState: ->
+    poll: @props.poll
+
   componentDidMount: ->
     google.setOnLoadCallback(@drawDonutGraph)
 
+  componentWillReceiveProps: (nextProps) ->
+    @setState poll: nextProps.poll
+
+  componentDidUpdate: (prevProps, prevState) ->
+    @drawDonutGraph()
+
   drawDonutGraph: ->
     data = [['Option', 'Votes']]
-    for option in @props.poll.options
+    for option in @state.poll.options
       data.push [option.text, option.votes_count]
 
     data = google.visualization.arrayToDataTable(data)
@@ -29,17 +38,17 @@
     chart.draw(data, options);
 
   renderLastVote: ->
-    moment(@props.poll.updated_at, "YYYY-MM-DDTHH:mm:ss.Z").fromNow()
+    moment(@state.poll.updated_at, "YYYY-MM-DDTHH:mm:ss.Z").fromNow()
 
   render: ->
-    <div className="poll-meta">
+    <section className="poll-meta">
       <div className="graph">
         <div id="poll-donut-chart" />
       </div>
       <div className="stats">
         <ul>
           <li>
-            <span className="data">{ @props.poll.votes_count }</span>
+            <span className="data">{ @state.poll.votes_count }</span>
             <span>Total</span>
           </li>
           <li>
@@ -48,4 +57,4 @@
           </li>
         </ul>
       </div>
-    </div>
+    </section>

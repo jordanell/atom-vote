@@ -14,12 +14,4 @@
   @media screen and (max-width: $small-screen) {
     padding: 20px;
   }
-
-  .poll-data {
-    @include span-columns(8);
-
-    @media screen and (max-width: $small-screen) {
-      @include span-columns(12);
-    }
-  }
 }
