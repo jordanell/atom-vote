@@ -48,11 +48,11 @@
       <div className="stats">
         <ul>
           <li>
-            <span className="data">{ @state.poll.votes_count }</span>
+            <span id="data-total" className="data">{ @state.poll.votes_count }</span>
             <span>Total</span>
           </li>
           <li>
-            <span className="data">{ @renderLastVote() }</span>
+            <span id="data-last" className="data">{ @renderLastVote() }</span>
             <span>Last</span>
           </li>
         </ul>
