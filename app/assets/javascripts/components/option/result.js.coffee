@@ -12,7 +12,9 @@
     "#{@props.option.percentage_of_votes}%"
 
   getColor: ->
-    Utils.colors[@props.index]
+    # Try to get the proper color, else default back to our custom blue
+    # This blue matches what is in variable.scss
+    Utils?.colors[@props.index] || '#477DCA'
 
   renderBar: ->
     barStyle =
