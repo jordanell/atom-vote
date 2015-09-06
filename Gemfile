@@ -34,9 +34,6 @@ gem 'font-awesome-sass', '4.3.0'
 # Better forms
 gem 'simple_form'
 
-# Environment varibles in rake tasks
-gem 'dotenv-rails'
-
 # SEO
 gem 'meta-tags'
 gem 'gabba'
