@@ -30,21 +30,21 @@ Install Homebrew from https://github.com/mxcl/homebrew or http://brew.sh/
 Ensure you have a `root` user with no password.
 
 Create the following databases:
-1. atom_vote_development
-2. atom_vote_test
+  1. atom_vote_development
+  2. atom_vote_test
 
 Grant permission on these new databases to the `root` user.
 
 ### Ruby Install
 
-    rbenv install 2.2.2
+    rbenv install 2.2.3
     rbenv rehash
 
 ### Clone Repository
 
     git clone git@github.com:jordanell/atom-vote.git
     cd atom-vote
-    rbenv local 2.2.2
+    rbenv local 2.2.3
     bundle install
     bundle exec rake db:migrate
 
