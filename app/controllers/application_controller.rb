@@ -8,15 +8,23 @@ class ApplicationController < ActionController::Base
   private
 
   def set_seo_tags
-    set_meta_tags title: 'AtomVote',
-                  description: 'Create a simple poll to share with the world.',
-                  keywords: %w[Poll Vote Question Survey Atom AtomVote],
-                  nofollow: true,
+    set_meta_tags title:        'AtomVote',
+                  description:  'Create a simple poll to share with the world.',
+                  keywords:     %w[Poll Vote Question Survey Atom AtomVote],
+                  nofollow:     true,
                   og:  {
-                    title: 'AtomVote',
-                    type:  'website',
-                    url:   'http://atomvote.com',
-                    image: 'https://s3.amazonaws.com/atomvote-production/meta/atom_vote_logo_64.png',
+                    title:        'AtomVote',
+                    type:         'website',
+                    url:          'http://atomvote.com',
+                    image:        'https://s3.amazonaws.com/atomvote-production/meta/atom_vote_logo_64.png',
+                    description:  'Create a simple poll to share with the world.'
+                  },
+                  twitter: {
+                    card:         'summary',
+                    url:          'http://atomvote.com',
+                    title:        'AtomVote',
+                    image:        'https://s3.amazonaws.com/atomvote-production/meta/atom_vote_logo_64.png',
+                    description:  'Create a simple poll to share with the world.'
                   }
   end
 

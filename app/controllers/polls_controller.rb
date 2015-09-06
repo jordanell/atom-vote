@@ -64,7 +64,15 @@ class PollsController < ApplicationController
   end
 
   def set_seo
-    set_meta_tags description: @poll.question
+    set_meta_tags description: @poll.question,
+                  og: {
+                    description:  @poll.question,
+                    url:          poll_url(@poll.uuid)
+                  },
+                  twitter: {
+                    description:  @poll.question,
+                    url:          poll_url(@poll.uuid)
+                  }
   end
 
   def supplied_options
