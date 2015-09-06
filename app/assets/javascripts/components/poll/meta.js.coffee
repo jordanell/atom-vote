@@ -12,11 +12,16 @@
   componentDidMount: ->
     google.setOnLoadCallback(@drawDonutGraph)
 
+    $(window).on 'resize', @drawDonutGraph
+
   componentWillReceiveProps: (nextProps) ->
     @setState poll: nextProps.poll
 
   componentDidUpdate: (prevProps, prevState) ->
     @drawDonutGraph()
+
+  componentWillUnmount: ->
+    $(window).off 'resize'
 
   drawDonutGraph: ->
     data = [['Option', 'Votes']]
