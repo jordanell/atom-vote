@@ -16,10 +16,4 @@ describe 'layouts/application.html.erb' do
 
     rendered.should render_template(partial: 'shared/_footer')
   end
-
-  it 'should render the banner ad' do
-    render
-
-    rendered.should render_template(partial: 'shared/_banner_ad')
-  end
 end
