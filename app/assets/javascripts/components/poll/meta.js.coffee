@@ -30,6 +30,7 @@
       pieHole:  0.2
       legend: 'none'
       backgroundColor: 'transparent'
+      colors: Utils.colors
       chartArea:
         top: 0
         height: 500
