@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require pluralize
 //= require turbolinks
 //= require es5-shim/es5-shim-min
 //= require react

@@ -4,14 +4,11 @@
   displayName: 'PollResult'
 
   propTypes:
-    poll: React.PropTypes.string.isRequired
-
-  renderOption: (option) ->
-    <OptionResult poll={ @props.poll } option={ option } />
+    poll: React.PropTypes.object.isRequired
 
   renderOptions: ->
     for option in @props.poll.options
-      @renderOption(option)
+      <OptionResult key={ option.id } poll={ @props.poll } option={ option } />
 
   render: ->
     <section className="poll-result">

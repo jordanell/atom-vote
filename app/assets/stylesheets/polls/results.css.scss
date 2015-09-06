@@ -7,28 +7,12 @@
   padding: 20px 75px;
   border-radius: $border-radius;
 
-  @media screen and (max-width: $small-screen) {
-    padding: 20px;
+  h2, h4 {
+    margin-top: 0;
   }
 
-  .option-result {
-    margin-bottom: 20px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    .option-text {
-      font-size: 18px;
-    }
-
-    .option-stats {
-      margin-top: 10px;
-
-      .option-count{
-        margin-right: 10px;
-      }
-    }
+  @media screen and (max-width: $small-screen) {
+    padding: 20px;
   }
 
   .poll-data {

@@ -9,7 +9,7 @@
     </h2>
 
     <!-- React results -->
-    <%= react_component('PollResult', { poll: PollSerializer.new(@poll) }, { prerender: true }) %>
+    <%= react_component('PollResult', { poll: PollSerializer.new(@poll) }) %>
   </div>
   <div class="poll-meta">
     <h4>Total Votes</h4>
