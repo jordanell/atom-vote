@@ -5,7 +5,7 @@ feature 'Vote gets created' do
     @poll = FactoryGirl.create(:poll)
   end
 
-  scenario 'with valid selection', pending: 'React test issues' do
+  scenario 'with valid selection', js: true do
     visit poll_path(@poll.uuid)
     page.should have_content(@poll.question)
 
@@ -31,7 +31,7 @@ feature 'Vote gets skipped' do
     @poll = FactoryGirl.create(:poll)
   end
 
-  scenario 'with go to results', pending: 'React test issues' do
+  scenario 'with go to results', js: true do
     visit poll_path(@poll.uuid)
     page.should have_content(@poll.question)
 

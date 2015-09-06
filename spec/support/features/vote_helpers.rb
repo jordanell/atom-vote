@@ -1,7 +1,7 @@
 module Features
   module VoteHelpers
     def select_option(choice = 1)
-      choose("vote_option_id_#{choice}")
+      find(:xpath, "//label[@for='vote_option_id_#{choice}']").click
     end
   end
 end
