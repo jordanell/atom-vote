@@ -1,4 +1,6 @@
 .banner-ad {
-  margin-top: 10px;
+  @include outer-container;
+
+  margin-top: 20px;
   text-align: center;
 }
