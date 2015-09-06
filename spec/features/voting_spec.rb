@@ -5,15 +5,15 @@ feature 'Vote gets created' do
     @poll = FactoryGirl.create(:poll)
   end
 
-  scenario 'with valid selection' do
-    visit poll_path(@poll.uuid)
+  scenario 'with valid selection', js: true do
+    puts poll_path(@poll.uuid)
     page.should have_content(@poll.question)
 
     select_option(@poll.options.first.id)
 
     click_button 'Vote'
 
-    page.should have_content('Total Votes')
+    page.should have_content('Total')
   end
 
   scenario 'with invalid selection' do
@@ -31,12 +31,12 @@ feature 'Vote gets skipped' do
     @poll = FactoryGirl.create(:poll)
   end
 
-  scenario 'with go to results' do
+  scenario 'with go to results', js: true do
     visit poll_path(@poll.uuid)
     page.should have_content(@poll.question)
 
     click_button 'Go To Results'
 
-    page.should have_content('Total Votes')
+    page.should have_content('Total')
   end
 end
