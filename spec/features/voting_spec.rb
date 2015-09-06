@@ -6,7 +6,7 @@ feature 'Vote gets created' do
   end
 
   scenario 'with valid selection', js: true do
-    puts poll_path(@poll.uuid)
+    visit poll_path(@poll.uuid)
     page.should have_content(@poll.question)
 
     select_option(@poll.options.first.id)
