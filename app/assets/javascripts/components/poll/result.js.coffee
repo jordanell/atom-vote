@@ -7,8 +7,8 @@
     poll: React.PropTypes.object.isRequired
 
   renderOptions: ->
-    for option in @props.poll.options
-      <OptionResult key={ option.id } poll={ @props.poll } option={ option } />
+    for option, index in @props.poll.options
+      <OptionResult key={ option.id } poll={ @props.poll } option={ option } index={ index } />
 
   render: ->
     <section className="poll-result">

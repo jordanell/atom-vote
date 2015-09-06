@@ -11,8 +11,8 @@
 #
 
 class Vote < ActiveRecord::Base
-  belongs_to :option, counter_cache: true
-  belongs_to :poll, counter_cache: true
+  belongs_to :option, counter_cache: true, touch: true
+  belongs_to :poll, counter_cache: true, touch: true
 
   validates :voter_uuid, presence: true
   validates :poll_id, presence: true
