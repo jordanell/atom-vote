@@ -1,70 +1,20 @@
 .poll-form-wrapper {
   @include outer-container;
+  padding: 0 75px;
 
-  $height-spacing: 20px;
-
-  background-color: $white-hover;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px 75px;
-  border-radius: $border-radius;
-
-  @media screen and (max-width: $small-screen) {
-    padding: 20px;
+  h3 {
+    margin-bottom: .625em;
+    text-transform: uppercase;
+    font-weight: 200;
   }
-
-  label {
-    display: none;
+  form {
+    font-size: 1.25em;
   }
+}
 
-  .option-label {
-    font-size: 20px;
-    color: $font-medium;
-    width: 50px;
-    float: left;
-    margin-top: 32px;
-  }
-
-  .poll_question{
-    padding-bottom: $height-spacing;
-
-    input{
-      padding: 0 10px;
-      width: 100%;
-      height: 60px;
-      font-size: 30px;
-    }
-
-    .error {
-      display: none;
-    }
-  }
-
-  .poll_options_text {
-    margin-top: $height-spacing;
-    overflow: hidden;
-
-    input {
-      width: 100%;
-      font-size: 20px;
-    }
-  }
-
-  input[type="text"] {
-    padding: 10px;
-    border: none;
-    border-bottom: solid 2px #c9c9c9;
-    transition: border 0.3s;
-    background-color: $white-hover;
-  }
-
-  input[type="text"]:focus,
-  input[type="text"].focus {
-    border-bottom: solid 2px #969696;
-    outline: none;
-  }
-
-  input[type=submit] {
-    margin-top: $height-spacing;
-  }
+.poll_question {
+  margin-bottom: 1.5rem;
+}
+.poll_options_text {
+  display: inline-block;
 }

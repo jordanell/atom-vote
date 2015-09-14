@@ -1,7 +1,12 @@
 .poll-result {
   @include span-columns(8);
 
-  @media screen and (max-width: $small-screen) {
-    @include span-columns(12);
+  // The question
+  h2 {
+    margin-bottom: .625em;
+    font-size: 1.5em;
+  }
+  @include media($small-viewport) {
+    @include fill-parent;
   }
 }

@@ -1,55 +1,71 @@
-#header {
-  $height: 65px;
-  $padding-height: 10px;
+// Header
+$header-height: 50px;
 
-  height: calc($height + $padding-height);
-  padding: $padding-height;
-  background-color: $background-color-dark;
+.header {
+  background-color: inherit;
+  padding: 25px 10px;
+  margin-bottom: 15px;
+}
 
-  .navigation-wrapper {
-    @include outer-container;
+// Main title
+.title {
+  text-decoration: none;
 
+  img {
+    float: left;
+    max-height: $header-height;
+  }
+
+  @include media($small-viewport) {
+    &::after {
+      display: none;
+    }
+  }
+
+  @include media($medium-viewport-up) {
     img {
-      height: $height;
-      margin-right: 10px;
+      margin: 0 7px;
     }
-
-    a {
-      text-decoration: none;
-    }
-
-    .title a {
-      color: $theme-color-blue;
-      line-height: $height;
-      font-size: 40px;
-      vertical-align: top;
-
-      @media screen and (max-width: $medium-screen) {
-        display: none
-      }
-    }
-
-    .new-poll-btn {
-      height: $height;
+    &::after {
+      line-height: $header-height;
       color: $white;
-      line-height: $height;
-      padding: 0 20px;
+      content: "AtomVote";
+      display: inline-block;
+      font-size: 36px;
+      height: $header-height;
+    }
+  }
+}
+
+// The new poll button
+.new-poll-btn {
+  text-decoration: none;
+  color: $white-hover;
+
+  &:hover {
+    color: $white;
+  }
+
+  @include media($small-viewport) {
+    i {
+      font-size: $header-height;
+      line-height: $header-height;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  @include media($medium-viewport-up) {
+    padding: 8px;
+
+    i {
+      margin-right: 5px;
+    }
+    &::after {
+      content: 'New Poll';
+      display: inline-block;
       font-size: 20px;
-
-      a {
-        color: white;
-      }
-
-      i {
-        color: $theme-color-blue;
-        margin-right: 5px;
-      }
-
-      &:hover {
-        a {
-          color: $white-hover;
-        }
-      }
+      line-height: $header-height;
     }
   }
 }

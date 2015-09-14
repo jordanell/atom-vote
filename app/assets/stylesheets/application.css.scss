@@ -1,3 +1,6 @@
+// Reset
+@import 'global/reset';
+
 // Vendor imports
 @import 'bourbon';
 @import 'neat';
@@ -30,3 +33,6 @@
 @import 'components/option/result';
 @import 'components/poll/results';
 @import 'components/poll/meta';
+
+// SHAME!!
+@import 'global/shame';

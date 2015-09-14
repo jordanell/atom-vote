@@ -1,69 +1,35 @@
 .option-result {
-  $bar-height: 20px;
-
+  $bar-height: 25px;
   margin-bottom: 20px;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  .option-text {
+  .option-label {
     font-size: 18px;
+    font-style: italic;
+    margin-bottom: .625em;
   }
 
   .option-stats {
     @include outer-container;
-    margin-top: 10px;
-
-    .option-count{
-      margin-right: 10px;
-    }
   }
 
   .stat-container {
-    @include span-columns(5);
-
-    @media screen and (max-width: $medium-screen) {
-      @include span-columns(6);
-    }
-
-    @media screen and (max-width: $small-screen) {
-      @include span-columns(12);
-
-      margin: 8px 0;
-    }
-  }
-
-  .stat-container > span {
-    display: inline-block;
+    text-align: right;
   }
 
   .bar-container {
-    @include span-columns(7);
-
-    display: inline-block;
-    margin-right: 10px;
-    vertical-align: bottom;
-
-    @media screen and (max-width: $medium-screen) {
-      @include span-columns(6);
-    }
-
-    @media screen and (max-width: $small-screen) {
-      @include span-columns(12);
-    }
+    margin-bottom: .625em;
   }
 
   .bar-progress {
-    overflow: hidden;
     background-color: $background-color-light;
     border-radius: $border-radius;
+    overflow: hidden;
   }
 
   .bar-fill {
-    width: 60%;
+    background-color: $light-blue;
     height: $bar-height;
-    background-color: $blue;
+    width: 60%;
   }
 }
 

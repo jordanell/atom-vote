@@ -13,15 +13,18 @@
     <% end %>
 
     <!-- Render the question input -->
-    <%= f.input :question, label: 'Poll Question', placeholder: 'Type your question here, options below', autofocus: true %>
+    <h3>Question</h3>
+    <%= f.input :question, label: false, placeholder: 'Type your question here, options below', autofocus: true %>
 
     <!-- Render all the options -->
-    <% @poll.options.each_with_index do |option, index| %>
-      <%= f.simple_fields_for :options, option do |o| %>
-        <span class="option-label"><%= "#{index+1}." %></span>
-        <%= o.input :text, label: 'Poll Option', placeholder: 'Enter poll option' %>
+    <h3>Answers</h3>
+    <ol class="numbered-list">
+      <% @poll.options.each_with_index do |option, index| %>
+        <%= f.simple_fields_for :options, option do |o| %>
+          <li><%= o.input :text, label: false, placeholder: 'Enter poll option' %></li>
+        <% end %>
       <% end %>
-    <% end %>
+    </ol>
 
     <%= f.button :submit %>
   <% end %>

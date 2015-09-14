@@ -29,7 +29,7 @@
 
   render: ->
     <section className="option-result">
-      <span className="option-text">{ @props.option.text }</span>
+      <label className="option-label">{ @props.option.text }</label>
       <div className="option-stats">
         { @renderBar() }
         <div className="stat-container">

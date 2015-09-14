@@ -1,3 +1,8 @@
+input + .error {
+  display: block;
+  text-align: right;
+
+}
 .error-wrapper {
   @include outer-container;
 
@@ -8,7 +13,19 @@
   padding: 20px 75px;
   border-radius: $border-radius;
 
-  @media screen and (max-width: $small-screen) {
+  @include media($small-viewport) {
     padding: 20px;
+  }
+}
+
+.errors-wrapper {
+  background-color: $background-color-medium;
+  border-radius: $border-radius;
+  border: 3px solid $white;
+  margin-bottom: 20px;
+  padding: 15px 25px;
+
+  h5 {
+    margin: 0;
   }
 }

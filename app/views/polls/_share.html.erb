@@ -1,6 +1,4 @@
 <div class="poll-share-wrapper">
-  <div class="poll-share-inner">
-    <h3>Share this poll</h3>
-    <input type="text" name="share-link" value='<%= request.base_url + "/polls/#{@poll.uuid}" %>' onClick="this.select();">
-  </div>
+  <h3>Share this poll!</h3>
+  <input type="text" name="share-link" value='<%= request.base_url + "/polls/#{@poll.uuid}" %>' onClick="this.select();">
 </div>

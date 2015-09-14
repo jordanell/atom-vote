@@ -1,34 +1,13 @@
+@import 'fonts';
+@import 'inputs';
+@import 'forms';
+@import 'lists';
+@import 'grid-settings';
+
 body {
+  background-color: $background-color-medium;
+  color: $white;
+  font-family: Open Sans, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: $background-color-medium;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-input[type=submit] {
-  background-color: $blue;
-  border-radius: $border-radius;
-  color: $white;
-  padding: 0.75em 1em;
-  border: none;
-  float: right;
-  font-size: 15px;
-
-  &:hover {
-    color: $white-hover;
-    background-color: $blue-hover;
-    cursor: pointer;
-  }
-}
-
-.errors-wrapper {
-  margin-bottom: 30px;
 }

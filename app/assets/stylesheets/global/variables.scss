@@ -4,13 +4,19 @@ $white-hover: #DDDDDD;
 $grey-light: #BBBBBB;
 $grey: #999999;
 $grey-hover: darken($grey, 10%);
-$blue: #477DCA;
+$blue: #37474F;
 $blue-hover: darken($blue, 10%);
+$light-blue: #6B8A99;
+$light-blue-hover: darken($light-blue, 10%);
+$red: #F44336;
+$red-hover: darken($red, 10%);
+$green: #66BB6A;
+$green-hover: darken($green, 10%);
 
 // Background colors
-$background-color-light: #F7F7F7;
-$background-color-medium: #969696;
-$background-color-dark: #2D2D2D;
+$background-color-light: #6B8A99;
+$background-color-medium: #2D2D2D;
+$background-color-dark: #263237;
 
 // Theme colors
 $theme-color-blue: #61DAFB;
@@ -26,7 +32,7 @@ $border-radius: 5px;
 $font-dark: #333333;
 $font-medium: #666666;
 
-// Screen sizes
+// Screen sizes// TODO: deprecate these
 $small-screen: 550px;
 $medium-screen: 800px;
 $large-screen: 1000px;
