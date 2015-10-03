@@ -8,6 +8,7 @@
 
   getInitialState: ->
     poll: @props.poll
+    colors: Utils?.generateColorPalette()
 
   componentDidMount: ->
     google.setOnLoadCallback(@drawDonutGraph)
@@ -35,10 +36,10 @@
       pieHole:  0.2
       legend: 'none'
       backgroundColor: 'transparent'
-      colors: Utils.colors
+      colors: @state.colors
       chartArea:
         top: 0
-        height: 500
+        height: 600
 
     chart = new google.visualization.PieChart(document.getElementById('poll-donut-chart'));
     chart.draw(data, options);

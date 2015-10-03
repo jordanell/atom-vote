@@ -11,9 +11,12 @@
   getWidth: ->
     "#{@props.option.percentage_of_votes}%"
 
+  getInitialState: ->
+    colors: Utils?.generateColorPalette()
+
   getColor: ->
-    # Try to get the proper color, else default back to our theme blue
-    Utils?.colors[@props.index] || '#61DAFB'
+    # Try to get a color, else default back to our theme blue
+    @state.colors[@props.index] || '#61DAFB'
 
   renderBar: ->
     barStyle =
