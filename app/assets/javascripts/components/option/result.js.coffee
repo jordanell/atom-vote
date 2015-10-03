@@ -28,15 +28,16 @@
 
   render: ->
     <section className="option-result">
-      <label className="option-label">{ @props.option.text }</label>
+      <h6 className="option-label">{ @props.option.text }</h6>
       <div className="option-stats">
         { @renderBar() }
         <div className="stat-container">
           <p id="option_#{@props.option.id}_count" className="option-count">
-            <span>{ @props.option.votes_count }</span><span>{ pluralize('vote', @props.option.votes_count) }</span>
+            <span>{ @props.option.votes_count }</span>
+            <span className="votes-word">{ pluralize('vote', @props.option.votes_count) }</span>
           </p>
           <p id="option_#{@props.option.id}_percentage" className="option-percentage">
-            <span>({ @props.option.percentage_of_votes }%)</span>
+            <span className="votes-precentage">{ @props.option.percentage_of_votes }%</span>
           </p>
         </div>
       </div>

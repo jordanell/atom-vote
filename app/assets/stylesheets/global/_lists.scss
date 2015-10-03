@@ -1,6 +1,5 @@
 // Common list styles
 ul, ol {
-  margin-bottom: $base-spacing * 3;
 
   li {
     margin-bottom: .625em;
@@ -9,6 +8,8 @@ ul, ol {
 
 // Ordered list
 .numbered-list {
+  margin-bottom: $base-spacing * 3;
+
   li {
     counter-increment: step-counter;
   }

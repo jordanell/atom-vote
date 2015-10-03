@@ -28,56 +28,6 @@ a[class$=btn], a[class$=button] {
   }
 }
 
-// Radio buttons behaviour on poll show
-input[type="radio"] {
-  display: none;
-
-  & + label {
-    @include transition(all .375s ease-in-out);
-    cursor: pointer;
-    display: inline-block;
-    padding-left: $base-spacing;
-    position: relative;
-
-    &::before, &::after {
-      @include transition(all .375s ease-in-out);
-      border-radius: 50%;
-      color: $grey-light;
-      content: '';
-      height: 1em;
-      left: 0;
-      position: absolute;
-      text-align: center;
-      top: 0;
-      width: 1em;
-    }
-  }
-
-  // Hover radio button styles
-  & + label {
-    &::before {
-      box-shadow:
-        inset 0 0 0 0.125em $white,
-        inset 0 0 0 1em $grey-light;
-    }
-
-    &:hover::before {
-      box-shadow:
-        inset 0 0 0 0.25em $white-hover,
-        inset 0 0 0 1em $theme-color-blue--25;
-    }
-  }
-
-  // Checked radio button styles
-  &:checked + label {
-    &::before {
-      box-shadow:
-        inset 0 0 0 0 $white,
-        inset 0 0 0 1em $theme-color-blue;
-    }
-  }
-}
-
 // Buttons (expand to other types)
 input[type=submit] {
   @include appearance(none);
@@ -94,7 +44,7 @@ input[type=submit] {
   text-decoration: none;
 
   &:hover {
-    background-color: $theme-color-blue--25;
+    background-color: $theme-color-blue--10;
     border: 1px solid transparent;
   }
 }

@@ -1,3 +1,24 @@
 .poll-meta {
-  @include span-columns(4);
+  @include pad;
+  background-color: $base-background-color-5;
+  border-radius: $border-radius;
+
+  @include media($small-viewport) {
+    @include fill-parent;
+  }
+  @include media($medium-viewport-up) {
+    @include span-columns(4);
+  }
+}
+
+.stats-list {
+  text-align: center;
+  text-transform: uppercase;
+
+  .data-value {
+    font-weight: 600;
+  }
+  .data-label {
+    color: $grey-light;
+  }
 }

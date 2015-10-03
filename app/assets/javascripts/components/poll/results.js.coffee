@@ -31,8 +31,8 @@
 
   render: ->
     <div>
+      <h2 className="result-question">{ @state.poll.question }</h2>
       <section className="poll-result">
-        <h2>{ @state.poll.question }</h2>
         { @renderOptions() }
       </section>
       <PollMeta poll={ @state.poll } />

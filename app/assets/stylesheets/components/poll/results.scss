@@ -1,12 +1,8 @@
 .poll-result {
-  @include span-columns(8);
-  @include pad(0 default);
-
-  h2 {
-    margin-bottom: $base-spacing;
-    font-size: 1.5em;
-  }
   @include media($small-viewport) {
     @include fill-parent;
+  }
+  @include media($medium-viewport-up) {
+    @include span-columns(8);
   }
 }

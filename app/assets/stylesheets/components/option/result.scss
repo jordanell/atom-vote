@@ -13,6 +13,14 @@
     p {
       display: inline-block;
     }
+    .votes-word {
+      margin: 0 5px;
+    }
+    .votes-precentage {
+      color: $grey-light;
+      &::before { content: '('; }
+      &::after { content: ')'; }
+    }
   }
 
   .bar-container {
@@ -20,7 +28,7 @@
   }
 
   .bar-progress {
-    background-color: $background-color-light;
+    @include linear-gradient(to left, $base-background-color-15, $base-background-color-5);
     border-radius: $border-radius;
     overflow: hidden;
   }

@@ -1,24 +1,31 @@
 // Colors
+$default-contrast: 10%;
 $black: #000000;
 $white: #FFFFFF;
-$white-hover: #DDDDDD;
+$white-hover: darken($white, $default-contrast);
 $grey-light: #BBBBBB;
 $grey: #999999;
-$grey-hover: darken($grey, 10%);
+$grey-hover: darken($grey, $default-contrast);
 $blue: #37474F;
-$blue-hover: darken($blue, 10%);
+$blue-hover: darken($blue, $default-contrast);
 $light-blue: #6B8A99;
-$light-blue-hover: darken($light-blue, 10%);
+$light-blue-hover: darken($light-blue, $default-contrast);
 $red: #F44336;
-$red-hover: darken($red, 10%);
+$red-hover: darken($red, $default-contrast);
 $green: #66BB6A;
-$green-hover: darken($green, 10%);
+$green-hover: darken($green, $default-contrast);
+$purple: #7C7AEE;
+$purple-hover: darken($purple, $default-contrast);
+$yellow: #FFCC66;
+$yellow-hover: darken($yellow, $default-contrast);
 
 // Background colors
 $background-color-light: #6B8A99;
 $background-color-medium: #2D2D2D;
 $background-color-dark: #263237;
 $base-background-color: $background-color-medium;
+$base-background-color-5: lighten($background-color-medium, 5%);
+$base-background-color-15: lighten($background-color-medium, 15%);
 
 // Theme colors
 $theme-color-blue: #61DAFB;

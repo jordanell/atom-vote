@@ -17,7 +17,7 @@ form {
 
 #{$all-text-inputs},
 textarea {
-  background-color: lighten($background-color-medium, 15);
+  background-color: $base-background-color-15;
   border-radius: $border-radius;
   border: none;
   color: $white-hover;
