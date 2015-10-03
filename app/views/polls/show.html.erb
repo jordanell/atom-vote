@@ -1,48 +1,40 @@
-<!-- Render the sharing options -->
-<%= render partial: 'polls/share' %>
-
 <!-- Render the poll voting options -->
 <div class="poll-show-wrapper">
-  <div class="poll-body">
-    <%= simple_form_for(@vote) do |f| %>
-      <!-- Render all the errors if needed -->
-      <% if @vote.errors.full_messages.length > 0 %>
-        <div class="errors-wrapper">
-          <h5>Your vote had the following errors:</h5>
-          <ul>
-            <% @vote.errors.messages.values.each do |msg| %>
-              <%msg.each do  |m| %>
-                <li><%= m %></li>
-              <% end %>
+  <%= simple_form_for(@vote) do |f| %>
+    <!-- Render all the errors if needed -->
+    <% if @vote.errors.full_messages.length > 0 %>
+      <div class="errors-wrapper">
+        <h5>Your vote had the following errors:</h5>
+        <ul>
+          <% @vote.errors.messages.values.each do |msg| %>
+            <%msg.each do  |m| %>
+              <li><%= m %></li>
             <% end %>
-          </ul>
-        </div>
-      <% end %>
-
-      <!-- Render the question -->
-      <div class="poll-show-question">
-        <h2>
-          <%= @poll.question %>
-        </h2>
-        <p>
-          Pick one of the following options:
-        </p>
+          <% end %>
+        </ul>
       </div>
+    <% end %>
 
-      <!-- Render all voting options -->
+    <!-- Render the question -->
+    <h2 class="poll-show-question"><%= @poll.question %></h2>
+
+    <!-- Render all voting options -->
+    <ul>
       <% @poll.options.each do |option| %>
-        <div class="vote-option-wrapper">
+        <li>
           <%= f.hidden_field(:poll_id, value: @poll.id) %>
           <%= f.radio_button :option_id, option.id %>
           <label class="vote-option-text" for="vote_option_id_<%= option.id %>">
             <%= option.text %>
           </label>
-        </div>
+        </li>
       <% end %>
+    </ol>
 
-      <%= f.button :submit, 'Vote' %>
-    <% end %>
+    <%= f.button :submit, 'Vote' %>
+  <% end %>
 
-    <%= button_to "Go To Results", results_poll_path(@poll.uuid), { class: 'go-to-results', method: 'get' } %>
-  </div>
+  <%= button_to "Go To Results", results_poll_path(@poll.uuid), { class: 'go-to-results', method: 'get' } %>
 </div>
+<!-- Render the sharing options -->
+<%= render partial: 'polls/share' %>

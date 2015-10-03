@@ -1,1 +1,80 @@
 // Put all your shameful hacks in here until so they don't get lost
+// *da-ding-ding* *da-ding-ding* SHAME
+
+// base links styles
+a {
+  color: $white-hover;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+
+// Links that look and behave like buttons
+a[class$=btn], a[class$=button] {
+  @include transition(all .375s ease-in-out);
+  background-color: rgba(0,0,0,0);
+  border-radius: $border-radius;
+  border: 1px solid $white-hover;
+  color: $white-hover;
+  padding: .5em 1.5em;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(0,0,0,.25);
+    border: 1px solid $white;
+    color: $white;
+  }
+}
+
+// Radio buttons behaviour on poll show
+input[type="radio"] {
+  display: none;
+
+  & + label {
+    @include transition(all .375s ease-in-out);
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 1.5em;
+    position: relative;
+
+    &::before, &::after {
+      @include transition(all .375s ease-in-out);
+      border-radius: 50%;
+      color: $grey-light;
+      content: '';
+      height: 1em;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 1em;
+    }
+  }
+
+  // Hover radio button styles
+  & + label {
+    &::before {
+      box-shadow:
+        inset 0 0 0 0.125em $white,
+        inset 0 0 0 1em $grey-light;
+    }
+
+    &:hover::before {
+      box-shadow:
+        inset 0 0 0 0.25em $white-hover,
+        inset 0 0 0 1em $theme-color-blue--25;
+    }
+  }
+
+  // Checked radio button styles
+  &:checked + label {
+    &::before {
+      box-shadow:
+        inset 0 0 0 0 $white,
+        inset 0 0 0 1em $theme-color-blue;
+    }
+  }
+}

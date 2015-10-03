@@ -1,8 +1,8 @@
 input + .error {
   display: block;
   text-align: right;
-
 }
+
 .error-wrapper {
   @include outer-container;
 
@@ -19,9 +19,9 @@ input + .error {
 }
 
 .errors-wrapper {
-  background-color: $background-color-medium;
+  background-color: #222;
   border-radius: $border-radius;
-  border: 3px solid $white;
+  border: 3px solid $white-hover;
   margin-bottom: 20px;
   padding: 15px 25px;
 

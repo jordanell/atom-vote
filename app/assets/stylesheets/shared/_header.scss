@@ -1,15 +1,22 @@
+//
 // Header
+//
+
 $header-height: 50px;
 
 .header {
   background-color: inherit;
   padding: 25px 10px;
-  margin-bottom: 15px;
+  margin-bottom: 2.5rem;
 }
 
-// Main title
+//
+// Main logo and title
+//
 .title {
   text-decoration: none;
+  font-family: $header-font-family;
+  font-weight: 300;
 
   img {
     float: left;
@@ -24,7 +31,7 @@ $header-height: 50px;
 
   @include media($medium-viewport-up) {
     img {
-      margin: 0 7px;
+      margin-right: .5em;
     }
     &::after {
       line-height: $header-height;
@@ -37,34 +44,24 @@ $header-height: 50px;
   }
 }
 
-// The new poll button
+//
+// New Poll Button
+//
 .new-poll-btn {
-  text-decoration: none;
-  color: $white-hover;
-
-  &:hover {
-    color: $white;
-  }
+  font-size: .8125em;
 
   @include media($small-viewport) {
-    i {
-      font-size: $header-height;
-      line-height: $header-height;
-    }
     &::after {
       display: none;
     }
   }
   @include media($medium-viewport-up) {
-    padding: 8px;
-
     i {
-      margin-right: 5px;
+      margin-right: .3125em;
     }
     &::after {
       content: 'New Poll';
       display: inline-block;
-      font-size: 20px;
       line-height: $header-height;
     }
   }

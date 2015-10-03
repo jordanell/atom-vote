@@ -1,1 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,200italic,200);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,300italic);
+
+$header-font-family: Roboto, sans-serif;
+$body-font-family: Open Sans, Arial, Helvetica, sans-serif;
+
+body {
+  font-family: $body-font-family;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+  font-weight: 400;
+}

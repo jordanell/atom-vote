@@ -2,6 +2,10 @@ form {
 
 }
 
+
+//
+// Inputs
+//
 #{$all-text-inputs},
 #{$all-text-inputs-focus},
 #{$all-text-inputs-hover} {
@@ -9,7 +13,6 @@ form {
   font-size: inherit;
 }
 
-// Inputs
 #{$all-text-inputs},
 textarea {
   background-color: lighten($background-color-medium, 15);
@@ -24,6 +27,12 @@ textarea {
 
 // Input focus
 #{$all-text-inputs-focus},
+textarea {
+  color: $white;
+}
+
+// Input hover
+#{$all-text-inputs-hover},
 textarea {
   color: $white;
 }
