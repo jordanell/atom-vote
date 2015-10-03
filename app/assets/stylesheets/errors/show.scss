@@ -5,7 +5,6 @@ input + .error {
 
 .error-wrapper {
   @include outer-container;
-
   text-align: center;
   background-color: $white-hover;
   margin-top: 20px;

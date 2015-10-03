@@ -12,9 +12,8 @@
     "#{@props.option.percentage_of_votes}%"
 
   getColor: ->
-    # Try to get the proper color, else default back to our custom blue
-    # This blue matches what is in variable.scss
-    Utils?.colors[@props.index] || '#477DCA'
+    # Try to get the proper color, else default back to our theme blue
+    Utils?.colors[@props.index] || '#61DAFB'
 
   renderBar: ->
     barStyle =
@@ -33,8 +32,12 @@
       <div className="option-stats">
         { @renderBar() }
         <div className="stat-container">
-          <span id="option_#{@props.option.id}_count" className="option-count">{ @props.option.votes_count } { pluralize('vote', @props.option.votes_count) }</span>
-          <span id="option_#{@props.option.id}_percentage" className="option-percentage">({ @props.option.percentage_of_votes }%)</span>
+          <p id="option_#{@props.option.id}_count" className="option-count">
+            <span>{ @props.option.votes_count }</span><span>{ pluralize('vote', @props.option.votes_count) }</span>
+          </p>
+          <p id="option_#{@props.option.id}_percentage" className="option-percentage">
+            <span>({ @props.option.percentage_of_votes }%)</span>
+          </p>
         </div>
       </div>
     </section>

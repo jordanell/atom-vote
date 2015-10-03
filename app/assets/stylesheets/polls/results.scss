@@ -1,3 +1,4 @@
 .poll-results-wrapper {
   @include outer-container;
+  margin-bottom: $base-spacing * 2;
 }

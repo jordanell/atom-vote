@@ -1,8 +1,8 @@
-<!-- Render the sharing options -->
-<%= render partial: 'polls/share' %>
-
 <!-- Render the poll results -->
 <div class="poll-results-wrapper">
   <!-- React results -->
   <%= react_component('PollResults', { poll: PollSerializer.new(@poll) }) %>
 </div>
+
+<!-- Render the sharing options -->
+<%= render partial: 'polls/share' %>

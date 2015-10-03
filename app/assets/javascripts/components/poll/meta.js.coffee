@@ -48,19 +48,15 @@
 
   render: ->
     <section className="poll-meta">
-      <div className="graph">
-        <div id="poll-donut-chart" />
-      </div>
-      <div className="stats">
-        <ul>
-          <li>
-            <span id="data-total" className="data">{ @state.poll.votes_count }</span>
-            <span>Total</span>
-          </li>
-          <li>
-            <span id="data-last" className="data">{ @renderLastVote() }</span>
-            <span>Last</span>
-          </li>
-        </ul>
-      </div>
+      <div id="poll-donut-chart" />
+      <ul className="stats">
+        <li>
+          <span id="data-total" className="data">{ @state.poll.votes_count }</span>
+          <span>Total</span>
+        </li>
+        <li>
+          <span id="data-last" className="data">{ @renderLastVote() }</span>
+          <span>Last</span>
+        </li>
+      </ul>
     </section>

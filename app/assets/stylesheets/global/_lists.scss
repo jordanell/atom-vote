@@ -1,8 +1,6 @@
 // Common list styles
 ul, ol {
-  margin-left: 0;
-  padding-right: 0;
-  list-style-type: none;
+  margin-bottom: $base-spacing * 3;
 
   li {
     margin-bottom: .625em;

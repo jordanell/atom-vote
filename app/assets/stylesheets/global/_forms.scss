@@ -1,7 +1,9 @@
 form {
-
+  h3 {
+    margin-bottom: $base-spacing / 2;
+    text-transform: uppercase;
+  }
 }
-
 
 //
 // Inputs
@@ -16,13 +18,14 @@ form {
 #{$all-text-inputs},
 textarea {
   background-color: lighten($background-color-medium, 15);
-  width: 100%;
-  padding: .5rem;
+  border-radius: $border-radius;
   border: none;
-  outline: 0;
-  transition: background .25s;
   color: $white-hover;
   font-size: inherit;
+  outline: 0;
+  padding: .5rem 1rem;
+  transition: background .25s;
+  width: 100%;
 }
 
 // Input focus

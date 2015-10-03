@@ -1,11 +1,7 @@
 .poll-form-wrapper {
   @include outer-container;
-  padding: 0 75px;
+  @include pad(0 default);
 
-  h3 {
-    margin-bottom: .625em;
-    text-transform: uppercase;
-  }
   form {
     font-size: 1.25em;
   }

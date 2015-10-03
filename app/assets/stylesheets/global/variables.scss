@@ -18,6 +18,7 @@ $green-hover: darken($green, 10%);
 $background-color-light: #6B8A99;
 $background-color-medium: #2D2D2D;
 $background-color-dark: #263237;
+$base-background-color: $background-color-medium;
 
 // Theme colors
 $theme-color-blue: #61DAFB;
@@ -25,11 +26,9 @@ $theme-color-blue-10: lighten($theme-color-blue, 10%);
 $theme-color-blue--10: darken($theme-color-blue, 10%);
 $theme-color-blue--25: darken($theme-color-blue, 25%);
 
-// Border colors
+// Borders
 $border-color-medium: #666666;
 $border-color-light: #AAAAAA;
-
-// Border styles
 $border-radius: 5px;
 
 // Font colors
@@ -40,3 +39,6 @@ $font-medium: #666666;
 $small-screen: 550px;
 $medium-screen: 800px;
 $large-screen: 1000px;
+
+// Layout realted variables
+$base-spacing: 1.5rem;

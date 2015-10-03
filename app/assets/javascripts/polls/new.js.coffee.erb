@@ -3,7 +3,7 @@ class Poll
 
   constructor: ->
     # Count how many options exist and start there
-    @lastOptionIndex = $('.option-label').length - 1
+    @lastOptionIndex = $('#js-add-option').children().length - 1
 
     @attachListener(@getLastOption())
 
@@ -27,18 +27,13 @@ class Poll
       @attachListener(@getLastOption())
 
   addOption: ->
-    # Append the new label
-    label = "<span class='option-label'>#{@lastOptionIndex+1}.</span>"
-    $(label).insertBefore("#new_poll input[type='submit']")
-
     # Append the new input
-    input =  "<div class='input string required poll_options_text'>" +
-              "<label class='string required' for='poll_options_attributes_#{@lastOptionIndex}_text'>" +
-                "<abbr title='required'>*</abbr> Poll Option" +
-              "</label>" +
-              "<input class='string required' placeholder='Enter poll option' type='text' name='poll[options_attributes][#{@lastOptionIndex}][text]' id='poll_options_attributes_#{@lastOptionIndex}_text'>" +
-            "</div>"
-    $(input).insertBefore("#new_poll input[type='submit']")
+    input =  "<li>" +
+                "<div class='input string required poll_options_text'>" +
+                  "<input class='string required' placeholder='Enter poll option' type='text' name='poll[options_attributes][#{@lastOptionIndex}][text]' id='poll_options_attributes_#{@lastOptionIndex}_text'>" +
+                "</div>" +
+              "</li>"
+    $(input).appendTo("#js-add-option")
 
 createPoll = ->
   window.Poll = new Poll $(this)

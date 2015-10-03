@@ -1,23 +1,22 @@
 .option-result {
   $bar-height: 25px;
-  margin-bottom: 20px;
+  margin-bottom: $base-spacing;
 
   .option-label {
-    font-size: 18px;
+    font-size: 1.125em;
     font-style: italic;
-    margin-bottom: .625em;
-  }
-
-  .option-stats {
-    @include outer-container;
+    margin-bottom: $base-spacing / 2;
   }
 
   .stat-container {
     text-align: right;
+    p {
+      display: inline-block;
+    }
   }
 
   .bar-container {
-    margin-bottom: .625em;
+    margin-bottom: $base-spacing / 2;
   }
 
   .bar-progress {

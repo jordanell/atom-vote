@@ -4,9 +4,9 @@
   margin-bottom: 2.5rem;
 
   h3 {
-    margin-bottom: .625em;
-    text-transform: uppercase;
+    margin-bottom: $base-spacing / 2;
   }
+
   input {
     border-radius: $border-radius;
     text-align: inherit;

@@ -1,9 +1,9 @@
 .poll-result {
   @include span-columns(8);
+  @include pad(0 default);
 
-  // The question
   h2 {
-    margin-bottom: .625em;
+    margin-bottom: $base-spacing;
     font-size: 1.5em;
   }
   @include media($small-viewport) {

@@ -1,24 +1,15 @@
 <div class="poll-form-wrapper">
   <%= simple_form_for(@poll) do |f| %>
     <!-- Render all the errors if needed -->
-    <% if @poll.errors.full_messages.length > 0 %>
-      <div class="errors-wrapper">
-        <h5>Your poll had the following errors:</h5>
-        <ul>
-          <% @poll.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+    <%= render partial: 'shared/form_errors', locals: { object: @poll } %>
 
     <!-- Render the question input -->
     <h3>Question</h3>
-    <%= f.input :question, label: false, placeholder: 'Type your question here, options below', autofocus: true %>
+    <%= f.input :question, label: false, placeholder: 'Want to type your question here?', autofocus: true %>
 
     <!-- Render all the options -->
     <h3>Answers</h3>
-    <ol class="numbered-list">
+    <ol id="js-add-option" class="numbered-list">
       <% @poll.options.each_with_index do |option, index| %>
         <%= f.simple_fields_for :options, option do |o| %>
           <li><%= o.input :text, label: false, placeholder: 'Enter poll option' %></li>

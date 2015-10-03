@@ -1,17 +1,3 @@
 .poll-meta {
   @include span-columns(4);
-
-  @media screen and (max-width: $small-screen) {
-    @include span-columns(12);
-  }
-
-  .stats {
-    text-align: center;
-    font-size: 0.75em;
-
-    li {
-      display: inline-block;
-      float: none;
-    }
-  }
 }
