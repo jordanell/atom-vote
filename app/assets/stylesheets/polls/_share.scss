@@ -10,5 +10,9 @@
   input {
     border-radius: $border-radius;
     text-align: inherit;
+
+    @include media($small-viewport) {}
+    @include media($medium-viewport) {}
+    @include media($large-viewport) {}
   }
 }

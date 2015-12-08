@@ -1,51 +1,48 @@
-// Colors
+// colors
 $default-contrast: 10%;
-$black: #000000;
-$white: #FFFFFF;
+$black: #000;
+$white: #fff;
 $white-hover: darken($white, $default-contrast);
-$grey-light: #BBBBBB;
-$grey: #999999;
+$grey-light: #bbb;
+$grey: #999;
 $grey-hover: darken($grey, $default-contrast);
-$blue: #37474F;
+$blue: #37474f;
 $blue-hover: darken($blue, $default-contrast);
-$light-blue: #6B8A99;
+$light-blue: #6b8a99;
 $light-blue-hover: darken($light-blue, $default-contrast);
-$red: #F44336;
+$red: #f44336;
 $red-hover: darken($red, $default-contrast);
-$green: #66BB6A;
+$green: #66bb6a;
 $green-hover: darken($green, $default-contrast);
-$purple: #7C7AEE;
+$purple: #7c7aee;
 $purple-hover: darken($purple, $default-contrast);
-$yellow: #FFCC66;
+$yellow: #fc6;
 $yellow-hover: darken($yellow, $default-contrast);
 
-// Background colors
-$background-color-light: #6B8A99;
-$background-color-medium: #2D2D2D;
+// background colors
+$background-color-light: #6b8a99;
+$background-color-medium: #2d2d2d;
 $background-color-dark: #263237;
 $base-background-color: $background-color-medium;
 $base-background-color-5: lighten($background-color-medium, 5%);
 $base-background-color-15: lighten($background-color-medium, 15%);
 
-// Theme colors
-$theme-color-blue: #61DAFB;
+// theme colors
+$theme-color-blue: #61dafb;
 $theme-color-blue-10: lighten($theme-color-blue, 10%);
 $theme-color-blue--10: darken($theme-color-blue, 10%);
 $theme-color-blue--25: darken($theme-color-blue, 25%);
 
-// Borders
-$border-color-medium: #666666;
-$border-color-light: #AAAAAA;
-$border-radius: 5px;
+$error-red: $red-hover;
 
-// Font colors
-$font-dark: #333333;
-$font-medium: #666666;
+// borders
+$border-color-medium: #666;
+$border-color-light: #aaa;
+$border-radius: 0;
 
-// Screen sizes// TODO: deprecate these
-$small-screen: 550px;
-$medium-screen: 800px;
-$large-screen: 1000px;
+// font colors
+$font-dark: #333;
+$font-medium: #666;
 
-// Layout realted variables
+// layout realted variables
 $base-spacing: 1.5rem;

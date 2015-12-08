@@ -19,13 +19,18 @@ form {
 textarea {
   background-color: $base-background-color-15;
   border-radius: $border-radius;
-  border: none;
+  border: 3px solid transparent;
   color: $white-hover;
   font-size: inherit;
+  margin-bottom: 8px;
   outline: 0;
   padding: .5rem 1rem;
   transition: background .25s;
   width: 100%;
+
+  &:focus {
+    // border: 3px solid $white;
+  }
 }
 
 // Input focus

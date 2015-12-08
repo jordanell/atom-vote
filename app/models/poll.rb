@@ -15,7 +15,7 @@ class Poll < ActiveRecord::Base
 
   validates :uuid, presence: true
   validates :question, presence: true
-  validates :options, length: { minimum: 2, message: 'must have at least 2' }
+  validates :options, length: { minimum: 2, message: 'Must have at least 2' }
 
   validates_associated :options
 

@@ -8,7 +8,6 @@ input + .error {
   text-align: center;
   background-color: $white-hover;
   margin-top: 20px;
-  margin-bottom: 20px;
   padding: 20px 75px;
   border-radius: $border-radius;
 
@@ -18,13 +17,19 @@ input + .error {
 }
 
 .errors-wrapper {
-  background-color: #222;
+  background-color: $black;
+  border: 3px solid $error-red;
   border-radius: $border-radius;
-  border: 3px solid $white-hover;
-  margin-bottom: 20px;
+  margin-bottom: $base-spacing * 2;
   padding: 15px 25px;
 
   h5 {
     margin: 0;
+    text-transform: uppercase;
+
+    &::before {
+      content: '!';
+      padding: $base-spacing / 2;
+    }
   }
 }

@@ -23,7 +23,7 @@ To set up your development environment in OSX follow the directions below.
 Install Homebrew from https://github.com/mxcl/homebrew or http://brew.sh/
 
     brew update
-    brew install rbenv ruby-build postgresql git apple-gcc42
+    brew install rbenv ruby-build postgresql git apple-gcc42 qt5
 
 ### Configure Postgres
 

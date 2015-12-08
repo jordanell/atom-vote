@@ -1,23 +1,16 @@
 .page-wrapper {
   @include outer-container;
-
   background-color: $white-hover;
-  margin-top: 20px;
+  border-radius: $border-radius;
   margin-bottom: 20px;
   padding: 20px 75px;
-  border-radius: $border-radius;
+}
 
-  @media screen and (max-width: $small-screen) {
-    padding: 20px;
-  }
+.page-content {
+  color: $font-dark;
+  line-height: 1.55;
 
-  .page-content {
-    li {
-      margin-bottom: 10px;
-    }
-
-    a {
-      text-decoration: none;
-    }
+  li {
+    margin-bottom: 10px;
   }
 }

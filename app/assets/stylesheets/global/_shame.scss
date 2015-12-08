@@ -2,7 +2,7 @@
 // *da-ding-ding* *da-ding-ding* SHAME *da-ding-ding*
 
 // Buttons (expand to other types)
-input[type=submit] {
+input[type=submit], button {
   @include appearance(none);
   outline: 0;
 
@@ -10,14 +10,27 @@ input[type=submit] {
   background-color: $theme-color-blue;
   border-radius: $border-radius;
   border: 1px solid transparent;
-  color: $base-background-color;
+  color: $white;
   cursor: pointer;
   font-weight: 600;
-  padding: .5em $base-spacing;
   text-decoration: none;
+  padding: .5em $base-spacing;
 
   &:hover {
     background-color: $theme-color-blue--10;
     border: 1px solid transparent;
   }
+
+  @include media($small-viewport) {
+    padding: $base-spacing;
+    display: block;
+    width: 100%;
+    font-size: 24px;
+  }
+  @include media($medium-viewport-up) {
+  }
+}
+
+.field_with_errors input {
+  border: 2px solid $error-red;
 }

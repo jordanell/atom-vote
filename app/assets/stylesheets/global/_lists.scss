@@ -20,3 +20,7 @@ ul, ol {
     color: $white;
   }
 }
+
+.numbered-list.fade-out {
+  li:last-child { opacity: .3; }
+}

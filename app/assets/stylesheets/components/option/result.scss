@@ -10,17 +10,18 @@
 
   .stat-container {
     text-align: right;
+
     p {
       display: inline-block;
     }
+
     .votes-word {
       margin: 0 5px;
     }
-    .votes-precentage {
-      color: $grey-light;
-      &::before { content: '('; }
-      &::after { content: ')'; }
-    }
+
+    .votes-precentage { color: $grey-light; }
+    .votes-percentage::before { content: '('; }
+    .votes-percentage::after { content: ')'; }
   }
 
   .bar-container {
