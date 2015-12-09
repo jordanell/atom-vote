@@ -17,3 +17,10 @@ h6 {
   font-family: $header-font-family;
   font-weight: 400;
 }
+
+h1 { font-size: $base-font-size * 1.9 }
+h2 { font-size: $base-font-size * 1.625 }
+h3 { font-size: $base-font-size * 1.375 }
+h4 { font-size: $base-font-size * 1.25 }
+h5 { font-size: $base-font-size * 1.125 }
+h6 { font-size: $base-font-size }

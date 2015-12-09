@@ -18,7 +18,8 @@
   .data-value {
     font-weight: 600;
   }
+
   .data-label {
-    color: $grey-light;
+    color: lighten($base-font-color, $default-contrast * 3);
   }
 }

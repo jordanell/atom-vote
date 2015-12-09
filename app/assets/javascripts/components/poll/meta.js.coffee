@@ -26,6 +26,7 @@
 
   drawDonutGraph: ->
     data = [['Option', 'Votes']]
+
     for option in @state.poll.options
       data.push [option.text, option.votes_count]
 

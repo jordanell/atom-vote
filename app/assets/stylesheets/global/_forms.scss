@@ -22,7 +22,7 @@ textarea {
   background-color: $base-background-color-15;
   border-radius: $border-radius;
   border: $form-border-width solid transparent;
-  color: $white-hover;
+  color: $base-font-color;
   font-size: inherit;
   margin-bottom: 8px;
   outline: 0;
@@ -38,11 +38,11 @@ textarea {
 // Input focus
 #{$all-text-inputs-focus},
 textarea {
-  color: $white;
+  color: $base-font-color;
 }
 
 // Input hover
 #{$all-text-inputs-hover},
 textarea {
-  color: $white;
+  color: $base-font-color;
 }

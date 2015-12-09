@@ -19,7 +19,7 @@
       margin: 0 5px;
     }
 
-    .votes-precentage { color: $grey-light; }
+    .votes-precentage { color: lighten($base-font-color, $default-contrast * 3); }
     .votes-percentage::before { content: '('; }
     .votes-percentage::after { content: ')'; }
   }
@@ -36,6 +36,7 @@
 
   .bar-fill {
     background-color: $light-blue;
+    border: 1px solid transparent;
     height: $bar-height;
     width: 60%;
   }

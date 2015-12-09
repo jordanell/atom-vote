@@ -35,7 +35,7 @@ $header-height: 50px;
     }
     &::after {
       line-height: $header-height;
-      color: $white;
+      color: $base-font-color;
       content: "AtomVote";
       display: inline-block;
       font-size: 36px;

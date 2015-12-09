@@ -14,18 +14,22 @@
   getInitialState: ->
     colors: Utils?.getColors()
 
-  getColor: ->
-    # Try to get a color, else default back to our theme blue
+  getBarColor: ->
     @state.colors[@props.index] || '#61DAFB'
+
+  getBarBorderColor: ->
+    # TODO: need to show nothing if votes are  == 0
+    Utils?.darken(@getBarColor()) || 'transparent'
 
   renderBar: ->
     barStyle =
       width:            @getWidth()
-      backgroundColor:  @getColor()
+      backgroundColor:  @getBarColor()
+      borderColor:      @getBarBorderColor()
 
     <div className="bar-container">
       <div className="bar-progress">
-        <div className="bar-fill" style={ barStyle }/>
+        <div className="bar-fill" style={ barStyle } />
       </div>
     </div>
 
