@@ -2,16 +2,14 @@
   @include pad(0 default);
   min-width: 480px;
 
-  form {
-    font-size: 1.25em;
-  }
-
   @include media($small-viewport) {
     @include outer-container;
   }
+
   @include media($medium-viewport) {
     @include outer-container(80%);
   }
+
   @include media($large-viewport) {
     @include outer-container(60%);
   }

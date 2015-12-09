@@ -8,7 +8,7 @@
 
   getInitialState: ->
     poll: @props.poll
-    colors: Utils?.generateColorPalette()
+    colors: Utils?.getColors()
 
   componentDidMount: ->
     google.setOnLoadCallback(@drawDonutGraph)

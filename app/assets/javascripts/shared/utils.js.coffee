@@ -1,5 +1,6 @@
 class Utils
 
+  # These colors should be the same as their respective declaration in _variables.scss
   colors: [
             '#FFCC66',  # yellow
             '#7C7AEE',  # purple
@@ -8,19 +9,8 @@ class Utils
             '#F44336',  # red
           ]
 
-  # Returns an array of attractive random colors
-  #   hue: red, orange, yellow, green, blue, purple, pink or monochrome
-  #   luminosity: bright, light or dark
-  #   count: 1 - N
-  #
-  # for random just leave a param out
-  # e.g. randomColor()
-  generateColorPalette: (luminosity = 'bright', hue = 'green', count = 10) ->
-    randomColor {
-      luminosity: luminosity,
-      hue: hue,
-      count: count
-    }
+  getColors: ->
+    return @colors
 
 initializeUtils = ->
   window.Utils = new Utils $(this)

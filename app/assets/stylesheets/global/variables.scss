@@ -1,5 +1,6 @@
-// colors
 $default-contrast: 10%;
+
+// Colors
 $black: #000;
 $white: #fff;
 $white-hover: darken($white, $default-contrast);
@@ -19,15 +20,12 @@ $purple-hover: darken($purple, $default-contrast);
 $yellow: #fc6;
 $yellow-hover: darken($yellow, $default-contrast);
 
-// background colors
+// Background colors
 $background-color-light: #6b8a99;
-$background-color-medium: #2d2d2d;
+$background-color-medium: #eee;
 $background-color-dark: #263237;
-$base-background-color: $background-color-medium;
-$base-background-color-5: lighten($background-color-medium, 5%);
-$base-background-color-15: lighten($background-color-medium, 15%);
 
-// theme colors
+// Theme colors
 $theme-color-blue: #61dafb;
 $theme-color-blue-10: lighten($theme-color-blue, 10%);
 $theme-color-blue--10: darken($theme-color-blue, 10%);
@@ -35,14 +33,21 @@ $theme-color-blue--25: darken($theme-color-blue, 25%);
 
 $error-red: $red-hover;
 
-// borders
+// Borders
 $border-color-medium: #666;
 $border-color-light: #aaa;
 $border-radius: 0;
 
-// font colors
+// Font colors
 $font-dark: #333;
 $font-medium: #666;
 
-// layout realted variables
+// Layout related variables
 $base-spacing: 1.5rem;
+
+// Base Variables
+$base-background-color: $background-color-medium;
+$base-background-color-5: lighten($background-color-medium, 5%);
+$base-background-color-15: lighten($background-color-medium, 15%);
+
+$base-font-color: $font-dark;

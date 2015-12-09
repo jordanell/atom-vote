@@ -17,9 +17,11 @@ form {
 
 #{$all-text-inputs},
 textarea {
+  $form-border-width: 2px;
+
   background-color: $base-background-color-15;
   border-radius: $border-radius;
-  border: 3px solid transparent;
+  border: $form-border-width solid transparent;
   color: $white-hover;
   font-size: inherit;
   margin-bottom: 8px;
@@ -29,7 +31,7 @@ textarea {
   width: 100%;
 
   &:focus {
-    // border: 3px solid $white;
+    border: $form-border-width solid $white;
   }
 }
 

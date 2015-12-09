@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require pluralize
 //= require moment
-//= require randomColor
 //= require turbolinks
 //= require es5-shim/es5-shim-min
 //= require react

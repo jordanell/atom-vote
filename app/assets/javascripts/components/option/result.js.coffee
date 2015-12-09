@@ -12,7 +12,7 @@
     "#{@props.option.percentage_of_votes}%"
 
   getInitialState: ->
-    colors: Utils?.generateColorPalette()
+    colors: Utils?.getColors()
 
   getColor: ->
     # Try to get a color, else default back to our theme blue
