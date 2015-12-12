@@ -3,33 +3,36 @@ $default-contrast: 10%;
 // Colors
 $black: #000;
 $white: #fff;
-$white-hover: darken($white, $default-contrast);
-$grey-light: #bbb;
 $grey: #999;
-$grey-hover: darken($grey, $default-contrast);
+$grey-light: #bbb;
 $blue: #37474f;
-$blue-hover: darken($blue, $default-contrast);
 $light-blue: #6b8a99;
-$light-blue-hover: darken($light-blue, $default-contrast);
 $red: #f44336;
-$red-hover: darken($red, $default-contrast);
 $green: #66bb6a;
-$green-hover: darken($green, $default-contrast);
 $purple: #7c7aee;
-$purple-hover: darken($purple, $default-contrast);
 $yellow: #fc6;
+
+$white-hover: darken($white, $default-contrast);
+$grey-hover: darken($grey, $default-contrast);
+$blue-hover: darken($blue, $default-contrast);
+$light-blue-hover: darken($light-blue, $default-contrast);
+$red-hover: darken($red, $default-contrast);
+$green-hover: darken($green, $default-contrast);
+$purple-hover: darken($purple, $default-contrast);
 $yellow-hover: darken($yellow, $default-contrast);
+
+$malibu: #61dafb;
 
 // Background colors
 $background-color-light: #6b8a99;
 $background-color-medium: #eee;
-$background-color-dark: #263237;
+$background-color-dark: #262626;
 
 // Theme colors
-$theme-color-blue: #61dafb;
-$theme-color-blue-10: lighten($theme-color-blue, 10%);
-$theme-color-blue--10: darken($theme-color-blue, 10%);
-$theme-color-blue--25: darken($theme-color-blue, 25%);
+$theme-color: $malibu;
+$theme-color-10: lighten($theme-color, 10%);
+$theme-color--10: darken($theme-color, 10%);
+$theme-color--25: darken($theme-color, 25%);
 
 $error-red: $red-hover;
 
@@ -47,8 +50,11 @@ $base-spacing: 1.5rem;
 
 // Base Variables
 $base-background-color: $background-color-medium;
-$base-background-color-5: lighten($background-color-medium, 5%);
-$base-background-color-15: lighten($background-color-medium, 15%);
+$base-background-color-5: lighten($base-background-color, 5%);
+$base-background-color-15: lighten($base-background-color, 15%);
 
 $base-font-size: 1em;
 $base-font-color: $font-dark;
+
+$serif-font-family: Roboto, sans-serif;
+$sans-serif-font-family: Open Sans, Arial, Helvetica, sans-serif;

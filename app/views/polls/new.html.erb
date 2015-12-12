@@ -1,22 +1,17 @@
-<div class="poll-form-wrapper">
-  <%= simple_form_for(@poll) do |f| %>
-    <!-- Render all the errors if needed -->
-    <%= render partial: 'shared/form_errors', locals: { object: @poll } %>
+<%= render partial: 'shared/form_errors', locals: { object: @poll } %>
 
-    <!-- Render the question input -->
-    <h3>Question</h3>
-    <%= f.input :question, label: false, placeholder: 'Want to type your question here?', autofocus: true %>
+<%= simple_form_for(@poll) do |f| %>
+  <%= f.input :question, label: false, placeholder: 'Want to type your question here?', autofocus: true %>
 
-    <!-- Render all the options -->
-    <h3>Answers</h3>
-    <ol id="js-add-option" class="numbered-list">
-      <% @poll.options.each_with_index do |option, index| %>
-        <%= f.simple_fields_for :options, option do |o| %>
-          <li><%= o.input :text, label: false, placeholder: 'Enter poll option' %></li>
-        <% end %>
+  <ol id="js-add-option" class="numbered-list">
+    <% @poll.options.each_with_index do |option, index| %>
+      <%= f.simple_fields_for :options, option do |o| %>
+        <li><%= o.input :text, label: false, placeholder: 'Enter poll option' %></li>
       <% end %>
-    </ol>
+    <% end %>
+  </ol>
 
-    <div class="form-button"><%= f.button :submit %></div>
-  <% end %>
-</div>
+  <div class="button-group">
+    <%= f.button :submit %>
+  </div>
+<% end %>

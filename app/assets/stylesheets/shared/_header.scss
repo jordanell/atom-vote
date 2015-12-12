@@ -1,26 +1,19 @@
-//
-// Header
-//
-
-$header-height: 50px;
-
 .header {
-  background-color: inherit;
-  padding: 25px 10px;
-  margin-bottom: $base-spacing;
+  @include outer-container;
+  padding: 2em $base-spacing;
+  margin-bottom: $base-spacing * 2;
 }
 
-//
-// Main logo and title
-//
-.title {
+.header-title {
+  $title-height: 50px;
+
   text-decoration: none;
-  font-family: $header-font-family;
+  font-family: $serif-font-family;
   font-weight: 300;
 
   img {
     float: left;
-    max-height: $header-height;
+    max-height: $title-height;
   }
 
   @include media($small-viewport) {
@@ -34,35 +27,47 @@ $header-height: 50px;
       margin-right: .5em;
     }
     &::after {
-      line-height: $header-height;
+      line-height: $title-height;
       color: $base-font-color;
       content: "AtomVote";
       display: inline-block;
       font-size: 36px;
-      height: $header-height;
+      height: $title-height;
     }
   }
 }
 
-//
-// New Poll Button
-//
 .new-poll-btn {
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px 0;
   font-size: .8125em;
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: $theme-color;
+  border: 1px solid shade($theme-color, 20);
+  color: $white;
+
+  &:hover {
+    opacity: .7;
+  }
 
   @include media($small-viewport) {
     &::after {
       display: none;
     }
   }
+
   @include media($medium-viewport-up) {
     i {
       margin-right: .3125em;
     }
+
     &::after {
       content: 'New Poll';
       display: inline-block;
-      line-height: $header-height;
     }
   }
 }

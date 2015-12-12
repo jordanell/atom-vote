@@ -1,29 +1,24 @@
-<!-- Render the poll voting options -->
-<div class="poll-show-wrapper">
-  <%= simple_form_for(@vote) do |f| %>
-    <!-- Render all the errors if needed -->
-    <%= render partial: 'shared/form_errors', locals: { object: @vote } %>
+<%= render partial: 'shared/form_errors', locals: { object: @vote } %>
 
-    <!-- Render the question -->
-    <h2 class="poll-show-question"><%= @poll.question %></h2>
-
-    <!-- Render all voting options -->
-    <ul>
-      <% @poll.options.each do |option| %>
-        <li>
-          <%= f.hidden_field(:poll_id, value: @poll.id) %>
-          <%= f.radio_button :option_id, option.id %>
-          <label class="vote-option-text" for="vote_option_id_<%= option.id %>">
-            <%= option.text %>
-          </label>
-        </li>
-      <% end %>
-    </ol>
-
+<%= simple_form_for(@vote) do |f| %>
+  <h1 class="poll-show-question">
+    <%= @poll.question %>
+  </h1>
+  <ul>
+    <% @poll.options.each do |option| %>
+      <li>
+        <%= f.hidden_field(:poll_id, value: @poll.id) %>
+        <%= f.radio_button :option_id, option.id %>
+        <label class="vote-option-text" for="vote_option_id_<%= option.id %>">
+          <%= option.text %>
+        </label>
+      </li>
+    <% end %>
+  </ul>
+  <div class="button-group">
     <%= f.button :submit, 'Vote' %>
-  <% end %>
+    <%= button_to "View Results", results_poll_path(@poll.uuid), { class: 'go-to-results', method: 'get' } %>
+  </div>
+<% end %>
 
-  <%= button_to "Go To Results", results_poll_path(@poll.uuid), { class: 'go-to-results', method: 'get' } %>
-</div>
-<!-- Render the sharing options -->
 <%= render partial: 'polls/share' %>

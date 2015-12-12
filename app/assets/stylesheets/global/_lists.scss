@@ -13,14 +13,16 @@ ul, ol {
   li {
     counter-increment: step-counter;
   }
+
   li::before {
     content: counter(step-counter);
     margin-right: 5px;
     padding: 3px 8px;
     color: lighten($base-font-color, $default-contrast * 3);
   }
+
+  &.fade-out {
+    li:last-child { opacity: .3; }
+  }
 }
 
-.numbered-list.fade-out {
-  li:last-child { opacity: .3; }
-}

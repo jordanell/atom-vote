@@ -1,9 +1,4 @@
-.poll-show-wrapper {
-  @include outer-container;
-  @include pad(0 default);
-}
-
 .poll-show-question {
   font-size: 1.75em;
-  margin-bottom: 2.5rem;
+  margin-bottom: $base-spacing;
 }

@@ -1,26 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,200italic,200);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,300italic);
 
-$header-font-family: Roboto, sans-serif;
-$body-font-family: Open Sans, Arial, Helvetica, sans-serif;
-
-body {
-  font-family: $body-font-family;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font-family;
+  font-family: $serif-font-family;
   font-weight: 400;
 }
 
-h1 { font-size: $base-font-size * 1.9 }
-h2 { font-size: $base-font-size * 1.625 }
-h3 { font-size: $base-font-size * 1.375 }
-h4 { font-size: $base-font-size * 1.25 }
-h5 { font-size: $base-font-size * 1.125 }
-h6 { font-size: $base-font-size }
+h1 { font-size: $base-font-size * 1.9; }
+h2 { font-size: $base-font-size * 1.625; }
+h3 { font-size: $base-font-size * 1.375; }
+h4 { font-size: $base-font-size * 1.25; }
+h5 { font-size: $base-font-size * 1.125; }
+h6 { font-size: $base-font-size; }

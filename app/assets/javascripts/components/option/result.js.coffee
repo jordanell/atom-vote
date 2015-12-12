@@ -17,15 +17,10 @@
   getBarColor: ->
     @state.colors[@props.index] || '#61DAFB'
 
-  getBarBorderColor: ->
-    # TODO: need to show nothing if votes are  == 0
-    Utils?.darken(@getBarColor()) || 'transparent'
-
   renderBar: ->
     barStyle =
       width:            @getWidth()
       backgroundColor:  @getBarColor()
-      borderColor:      @getBarBorderColor()
 
     <div className="bar-container">
       <div className="bar-progress">
@@ -34,7 +29,7 @@
     </div>
 
   render: ->
-    <section className="option-result">
+    <section className="option-result" data-num-votes={ @props.option.votes_count }>
       <h6 className="option-label">{ @props.option.text }</h6>
       <div className="option-stats">
         { @renderBar() }

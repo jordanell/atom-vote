@@ -1,13 +1,13 @@
 // Put all your shameful hacks in here until so they don't get lost
 // *da-ding-ding* *da-ding-ding* SHAME *da-ding-ding*
 
-// Buttons (expand to other types)
-input[type=submit], button {
+input[type=submit],
+button {
   @include appearance(none);
   outline: 0;
 
   @include transition(all .375s ease-in-out);
-  background-color: $theme-color-blue;
+  background-color: $theme-color;
   border-radius: $border-radius;
   border: 1px solid transparent;
   color: $white;
@@ -17,7 +17,7 @@ input[type=submit], button {
   padding: .5em $base-spacing;
 
   &:hover {
-    background-color: $theme-color-blue--10;
+    background-color: $theme-color--10;
     border: 1px solid transparent;
   }
 
@@ -33,4 +33,14 @@ input[type=submit], button {
 
 .field_with_errors input {
   border: 2px solid $error-red;
+}
+
+hr {
+  margin-bottom: $base-spacing * 2;
+  margin-top: $base-spacing;
+  width: 600px;
+}
+
+.button-group {
+  display: block;
 }

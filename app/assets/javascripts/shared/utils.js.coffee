@@ -12,10 +12,6 @@ class Utils
   getColors: ->
     return @colors
 
- # TODO: this should be equivalent to darken(barColor, default-contrast (10%))
-  darken: (color, offset = 10) ->
-    return "black"
-
 initializeUtils = ->
   window.Utils = new Utils $(this)
 

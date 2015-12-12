@@ -1,14 +1,27 @@
 .page-wrapper {
   @include outer-container;
-  background-color: $white-hover;
+  background-color: #fefefe;
   border-radius: $border-radius;
   margin-bottom: 20px;
-  padding: 20px 75px;
+  padding: 56px 75px;
 }
 
 .page-content {
   color: $font-dark;
   line-height: 1.55;
+  padding-right: 80px;
+
+  strong {
+    font-weight: 800;
+  }
+
+  h1 {
+    border-bottom: 4px solid $theme-color;
+    padding-bottom: .625em;
+    margin-bottom: 1em;
+    display: inline-block;
+    text-transform: uppercase;
+  }
 
   p {
     margin-bottom: $base-spacing;

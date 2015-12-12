@@ -12,13 +12,3 @@ $large-viewport: new-breakpoint(min-width em($large-breakpoint + 1));
 
 $medium-viewport-up: new-breakpoint(min-width em($medium-breakpoint));
 $large-viewport-up: new-breakpoint(min-width em($large-breakpoint));
-
-.left { float: left; }
-
-.right { float: right; }
-
-.right-align { text-align: right; }
-
-.--full-width-wrapper > * {
-  @include outer-container;
-}

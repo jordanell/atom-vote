@@ -1,4 +1,11 @@
 form {
+  margin-bottom: $base-spacing * 2;
+
+  ol,
+  ul {
+    margin-bottom: $base-spacing * 2;
+  }
+
   h3 {
     margin-bottom: $base-spacing / 2;
     text-transform: uppercase;
@@ -17,11 +24,12 @@ form {
 
 #{$all-text-inputs},
 textarea {
-  $form-border-width: 2px;
+  $form-border-width: 1px;
 
   background-color: $base-background-color-15;
   border-radius: $border-radius;
-  border: $form-border-width solid transparent;
+  border: $form-border-width solid shade($white-hover, 10);
+
   color: $base-font-color;
   font-size: inherit;
   margin-bottom: 8px;
@@ -31,7 +39,7 @@ textarea {
   width: 100%;
 
   &:focus {
-    border: $form-border-width solid $white;
+    border: $form-border-width solid $black;
   }
 }
 
@@ -46,3 +54,4 @@ textarea {
 textarea {
   color: $base-font-color;
 }
+

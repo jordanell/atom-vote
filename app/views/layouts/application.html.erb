@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <%= favicon_link_tag 'favicon.png' %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <head>
+    <%= favicon_link_tag 'favicon.png' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 
-  <!-- Display the SEO meta tags -->
-  <%= display_meta_tags %>
+    <!-- Display the SEO meta tags -->
+    <%= display_meta_tags %>
 
-  <!-- Google charts -->
-  <%= javascript_include_tag "https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}" %>
-</head>
-<body>
-
-  <%-# Render the header -%>
-  <%= render partial: 'shared/header' %>
-
-  <%-# Yield to the body content -%>
-  <%= yield %>
-
-  <%-# Render the footer -%>
-  <%= render partial: 'shared/footer' %>
-
-</body>
+    <!-- Google charts -->
+    <%= javascript_include_tag "https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}" %>
+  </head>
+  <body>
+    <%= render partial: 'shared/header' %>
+    <div class="content">
+      <%= yield %>
+    </div>
+    <%= render partial: 'shared/footer' %>
+  </body>
 </html>

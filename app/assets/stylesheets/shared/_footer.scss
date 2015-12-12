@@ -1,23 +1,32 @@
 .footer {
-  padding: 25px 10px;
+  padding: $base-spacing * 2 $base-spacing;
+  background-color: $background-color-dark;
 
-  .icon {
-    display: block;
-    margin: auto;
-    height: 40px;
-    width: 40px;
-
-    img {
-      max-width: 100%;
-    }
+  > div {
+    @include outer-container;
   }
 }
 
-.links {
+.footer-icon {
+  display: block;
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  margin-bottom: 2em;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.footer-links {
   text-align: center;
   list-style: none;
   padding-left: 0;
-  margin-bottom: 25px;
+
+  a {
+    color: $white;
+  }
 
   li {
     display: inline-block;

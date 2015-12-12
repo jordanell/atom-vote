@@ -1,44 +1,47 @@
 .option-result {
-  $bar-height: 25px;
   margin-bottom: $base-spacing;
 
-  .option-label {
-    font-size: 1.125em;
-    font-style: italic;
-    margin-bottom: $base-spacing / 2;
+  &[data-num-votes="0"] {
+    opacity: .5;
+  }
+}
+
+.option-label {
+  font-size: 1.125em;
+  font-style: italic;
+  margin-bottom: $base-spacing / 2;
+}
+
+.stat-container {
+  text-align: right;
+
+  p {
+    display: inline-block;
   }
 
-  .stat-container {
-    text-align: right;
-
-    p {
-      display: inline-block;
-    }
-
-    .votes-word {
-      margin: 0 5px;
-    }
-
-    .votes-precentage { color: lighten($base-font-color, $default-contrast * 3); }
-    .votes-percentage::before { content: '('; }
-    .votes-percentage::after { content: ')'; }
+  .votes-word {
+    margin: 0 5px;
   }
 
-  .bar-container {
-    margin-bottom: $base-spacing / 2;
-  }
+  .votes-precentage { color: lighten($base-font-color, $default-contrast * 3); }
+  .votes-percentage::before { content: '('; }
+  .votes-percentage::after { content: ')'; }
+}
 
-  .bar-progress {
-    @include linear-gradient(to left, $base-background-color-15, $base-background-color-5);
-    border-radius: $border-radius;
-    overflow: hidden;
-  }
+.bar-container {
+  margin-bottom: $base-spacing / 2;
+}
 
-  .bar-fill {
-    background-color: $light-blue;
-    border: 1px solid transparent;
-    height: $bar-height;
-    width: 60%;
-  }
+.bar-progress {
+  @include linear-gradient(to left, $base-background-color-15, $base-background-color-5);
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.bar-fill {
+  background-color: $light-blue;
+  border: 1px solid rgba(0,0,0,0.2);
+  height: 25px;
+  width: 60%;
 }
 

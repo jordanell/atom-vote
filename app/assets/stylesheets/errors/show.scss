@@ -17,8 +17,8 @@ input + .error {
 }
 
 .errors-wrapper {
-  background-color: $black;
-  border: 3px solid $error-red;
+  background-color: tint($error-red, 75);
+  border: 1px solid $error-red;
   border-radius: $border-radius;
   margin-bottom: $base-spacing * 2;
   padding: 15px 25px;

@@ -1,20 +1,3 @@
-.poll-form-wrapper {
-  @include pad(0 default);
-  min-width: 480px;
-
-  @include media($small-viewport) {
-    @include outer-container;
-  }
-
-  @include media($medium-viewport) {
-    @include outer-container(80%);
-  }
-
-  @include media($large-viewport) {
-    @include outer-container(60%);
-  }
-}
-
 .poll_question {
   margin-bottom: $base-spacing * 2;
 }
