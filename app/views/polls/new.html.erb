@@ -1,9 +1,11 @@
 <%= render partial: 'shared/form_errors', locals: { object: @poll } %>
 
 <%= simple_form_for(@poll) do |f| %>
-  <%= f.input :question, label: false, placeholder: 'Want to type your question here?', autofocus: true %>
+  <div class="question-input-wrapper">
+    <%= f.input :question, label: false, placeholder: 'Type your question here', autofocus: true %>
+  </div>
 
-  <ol id="js-add-option" class="numbered-list">
+  <ol id="js-add-option" class="options-list">
     <% @poll.options.each_with_index do |option, index| %>
       <%= f.simple_fields_for :options, option do |o| %>
         <li><%= o.input :text, label: false, placeholder: 'Enter poll option' %></li>

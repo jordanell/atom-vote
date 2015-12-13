@@ -3,14 +3,19 @@
 @import 'radios';
 @import 'layout';
 @import 'links';
-
 @import 'forms';
 @import 'lists';
 @import 'grid-settings';
 
+html,
+body {
+  min-height: 100%;
+}
+
 body {
   background-color: $base-background-color;
   color: $base-font-color;
+  line-height: $base-line-height;
   font-family: $sans-serif-font-family;
   margin: 0;
   padding: 0;

@@ -26,10 +26,5 @@ input + .error {
   h5 {
     margin: 0;
     text-transform: uppercase;
-
-    &::before {
-      content: '!';
-      padding: $base-spacing / 2;
-    }
   }
 }

@@ -26,6 +26,7 @@ form {
 textarea {
   $form-border-width: 1px;
 
+  @include transition(background .375s ease-in-out);
   background-color: $base-background-color-15;
   border-radius: $border-radius;
   border: $form-border-width solid shade($white-hover, 10);
@@ -34,12 +35,11 @@ textarea {
   font-size: inherit;
   margin-bottom: 8px;
   outline: 0;
-  padding: .5rem 1rem;
-  transition: background .25s;
+  padding: .5em 1em;
   width: 100%;
 
   &:focus {
-    border: $form-border-width solid $black;
+    border: $form-border-width solid $background-color-dark;
   }
 }
 
@@ -54,4 +54,3 @@ textarea {
 textarea {
   color: $base-font-color;
 }
-

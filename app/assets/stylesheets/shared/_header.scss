@@ -14,26 +14,15 @@
   img {
     float: left;
     max-height: $title-height;
+    margin-right: .5em;
   }
-
-  @include media($small-viewport) {
-    &::after {
-      display: none;
-    }
-  }
-
-  @include media($medium-viewport-up) {
-    img {
-      margin-right: .5em;
-    }
-    &::after {
-      line-height: $title-height;
-      color: $base-font-color;
-      content: "AtomVote";
-      display: inline-block;
-      font-size: 36px;
-      height: $title-height;
-    }
+  &::after {
+    line-height: $title-height;
+    color: $base-font-color;
+    content: "AtomVote";
+    display: inline-block;
+    font-size: 36px;
+    height: $title-height;
   }
 }
 
@@ -49,25 +38,9 @@
   background-color: $theme-color;
   border: 1px solid shade($theme-color, 20);
   color: $white;
+  border-radius: 50%;
 
   &:hover {
     opacity: .7;
-  }
-
-  @include media($small-viewport) {
-    &::after {
-      display: none;
-    }
-  }
-
-  @include media($medium-viewport-up) {
-    i {
-      margin-right: .3125em;
-    }
-
-    &::after {
-      content: 'New Poll';
-      display: inline-block;
-    }
   }
 }

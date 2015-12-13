@@ -7,32 +7,21 @@ button {
   outline: 0;
 
   @include transition(all .375s ease-in-out);
-  background-color: $theme-color;
-  border-radius: $border-radius;
-  border: 1px solid transparent;
-  color: $white;
-  cursor: pointer;
+  text-transform: uppercase;
   font-weight: 600;
-  text-decoration: none;
-  padding: .5em $base-spacing;
+  background-color: $theme-color;
+  border: 1px solid shade($theme-color, 20);
+  color: $white;
+  padding: .5em 1em;
+  cursor: pointer;
 
   &:hover {
-    background-color: $theme-color--10;
-    border: 1px solid transparent;
-  }
-
-  @include media($small-viewport) {
-    padding: $base-spacing;
-    display: block;
-    width: 100%;
-    font-size: 24px;
-  }
-  @include media($medium-viewport-up) {
+    opacity: .7;
   }
 }
 
 .field_with_errors input {
-  border: 2px solid $error-red;
+  border: 1px solid $error-red;
 }
 
 hr {
@@ -43,4 +32,10 @@ hr {
 
 .button-group {
   display: block;
+}
+
+.new_vote {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
