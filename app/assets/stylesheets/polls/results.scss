@@ -1,6 +1,5 @@
 .poll-results-wrapper {
   @include outer-container;
-  @include pad(0 default);
   margin-bottom: $base-spacing * 2;
 
   .result-question {

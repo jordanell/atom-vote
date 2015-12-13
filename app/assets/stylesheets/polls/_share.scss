@@ -1,18 +1,15 @@
 .poll-share-wrapper {
-  @include outer-container;
   text-align: center;
-  margin-bottom: 2.5rem;
 
-  h3 {
-    margin-bottom: $base-spacing / 2;
+  h6 {
+    margin-bottom: 6px;
+    color: $black;
+    text-transform: uppercase;
   }
 
-  input {
-    border-radius: $border-radius;
-    text-align: inherit;
-
-    @include media($small-viewport) {}
-    @include media($medium-viewport) {}
-    @include media($large-viewport) {}
+  .share-url {
+    background-color: $white;
+    display: inline-block;
+    padding: .5em 1em;
   }
 }

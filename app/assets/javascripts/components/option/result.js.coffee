@@ -39,7 +39,7 @@
             <span className="votes-word">{ pluralize('vote', @props.option.votes_count) }</span>
           </p>
           <p id="option_#{@props.option.id}_percentage" className="option-percentage">
-            <span className="votes-precentage">{ @props.option.percentage_of_votes }%</span>
+            <span className="votes-precentage">({ @props.option.percentage_of_votes }%)</span>
           </p>
         </div>
       </div>

@@ -12,6 +12,16 @@ class Utils
   getColors: ->
     return @colors
 
+  selectText: (container) ->
+    if document.selection
+      range = document.body.createTextRange()
+      range.moveToElementText document.getElementById(container.id)
+      range.select()
+    else if window.getSelection
+      range = document.createRange()
+      range.selectNode document.getElementById(container.id)
+      window.getSelection().addRange range
+
 initializeUtils = ->
   window.Utils = new Utils $(this)
 

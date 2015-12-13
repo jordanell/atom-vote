@@ -25,7 +25,13 @@
   padding-left: 0;
 
   a {
+    @include transition(background .375s ease-in-out);
     color: $white;
+    font-size: .8125em;
+
+    &:hover {
+      color: darken($white, $default-contrast);
+    }
   }
 
   li {

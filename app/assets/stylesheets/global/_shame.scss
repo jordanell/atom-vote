@@ -4,35 +4,30 @@
 input[type=submit],
 button {
   @include appearance(none);
-  outline: 0;
-
-  @include transition(all .375s ease-in-out);
   background-color: $theme-color;
-  border-radius: $border-radius;
-  border: 1px solid transparent;
+  border-radius: 2em;
+  border: 0;
   color: $white;
   cursor: pointer;
-  font-weight: 600;
-  text-decoration: none;
-  padding: .5em $base-spacing;
+  font-size: 1em;
+  font-weight: 500;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  padding: 0 28px;
+  text-transform: uppercase;
 
   &:hover {
-    background-color: $theme-color--10;
-    border: 1px solid transparent;
+    opacity: .7;
   }
 
-  @include media($small-viewport) {
-    padding: $base-spacing;
-    display: block;
-    width: 100%;
-    font-size: 24px;
-  }
-  @include media($medium-viewport-up) {
+  i {
+    margin-right: 8px;
   }
 }
 
 .field_with_errors input {
-  border: 2px solid $error-red;
+  border: 1px solid $error-red;
 }
 
 hr {
@@ -41,6 +36,8 @@ hr {
   width: 600px;
 }
 
-.button-group {
-  display: block;
+.new_vote {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }

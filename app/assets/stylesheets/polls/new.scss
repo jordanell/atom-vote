@@ -1,7 +1,17 @@
-.poll_question {
-  margin-bottom: $base-spacing * 2;
-}
+.question-input-wrapper {
+  margin-bottom: $base-spacing;
 
-.poll_options_text {
-  display: inline-block;
+  &::before {
+    content: counter(step-counter);
+    padding: 1em;
+    color: $black;
+    position: absolute;
+    line-height: 1;
+    content: 'Q';
+    font-weight: 600;
+  }
+
+  input {
+    padding-left: 2.55em;
+  }
 }

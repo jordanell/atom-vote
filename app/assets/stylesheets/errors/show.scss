@@ -18,18 +18,11 @@ input + .error {
 
 .errors-wrapper {
   background-color: tint($error-red, 75);
-  border: 1px solid $error-red;
   border-radius: $border-radius;
   margin-bottom: $base-spacing * 2;
   padding: 15px 25px;
 
   h5 {
     margin: 0;
-    text-transform: uppercase;
-
-    &::before {
-      content: '!';
-      padding: $base-spacing / 2;
-    }
   }
 }
