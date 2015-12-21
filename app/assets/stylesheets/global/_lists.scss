@@ -23,7 +23,7 @@ ul, ol {
 }
 
 .options-list {
-  margin-bottom: $base-spacing * 2;
+  margin-bottom: $base-spacing;
 
   li {
     counter-increment: step-counter;
@@ -31,7 +31,7 @@ ul, ol {
 
   li::before {
     content: counter(step-counter);
-    padding: .6em 1em;
+    padding: 1em;
     color: $black;
     position: absolute;
     line-height: 1;

@@ -3,7 +3,7 @@
 
   &::before {
     content: counter(step-counter);
-    padding: .6em 1em;
+    padding: 1em;
     color: $black;
     position: absolute;
     line-height: 1;
