@@ -31,7 +31,7 @@ ul, ol {
 
   li::before {
     content: counter(step-counter);
-    padding: 1em;
+    padding: .875em;
     color: $black;
     position: absolute;
     line-height: 1;

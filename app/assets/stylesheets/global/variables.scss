@@ -24,7 +24,7 @@ $yellow-hover: darken($yellow, $default-contrast);
 $malibu: #61dafb;
 
 // Background colors
-$background-color-light: #6b8a99;
+$background-color-light: #8b8b8b;
 $background-color-medium: #eee;
 $background-color-dark: #262626;
 
@@ -36,9 +36,6 @@ $theme-color--25: darken($theme-color, 25%);
 
 $error-red: $red-hover;
 
-// Borders
-$border-color-medium: #666;
-$border-color-light: #aaa;
 $border-radius: 0;
 
 // Font colors
@@ -56,6 +53,3 @@ $base-background-color-15: lighten($base-background-color, 15%);
 
 $base-font-size: 1em;
 $base-font-color: $font-dark;
-
-$serif-font-family: Roboto, sans-serif;
-$sans-serif-font-family: Open Sans, Arial, Helvetica, sans-serif;

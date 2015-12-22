@@ -2,47 +2,46 @@ input[type="radio"] {
   display: none;
 
   & + label {
-    @include transition(all .375s ease-in-out);
     cursor: pointer;
-    display: inline-block;
-    padding-left: $base-spacing;
+    display: block;
     position: relative;
+    color: $font-medium;
 
-    &::before, &::after {
-      @include transition(all .375s ease-in-out);
-      border-radius: 50%;
-      color: $grey-light;
-      content: '';
-      height: 1em;
-      left: 0;
-      position: absolute;
-      text-align: center;
-      top: 0;
-      width: 1em;
+    &::before {
+      margin-right: 8px;
+      font-size: 1.5em;
+      font-family: FontAwesome;
+      vertical-align: middle;
+      font-weight: initial;
     }
   }
 
-  // Hover radio button styles
   & + label {
-    &::before {
-      box-shadow:
-        inset 0 0 0 0.125em $white,
-        inset 0 0 0 1em $grey-light;
-    }
+    color: $background-color-light;
 
-    &:hover::before {
-      box-shadow:
-        inset 0 0 0 0.25em $white-hover,
-        inset 0 0 0 1em $theme-color--25;
+    &::before {
+      content: '\f10c';
+    }
+  }
+
+  & + label:hover {
+    color: darken($background-color-light, 20);
+    font-weight: 600;
+
+    &::before {
+      content: '\f05d';
     }
   }
 
   // Checked radio button styles
   &:checked + label {
+    color: $font-dark;
+    font-weight: 600;
+    pointer-events: none;
+
     &::before {
-      box-shadow:
-        inset 0 0 0 0 $white,
-        inset 0 0 0 1em $theme-color;
+      color: $theme-color;
+      content: '\f058';
     }
   }
 }

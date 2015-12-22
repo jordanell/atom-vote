@@ -1,19 +1,10 @@
 .poll-meta {
-  @include pad;
-  background-color: $base-background-color-5;
-  border-radius: $border-radius;
-
-  @include media($small-viewport) {
-    @include fill-parent;
-  }
-  @include media($medium-viewport-up) {
-    @include span-columns(4);
-  }
+  width: 30%;
 }
 
-.stats-list {
+.poll-stat {
   text-align: center;
-  text-transform: uppercase;
+  margin-bottom: .625em;
 
   .data-value {
     font-weight: 600;
@@ -21,5 +12,6 @@
 
   .data-label {
     color: lighten($base-font-color, $default-contrast * 3);
+    text-transform: uppercase;
   }
 }

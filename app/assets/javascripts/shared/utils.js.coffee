@@ -5,8 +5,8 @@ class Utils
             '#FFCC66',  # yellow
             '#7C7AEE',  # purple
             '#61DAFB',  # theme blue
-            '#66BB6A',  # green
-            '#F44336',  # red
+            '#C7F464',  # green
+            '#FF6B6B',  # red
           ]
 
   getColors: ->

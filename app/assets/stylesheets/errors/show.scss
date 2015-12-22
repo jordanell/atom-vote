@@ -4,22 +4,18 @@ input + .error {
 }
 
 .error-wrapper {
-  @include outer-container;
   text-align: center;
   background-color: $white-hover;
   margin-top: 20px;
   padding: 20px 75px;
   border-radius: $border-radius;
-
-  @include media($small-viewport) {
-    padding: 20px;
-  }
 }
 
 .errors-wrapper {
-  background-color: tint($error-red, 75);
+  background-color: lighten($error-red, 37);
   border-radius: $border-radius;
-  margin-bottom: $base-spacing * 2;
+  border: 1px solid $error-red;
+  margin-bottom: $base-spacing;
   padding: 15px 25px;
 
   h5 {

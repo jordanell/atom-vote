@@ -27,13 +27,20 @@
 
   renderOptions: ->
     for option, index in @state.poll.options
-      <OptionResult key={ option.id } poll={ @state.poll } option={ option } index={ index } />
+      <OptionResult
+        key={ option.id }
+        poll={ @state.poll }
+        option={ option }
+        index={ index }
+      />
 
   render: ->
-    <div>
-      <h2 className="result-question">{ @state.poll.question }</h2>
-      <section className="poll-result">
-        { @renderOptions() }
-      </section>
-      <PollMeta poll={ @state.poll } />
+    <div className="poll-results-content">
+      <h2 className="poll-result-question">{ @state.poll.question }</h2>
+      <div className="poll-result-data">
+        <div className="poll-result">
+          { @renderOptions() }
+        </div>
+        <PollMeta poll={ @state.poll } />
+      </div>
     </div>

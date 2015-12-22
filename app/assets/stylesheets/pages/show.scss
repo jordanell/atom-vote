@@ -1,12 +1,10 @@
 .page-wrapper {
-  @include outer-container;
-  background-color: #fefefe;
-  border-radius: $border-radius;
-  margin-bottom: 20px;
-  padding: 56px 75px;
+  margin-bottom: $base-spacing;
 }
 
 .page-content {
+  padding: 56px 75px;
+  background-color: $white;
   color: $font-dark;
   line-height: 1.55;
   padding-right: 80px;
