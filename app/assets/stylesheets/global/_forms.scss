@@ -1,6 +1,4 @@
 form {
-  margin-bottom: $base-spacing * 2;
-
   ol,
   ul {
     margin-bottom: $base-spacing * 2;
@@ -24,8 +22,6 @@ form {
 
 #{$all-text-inputs},
 textarea {
-  $form-border-width: 1px;
-
   @include transition(background .375s ease-in-out);
   background-color: $base-background-color-15;
   border-radius: $border-radius;
@@ -36,20 +32,22 @@ textarea {
   outline: 0;
   padding: .75em 1em;
   width: 100%;
-
-  &:focus {
-    border: $form-border-width solid $background-color-dark;
-  }
 }
 
 // Input focus
 #{$all-text-inputs-focus},
 textarea {
   color: $base-font-color;
+
+  &,
+  &:hover {
+    border: 1px solid $background-color-dark;
+  }
 }
 
 // Input hover
 #{$all-text-inputs-hover},
 textarea {
+  border: 1px solid $grey;
   color: $base-font-color;
 }

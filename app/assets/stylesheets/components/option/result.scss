@@ -35,7 +35,7 @@
 }
 
 .bar-progress {
-  @include linear-gradient(to left, $base-background-color-15, $base-background-color-5);
+  background-color: $white;
   border-radius: $border-radius;
   overflow: hidden;
 }

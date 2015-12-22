@@ -1,15 +1,42 @@
 .poll-share-wrapper {
+  padding: $base-spacing * 2 0;
   text-align: center;
+  background-color: $theme-color;
+  position: relative; // Establish a positioning context for svg
+}
 
-  h6 {
-    margin-bottom: 6px;
-    color: $black;
-    text-transform: uppercase;
+.poll-share-content {
+  @include display(flex);
+  @include align-items(center);
+  @include flex-direction(column);
+}
+
+.poll-share-title {
+  color: $white;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.poll-share-url {
+  overflow: auto;
+  margin-bottom: .625em;
+  background-color: $white;
+
+  i {
+    padding: .625em;
+    font-size: 20px;
+    background-color: $theme-color-10;
   }
 
-  .share-url {
-    background-color: $white;
+  p {
     display: inline-block;
-    padding: .5em 1em;
+    padding: .5em 1em .5em .5em;
   }
+}
+
+.poll-share-hint {
+  font-size: .8125em;
+  font-weight: 600;
 }

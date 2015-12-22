@@ -1,7 +1,12 @@
-.header {
-  @include outer-container(900px);
-  padding: 32px 14px;
-  margin-bottom: $base-spacing * 2;
+.header-wrapper {
+  padding-top: $base-spacing * 2;
+  padding-bottom: $base-spacing;
+  margin-bottom: $base-spacing;
+}
+
+.header-content {
+  @include display(flex);
+  @include justify-content(space-between);
 }
 
 .header-title {
@@ -26,7 +31,7 @@
   }
 }
 
-.new-poll-btn {
+.new-poll-button {
   float: right;
   height: 40px;
   line-height: 40px;

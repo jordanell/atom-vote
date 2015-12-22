@@ -1,18 +1,42 @@
-.footer {
-  padding: $base-spacing * 2 $base-spacing;
+.footer-wrapper {
   background-color: $background-color-dark;
+  padding-bottom: $base-spacing;
+  padding-top: $base-spacing * 3;
+}
 
-  > div {
-    @include outer-container;
+.footer-content {
+  @include display(flex);
+  @include align-items(flex-end);
+  @include justify-content(space-between);
+  margin-bottom: $base-spacing;
+}
+
+.footer-title {
+  $title-height: 50px;
+
+  text-decoration: none;
+  font-family: $serif-font-family;
+  font-weight: 300;
+
+  img {
+    float: left;
+    max-height: $title-height;
+    margin-right: .5em;
+  }
+
+  p {
+    line-height: $title-height;
+    color: $white;
+    display: inline-block;
+    font-size: 36px;
+    height: $title-height;
   }
 }
 
 .footer-icon {
-  display: block;
-  margin: auto;
   height: 40px;
   width: 40px;
-  margin-bottom: 2em;
+  margin-right: 16px;
 
   img {
     max-width: 100%;
@@ -25,7 +49,6 @@
   padding-left: 0;
 
   a {
-    @include transition(background .375s ease-in-out);
     color: $white;
     font-size: .8125em;
 

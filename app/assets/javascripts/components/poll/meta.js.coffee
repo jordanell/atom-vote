@@ -51,7 +51,7 @@
   render: ->
     <section className="poll-meta">
       <div id="poll-donut-chart" />
-      <ul className="stats-list">
+      <ul className="poll-stats-list">
         <li>
           <span id="data-total" className="data-value">{ @state.poll.votes_count }</span>
           <p className="data-label">Total Votes</p>
