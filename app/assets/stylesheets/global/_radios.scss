@@ -4,21 +4,20 @@ input[type="radio"] {
   & + label {
     cursor: pointer;
     display: block;
-    padding-left: 2em;
     position: relative;
     color: $font-medium;
 
     &::before {
-      margin: 4px;
+      margin-right: 8px;
       font-size: 1.5em;
       font-family: FontAwesome;
       vertical-align: middle;
+      font-weight: initial;
     }
   }
 
-
   & + label {
-    color: $font-medium;
+    color: $background-color-light;
 
     &::before {
       content: '\f10c';
@@ -26,7 +25,8 @@ input[type="radio"] {
   }
 
   & + label:hover {
-    color: $font-dark;
+    color: darken($background-color-light, 20);
+    font-weight: 600;
 
     &::before {
       content: '\f05d';
@@ -35,13 +35,13 @@ input[type="radio"] {
 
   // Checked radio button styles
   &:checked + label {
-    color: $black;
+    color: $font-dark;
     font-weight: 600;
+    pointer-events: none;
 
     &::before {
       color: $theme-color;
       content: '\f058';
-      font-weight: 400;
     }
   }
 }

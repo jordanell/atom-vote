@@ -1,8 +1,7 @@
 <section class="poll-show-wrapper">
   <div class="poll-show-content">
-    <%= render partial: 'shared/form_errors', locals: { object: @vote } %>
-
     <%= simple_form_for(@vote) do |f| %>
+      <%= render partial: 'shared/form_errors', locals: { object: @vote } %>
       <div class='poll-content'>
         <h1 class="poll-show-question">
           <%= @poll.question %>
@@ -20,10 +19,11 @@
         </ul>
       </div>
       <div class="button-group">
-        <%= f.button :submit, 'Vote' %>
         <%= button_to "View Results", results_poll_path(@poll.uuid), { class: 'go-to-results', method: 'get' } %>
+        <%= f.button :submit, 'Vote', class: 'vote-button' %>
       </div>
     <% end %>
   </div>
 </section>
+
 <%= render partial: 'polls/share' %>

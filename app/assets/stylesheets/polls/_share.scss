@@ -13,16 +13,20 @@
 
 .poll-share-title {
   color: $white;
-  margin-bottom: 12px;
+  margin-bottom: $base-spacing;
   text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 3px;
+  font-family: $sans-serif-font-family;
+  letter-spacing: 2px;
+  font-size: 1.25em;
 }
 
 .poll-share-url {
   overflow: auto;
   margin-bottom: .625em;
   background-color: $white;
+  white-space: nowrap;
+  box-shadow: 0 2px 2px transparentize(black, .8);
 
   i {
     padding: .625em;

@@ -3,11 +3,12 @@
 button[type=submit],
 input[type=submit] {
   @include appearance(none);
-  background-color: $theme-color;
+  background-color: $background-color-light;
   border-radius: 2em;
   border: 0;
   color: $white;
   cursor: pointer;
+  font-family: inherit;
   font-size: 1em;
   height: 40px;
   line-height: 40px;
@@ -18,11 +19,18 @@ input[type=submit] {
 
   &:hover {
     opacity: .7;
+    box-shadow: 0 2px 2px transparentize(black, .8);
   }
 
   i {
     margin-right: 8px;
   }
+}
+
+.create-poll-button,
+.vote-button {
+  font-weight: 600;
+  background-color: $theme-color !important; // SHAMEFUL
 }
 
 .field_with_errors input {
@@ -36,7 +44,7 @@ hr {
 }
 
 .new_vote {
-  width: 600px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
@@ -61,7 +69,7 @@ hr {
   // This is from metalabs wf loading classes
   // @include transition(opacity 0.33s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s);
   // opacity: 1;
-  width: 30%;
+  width: 45%;
   margin-right: 3em;
   + * {
     flex: 1;
@@ -81,22 +89,20 @@ hr {
   display: inline-block;
 }
 
-.create-poll-button {
-  font-weight: 600;
-
-  &::after {
-    content: '\f105';
-    font-family: FontAwesome;
-    vertical-align: bottom;
-    margin-left: 3px;
-    font-size: 1.375em;
-  }
-}
-
 .new-poll-link {
   color: $white;
   font-weight: 600;
   border-bottom: 1px dotted $white;
+}
+
+.button-group {
+  @include display(flex);
+  @include justify-content(flex-end);
+
+  > * {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
 }
 
 // TODO: make no-accent button for view results and other similar buttons

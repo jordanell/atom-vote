@@ -1,6 +1,10 @@
 .option-result {
   margin-bottom: $base-spacing;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &[data-num-votes="0"] {
     opacity: .5;
   }
@@ -9,7 +13,12 @@
 .option-label {
   font-size: 1.125em;
   font-style: italic;
-  margin-bottom: $base-spacing / 2;
+  margin-bottom: .625em;
+  padding: 0 8px;
+}
+
+.option-count {
+  font-weight: 600;
 }
 
 .stat-container {
@@ -21,13 +30,12 @@
   }
 
   .votes-word {
-    margin: 0 5px;
+    margin: 0 4px;
   }
-
 }
 
 .votes-precentage {
-  color: lighten($base-font-color, $default-contrast * 3);
+  color: $font-medium;
 }
 
 .bar-container {
@@ -35,14 +43,12 @@
 }
 
 .bar-progress {
-  background-color: $white;
+  background-color: $base-background-color;
   border-radius: $border-radius;
   overflow: hidden;
 }
 
 .bar-fill {
-  background-color: $light-blue;
-  border: 1px solid rgba(0, 0, 0, .2);
   height: 25px;
   width: 60%;
 }

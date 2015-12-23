@@ -45,6 +45,7 @@
   border-radius: 50%;
 
   &:hover {
+    box-shadow: 0 2px 2px transparentize(black, .8);
     opacity: .7;
   }
 }
