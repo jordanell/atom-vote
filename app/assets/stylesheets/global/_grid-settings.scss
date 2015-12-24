@@ -6,7 +6,7 @@ $small-breakpoint: 550px;
 $medium-breakpoint: 800px;
 $large-breakpoint: 1000px;
 
-$small-viewport: new-breakpoint(min-width em($small-breakpoint) max-width em($medium-breakpoint));
+$small-viewport: new-breakpoint(max-width em($medium-breakpoint));
 $medium-viewport: new-breakpoint(min-width em($medium-breakpoint + 1) max-width em($large-breakpoint));
 $large-viewport: new-breakpoint(min-width em($large-breakpoint + 1));
 

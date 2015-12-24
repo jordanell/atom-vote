@@ -5,15 +5,28 @@
 }
 
 .footer-content {
-  @include display(flex);
   @include align-items(flex-end);
+  @include display(flex);
   @include justify-content(space-between);
-  margin-bottom: $base-spacing;
+
+  @include media($small-viewport) {
+    @include align-items(center);
+    @include flex-direction(column);
+    @include justify-content(space-around);
+  }
+
+  @include media($medium-viewport-up) {
+    margin-bottom: $base-spacing;
+  }
 }
 
 .footer-title {
   @include av-logo;
   color: $white;
+
+  @include media($small-viewport) {
+    margin-bottom: $base-spacing;
+  }
 }
 
 .footer-icon {

@@ -103,6 +103,10 @@ hr {
   @include display(flex);
   @include justify-content(flex-end);
 
+  @include media($small-viewport) {
+    @include justify-content(center);
+  }
+
   > * {
     margin-left: 6px;
     margin-right: 6px;
