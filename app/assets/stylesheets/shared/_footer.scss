@@ -14,23 +14,19 @@
 .footer-title {
   $title-height: 50px;
 
-  text-decoration: none;
+  background-size: $title-height $title-height;
+  background: url(logos/av-logo.svg);
+  background-repeat: no-repeat;
+  color: $white;
+  display: block;
   font-family: $serif-font-family;
+  font-size: 28px;
   font-weight: 300;
-
-  img {
-    float: left;
-    max-height: $title-height;
-    margin-right: .5em;
-  }
-
-  p {
-    line-height: $title-height;
-    color: $white;
-    display: inline-block;
-    font-size: 36px;
-    height: $title-height;
-  }
+  height: $title-height;
+  line-height: $title-height;
+  padding-left: $title-height;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .footer-icon {
@@ -53,13 +49,19 @@
     font-size: .8125em;
 
     &:hover {
-      color: darken($white, $default-contrast);
+      color: darken($white, 10);
     }
+  }
+
+  i {
+    font-size: 6px;
+    color: $base-accent-color;
+    vertical-align: middle;
   }
 
   li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 6px;
 
     &:last-child {
       margin-right: 0;

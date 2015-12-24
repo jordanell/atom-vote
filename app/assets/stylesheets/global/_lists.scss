@@ -18,7 +18,7 @@ ul, ol {
     content: counter(step-counter);
     margin-right: 5px;
     padding: 3px 8px;
-    color: lighten($base-font-color, $default-contrast * 3);
+    color: lighten($base-font-color, 30);
   }
 }
 

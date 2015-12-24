@@ -11,7 +11,7 @@
   }
 
   .data-label {
-    color: lighten($base-font-color, $default-contrast * 3);
+    color: lighten($base-font-color, 30);
     text-transform: uppercase;
   }
 }

@@ -5,15 +5,12 @@ input + .error {
 
 .error-wrapper {
   text-align: center;
-  background-color: $white-hover;
   margin-top: 20px;
-  border-radius: $border-radius;
 }
 
 .errors-wrapper {
-  background-color: lighten($error-red, 37);
-  border-radius: $border-radius;
-  border: 1px solid $error-red;
+  background-color: lighten($red, 37);
+  border: 1px solid $red;
   margin-bottom: $base-spacing;
   padding: .75em 1em;
 

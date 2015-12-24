@@ -1,7 +1,7 @@
 .poll-share-wrapper {
   padding: $base-spacing * 2 0;
   text-align: center;
-  background-color: $theme-color;
+  background-color: $base-accent-color;
   position: relative; // Establish a positioning context for svg
 }
 
@@ -26,12 +26,12 @@
   margin-bottom: .625em;
   background-color: $white;
   white-space: nowrap;
-  box-shadow: 0 2px 2px transparentize(black, .8);
+  box-shadow: $base-box-shadow;
 
   i {
     padding: .625em;
     font-size: 20px;
-    background-color: $theme-color-10;
+    background-color: lighten($base-accent-color, 10);
   }
 
   p {

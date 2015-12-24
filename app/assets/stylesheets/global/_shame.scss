@@ -16,10 +16,11 @@ input[type=submit] {
   padding: .5em 1em;
   padding: 0 28px;
   text-transform: uppercase;
+  white-space: nowrap;
 
   &:hover {
     opacity: .7;
-    box-shadow: 0 2px 2px transparentize(black, .8);
+    box-shadow: $base-box-shadow;
   }
 
   i {
@@ -30,11 +31,11 @@ input[type=submit] {
 .create-poll-button,
 .vote-button {
   font-weight: 600;
-  background-color: $theme-color !important; // SHAMEFUL
+  background-color: $base-accent-color !important; // SHAMEFUL
 }
 
 .field_with_errors input {
-  border: 1px solid $error-red;
+  border: 1px solid $red;
 }
 
 hr {
@@ -69,8 +70,8 @@ hr {
   // This is from metalabs wf loading classes
   // @include transition(opacity 0.33s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s);
   // opacity: 1;
-  width: 45%;
   margin-right: 3em;
+
   + * {
     flex: 1;
   }
@@ -79,11 +80,12 @@ hr {
 .intro-content {
   @include display(flex);
   @include justify-content(space-around);
+  @include flex-flow(row wrap);
 }
 
 // TODO consolidate this with page-cotnent h1 they are the same - uppercase, pool-question too
 .intro-text-header {
-  border-bottom: 4px solid $theme-color;
+  border-bottom: 4px solid $base-accent-color;
   padding-bottom: .625em;
   margin-bottom: 1em;
   display: inline-block;

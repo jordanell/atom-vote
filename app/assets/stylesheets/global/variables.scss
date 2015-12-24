@@ -1,55 +1,31 @@
-$default-contrast: 10%;
-
 // Colors
 $black: #000;
-$white: #fff;
-$grey: #999;
-$grey-light: #bbb;
-$blue: #37474f;
-$light-blue: #6b8a99;
-$red: #f44336;
-$green: #66bb6a;
-$purple: #7c7aee;
-$yellow: #fc6;
-
-$white-hover: darken($white, $default-contrast);
-$grey-hover: darken($grey, $default-contrast);
-$blue-hover: darken($blue, $default-contrast);
-$light-blue-hover: darken($light-blue, $default-contrast);
-$red-hover: darken($red, $default-contrast);
-$green-hover: darken($green, $default-contrast);
-$purple-hover: darken($purple, $default-contrast);
-$yellow-hover: darken($yellow, $default-contrast);
-
-$malibu: #61dafb;
-
-// Background colors
-$background-color-light: #8b8b8b;
-$background-color-medium: #eee;
 $background-color-dark: #262626;
-
-// Theme colors
-$theme-color: $malibu;
-$theme-color-10: lighten($theme-color, 10%);
-$theme-color--10: darken($theme-color, 10%);
-$theme-color--25: darken($theme-color, 25%);
-
-$error-red: $red-hover;
-
-$border-radius: 0;
-
-// Font colors
 $font-dark: #333;
 $font-medium: #666;
+$background-color-light: #8b8b8b;
+$background-color-medium: #eee;
+$white: #fff;
 
-// Layout related variables
+$red: #f44336;
+$green: #C7F464;
+$purple: #7c7aee;
+$yellow: #fc6;
+$malibu: #61dafb;
+
+// Theme colors
+$base-accent-color: $malibu;
+$base-background-color: $background-color-medium;
+
 $base-spacing: 1.5rem;
 $base-line-height: 1.55;
-
-// Base Variables
-$base-background-color: $background-color-medium;
-$base-background-color-5: lighten($base-background-color, 5%);
-$base-background-color-15: lighten($base-background-color, 15%);
-
 $base-font-size: 1em;
+$h1-font-size: $base-font-size * 1.9;
+$h2-font-size: $base-font-size * 1.625;
+$h3-font-size: $base-font-size * 1.375;
+$h4-font-size: $base-font-size * 1.25;
+$h5-font-size: $base-font-size * 1.125;
+$h6-font-size: $base-font-size;
+
 $base-font-color: $font-dark;
+$base-box-shadow: 0 2px 2px transparentize(black, .8);
