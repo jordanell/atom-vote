@@ -10,37 +10,6 @@
 }
 
 .header-title {
-  $title-height: 50px;
-
-  background-size: $title-height $title-height;
-  background: url(logos/av-logo.svg);
-  background-repeat: no-repeat;
-  display: block;
-  font-family: $serif-font-family;
-  font-size: 28px;
-  font-weight: 300;
-  height: $title-height;
-  line-height: $title-height;
-  padding-left: $title-height;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.new-poll-button {
-  float: right;
-  height: 40px;
-  line-height: 40px;
-  margin: 5px 0;
-  font-size: .8125em;
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 600;
-  background-color: $base-accent-color;
-  color: $white;
-  border-radius: 50%;
-
-  &:hover {
-    box-shadow: $base-box-shadow;
-    opacity: .7;
-  }
+  @include av-logo;
+  color: $black;
 }

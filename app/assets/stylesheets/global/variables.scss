@@ -1,25 +1,24 @@
-// Colors
+$base-spacing: 1.5rem;
+
 $black: #000;
-$background-color-dark: #262626;
-$font-dark: #333;
-$font-medium: #666;
-$background-color-light: #8b8b8b;
-$background-color-medium: #eee;
+$mine-shaft: #262626;
+$boulder: #777;
+$athens-gray: #ebebec;
 $white: #fff;
 
-$red: #f44336;
-$green: #C7F464;
-$purple: #7c7aee;
-$yellow: #fc6;
+$pomegranate: #f44336;
+$sulu: #C7F464;
+$portage: #7c7aee;
+$golden-tainoi: #fc6;
 $malibu: #61dafb;
 
-// Theme colors
 $base-accent-color: $malibu;
-$base-background-color: $background-color-medium;
+$base-background-color: $athens-gray;
 
-$base-spacing: 1.5rem;
+$base-font-color: $mine-shaft;
 $base-line-height: 1.55;
 $base-font-size: 1em;
+
 $h1-font-size: $base-font-size * 1.9;
 $h2-font-size: $base-font-size * 1.625;
 $h3-font-size: $base-font-size * 1.375;
@@ -27,5 +26,4 @@ $h4-font-size: $base-font-size * 1.25;
 $h5-font-size: $base-font-size * 1.125;
 $h6-font-size: $base-font-size;
 
-$base-font-color: $font-dark;
 $base-box-shadow: 0 2px 2px transparentize(black, .8);

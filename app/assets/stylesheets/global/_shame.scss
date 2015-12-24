@@ -1,9 +1,10 @@
 // Put all your shameful hacks in here until so they don't get lost
 // *da-ding-ding* *da-ding-ding* SHAME *da-ding-ding*
+.new-poll-button,
 button[type=submit],
 input[type=submit] {
   @include appearance(none);
-  background-color: $background-color-light;
+  background-color: $boulder;
   border-radius: 2em;
   border: 0;
   color: $white;
@@ -28,6 +29,7 @@ input[type=submit] {
   }
 }
 
+.new-poll-button,
 .create-poll-button,
 .vote-button {
   font-weight: 600;
@@ -35,7 +37,7 @@ input[type=submit] {
 }
 
 .field_with_errors input {
-  border: 1px solid $red;
+  border: 1px solid $pomegranate;
 }
 
 hr {
@@ -107,20 +109,14 @@ hr {
   }
 }
 
-// TODO: make no-accent button for view results and other similar buttons
-// TODO: icon on button (affordance?) view reuslts button. maybe a link with an icon?
 // TODO: Errors wrapper needs to be the same width as form.
-// TODO: the whole background of the votes create page should be white bg, buttons outside of white though.
 // TODO: Suppress the simple form classes and put my own, a la new_vote
 // TODO: keep vote buttons disabled until vote has been put in.
-// TODO: MArign in button group items
 // TODO: consolidate white well styles.
 // TODO: have question and answer labels on the new poll form
 // TODO: have meta data in a 3 or 4 column container. or pice chart straddled with meta. need more than two.
-
 // TODO: align footer to be bottom left and flex box row more padding on top of header
 // TODO: add some texture to the share section. eg darker theme blue circles around
 // TODO: share poll background should be grey on vote page, blue on results
-
-// TODO: large checks in circles for radios " fa-check-circle"
 // differnt icon on create poll.... plus doesnt make the most sense... even double chev or somethin would be better.
+// TODO: multi line questions and ansers on vote page

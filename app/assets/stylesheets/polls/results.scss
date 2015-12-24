@@ -12,8 +12,8 @@
 }
 
 .poll-result-data {
-  @include display(flex);
-  @include justify-content(space-around);
+  // @include display(flex);
+  // @include justify-content(space-around);
   background-color: $white;
   padding: 2em;
 }

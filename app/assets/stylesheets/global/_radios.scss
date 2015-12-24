@@ -1,11 +1,12 @@
 input[type="radio"] {
   display: none;
 
+  // Radio button label
   & + label {
     cursor: pointer;
     display: block;
     position: relative;
-    color: $font-medium;
+    color: $boulder;
 
     &::before {
       margin-right: 8px;
@@ -13,19 +14,13 @@ input[type="radio"] {
       font-family: FontAwesome;
       vertical-align: middle;
       font-weight: initial;
-    }
-  }
-
-  & + label {
-    color: $background-color-light;
-
-    &::before {
       content: '\f10c';
     }
   }
 
+  // Hover radio button styles
   & + label:hover {
-    color: darken($background-color-light, 20);
+    color: darken($boulder, 17);
     font-weight: 600;
 
     &::before {
@@ -35,7 +30,7 @@ input[type="radio"] {
 
   // Checked radio button styles
   &:checked + label {
-    color: $font-dark;
+    color: $mine-shaft;
     font-weight: 600;
     pointer-events: none;
 

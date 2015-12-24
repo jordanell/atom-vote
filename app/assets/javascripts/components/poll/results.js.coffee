@@ -36,8 +36,8 @@
 
   render: ->
     <div className="poll-results-content">
-      <h2 className="poll-result-question">{ @state.poll.question }</h2>
       <div className="poll-result-data">
+        <h2 className="poll-result-question">{ @state.poll.question }</h2>
         <div className="poll-result">
           { @renderOptions() }
         </div>
