@@ -72,8 +72,8 @@
 
   code {
     background: $athens-gray;
-    border-radius: 9px;
-    border: 1px solid $boulder;
+    border-radius: 3px;
+    border: 1px solid darken($athens-gray, 17);
     font-family: monaco;
     font-size: .7em;
     font-style: normal;

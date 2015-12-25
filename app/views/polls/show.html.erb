@@ -19,7 +19,7 @@
         </ul>
       </div>
       <div class="button-group">
-        <%= button_to "View Results", results_poll_path(@poll.uuid), { class: 'go-to-results', method: 'get' } %>
+        <%= link_to 'View Results', results_poll_path(@poll.uuid), class: 'view-results-link' %>
         <%= f.button :submit, 'Vote', class: 'vote-button' %>
       </div>
     <% end %>

@@ -6,13 +6,17 @@
   padding: 2em;
 }
 
-// TODO: Errors wrapper needs to be the same width as form.
-// TODO: Suppress the simple form classes and put my own, a la new_vote
+// Had to change the button_to to a link becasue
+// button_to creates a form and submit its parent form
+.view-results-link {
+  @extend %button;
+  background-color: $boulder;
+  font-weight: 800;
+}
+
 // TODO: keep vote buttons disabled until vote has been put in.
 // TODO: consolidate white well styles.
 // TODO: have question and answer labels on the new poll form
-// TODO: have meta data in a 3 or 4 column container. or pice chart straddled with meta. need more than two.
-// TODO: align footer to be bottom left and flex box row more padding on top of header
 // TODO: add some texture to the share section. eg darker theme blue circles around
-// TODO: share poll background should be grey on vote page, blue on results
 // TODO: multi line questions and ansers on vote page
+// TODO: Handle case where 0 votes wont render the donut chart

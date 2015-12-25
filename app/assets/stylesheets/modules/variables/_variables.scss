@@ -1,7 +1,7 @@
 $black: #000;
 $mine-shaft: #262626;
 $boulder: #777;
-$athens-gray: #ebebec;
+$athens-gray: #ebebeb;
 $white: #fff;
 
 $pomegranate: #f44336;
@@ -13,9 +13,7 @@ $malibu: #61dafb;
 // TODO: better fallback stack here
 $serif-font-stack: Arial, Helvetica, sans-serif;
 $varela-round: 'Varela Round', $serif-font-stack;
-$open-sans: 'Open Sans', Arial, Helvetica, sans-serif;
-
-$base-spacing: 1.5rem;
+$open-sans: 'Open Sans', Helvetica, sans-serif;
 
 $base-accent-color: $malibu;
 $base-background-color: $athens-gray;
@@ -32,3 +30,4 @@ $h5-font-size: $base-font-size * 1.125;
 $h6-font-size: $base-font-size;
 
 $base-box-shadow: 0 2px 2px transparentize(black, .8);
+$base-spacing: 1.5rem;

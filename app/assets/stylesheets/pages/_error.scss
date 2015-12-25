@@ -1,0 +1,9 @@
+.error-page-wrapper {
+}
+
+.error-content {
+  background-color: lighten($pomegranate, 17);
+  border: 1px solid $pomegranate;
+  margin-bottom: $base-spacing;
+  padding: 2em 1em;
+}
