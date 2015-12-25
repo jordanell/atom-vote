@@ -14,6 +14,18 @@
   font-weight: 800;
 }
 
+.intro-content ul {
+  margin-bottom: $base-spacing;
+}
+
+input + .error {
+  display: block;
+  text-align: right;
+  color: $pomegranate;
+  padding: 0 6px;
+  display: none;
+}
+
 // TODO: keep vote buttons disabled until vote has been put in.
 // TODO: consolidate white well styles.
 // TODO: have question and answer labels on the new poll form
