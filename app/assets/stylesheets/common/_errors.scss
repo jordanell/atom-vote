@@ -8,3 +8,40 @@ input + .error {
   color: $pomegranate;
   padding: 0 6px;
 }
+
+.form-errors-wrapper {
+  color: $white;
+  margin-bottom: 14px;
+  box-shadow: $base-box-shadow;
+}
+
+.form-errors-title {
+  display: block;
+  background-color: $pomegranate;
+  padding: 4px 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+
+  &::before {
+    content: '\f071';
+    font-family: FontAwesome;
+    font-weight: normal;
+    margin-right: 6px;
+  }
+}
+
+.form-errors-list {
+  padding: 12px 14px 7px;
+  background-color: $white;
+  color: $base-font-color;
+
+  li::before {
+    content: '\f111';
+    font-family: FontAwesome;
+    font-size: 6px;
+    color: $base-font-color;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+}

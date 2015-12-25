@@ -1,8 +1,8 @@
 <% if object.errors.full_messages.length > 0 %>
-  <div class="errors-wrapper">
-    <p>Errors</p>
+  <div class="form-errors-wrapper">
+    <h5 class="form-errors-title"><%= "Error".pluralize(object.errors.messages.length)%></h5>
     <% if object.errors.messages.length > 0 %>
-      <ul>
+      <ul class="form-errors-list">
         <% object.errors.messages.values.each do |msg| %>
           <% msg.each do |m| %>
             <li><%= m %></li>
