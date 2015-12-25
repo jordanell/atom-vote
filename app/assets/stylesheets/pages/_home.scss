@@ -1,0 +1,26 @@
+.intro-wrapper {
+  margin-bottom: $base-spacing * 2;
+}
+
+.intro-content {
+  @include display(flex);
+  @include justify-content(space-around);
+  @include flex-flow(row wrap);
+}
+
+.intro-text {
+  margin-right: 3em;
+
+  + * {
+    flex: 1;
+  }
+}
+
+
+// TODO consolidate this with page-cotnent h1 they are the same - uppercase, pool-question too
+.intro-text-header {
+  border-bottom: 4px solid $base-accent-color;
+  padding-bottom: .625em;
+  margin-bottom: 1em;
+  display: inline-block;
+}

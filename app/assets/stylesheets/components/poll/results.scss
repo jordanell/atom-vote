@@ -1,3 +1,26 @@
+.poll-results-wrapper {}
+
+.poll-results-content {
+  margin-bottom: $base-spacing * 2;
+}
+
+.poll-result-question {
+  margin-bottom: $base-spacing;
+  padding: 0 14px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.poll-result-viz {
+  @include display(flex);
+  @include justify-content(space-around);
+}
+
+.poll-result-data {
+  background-color: $white;
+  padding: 2em;
+}
+
 .poll-result {
   width: 70%;
 }

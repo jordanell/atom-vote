@@ -1,11 +1,14 @@
-@import 'fonts';
+@import 'buttons';
+@import 'errors';
+@import 'forms';
 @import 'inputs';
-@import 'radios';
 @import 'layout';
 @import 'links';
-@import 'forms';
 @import 'lists';
-@import 'grid-settings';
+@import 'radios';
+@import 'reset';
+@import 'shame';
+@import 'type';
 
 html,
 body {
@@ -16,7 +19,7 @@ body {
   background-color: $base-background-color;
   color: $base-font-color;
   line-height: $base-line-height;
-  font-family: $sans-serif-font-family;
+  font-family: $varela-round;
   margin: 0;
   padding: 0;
 }

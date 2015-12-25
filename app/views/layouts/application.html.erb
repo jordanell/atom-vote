@@ -11,6 +11,14 @@
 
     <!-- Google charts -->
     <%= javascript_include_tag "https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}" %>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Open Sans', 'Varela Round']
+        }
+      });
+    </script>
   </head>
   <body>
     <%= render partial: 'shared/header' %>

@@ -1,38 +1,21 @@
-// Reset
-@import 'global/reset';
-
-// Vendor imports
 @import 'bourbon';
+@import 'modules/variables/grid-settings';
 @import 'neat';
+
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
-@import 'mixins/mixins';
+@import 'modules/all';
+@import 'common/all';
+@import 'patterns/all';
 
-// Global imports
-@import 'global/variables';
-@import 'global/global';
-
-// Error imports
-@import 'errors/show';
-
-// Shared imports
-@import 'shared/header';
-@import 'shared/footer';
-
-// Poll imports
+// Pages
+@import 'pages/home';
+@import 'pages/show';
 @import 'polls/new';
 @import 'polls/show';
-@import 'polls/results';
-@import 'polls/share';
-
-// Page imports
-@import 'pages/show';
 
 // React components
 @import 'components/option/result';
 @import 'components/poll/results';
 @import 'components/poll/meta';
-
-// SHAME!!
-@import 'global/shame';

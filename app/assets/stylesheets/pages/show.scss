@@ -3,37 +3,6 @@
 }
 
 .page-content {
-  padding: 56px 75px;
+  padding: 2em 3em;
   background-color: $white;
-  color: $mine-shaft;
-  line-height: 1.55;
-  padding-right: 80px;
-
-  strong {
-    font-weight: 800;
-  }
-
-  a {
-    color: $base-accent-color;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  h1 {
-    border-bottom: 4px solid $base-accent-color;
-    padding-bottom: .625em;
-    margin-bottom: 1em;
-    display: inline-block;
-    text-transform: uppercase;
-  }
-
-  p {
-    margin-bottom: $base-spacing;
-  }
-
-  li {
-    margin-bottom: $base-spacing;
-  }
 }

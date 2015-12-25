@@ -1,0 +1,19 @@
+.new-poll-button,
+button[type=submit],
+input[type=submit] {
+  @extend %button;
+  font-weight: 800;
+}
+
+.new-poll-button,
+.create-poll-button,
+.vote-button {
+  background-color: $base-accent-color !important; // SHAMEFUL
+}
+
+.new_vote {
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}

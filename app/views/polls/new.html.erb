@@ -9,27 +9,25 @@
       </ul>
     </div>
 
-    <div>
+    <%= simple_form_for(@poll) do |f| %>
       <%= render partial: 'shared/form_errors', locals: { object: @poll } %>
-      <%= simple_form_for(@poll) do |f| %>
-        <div class='question-input-wrapper'>
-          <%= f.input :question, label: false, placeholder: 'Enter your question here', autofocus: true %>
-        </div>
+      <div class='question-input-wrapper'>
+        <%= f.input :question, label: false, placeholder: 'Enter your question here', autofocus: true %>
+      </div>
 
-        <ol id='js-add-option' class='options-list'>
-          <% @poll.options.each_with_index do |option, index| %>
-            <%= f.simple_fields_for :options, option do |o| %>
-              <li><%= o.input :text, label: false, placeholder: 'Enter poll option' %></li>
-            <% end %>
+      <ol id='js-add-option' class='options-list'>
+        <% @poll.options.each_with_index do |option, index| %>
+          <%= f.simple_fields_for :options, option do |o| %>
+            <li><%= o.input :text, label: false, placeholder: 'Enter poll option' %></li>
           <% end %>
-        </ol>
+        <% end %>
+      </ol>
 
-        <div class='button-group'>
-          <%= f.button :button, type: :submit, class: 'create-poll-button' do %>
-            Create Poll
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+      <div class='button-group'>
+        <%= f.button :button, type: :submit, class: 'create-poll-button' do %>
+          Create Poll
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>

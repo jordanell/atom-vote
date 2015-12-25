@@ -1,8 +1,7 @@
 .poll-share-wrapper {
+  background-color: $base-accent-color;
   padding: $base-spacing * 2 0;
   text-align: center;
-  background-color: $base-accent-color;
-  position: relative; // Establish a positioning context for svg
 }
 
 .poll-share-content {
@@ -13,25 +12,27 @@
 
 .poll-share-title {
   color: $white;
-  margin-bottom: $base-spacing;
-  text-transform: uppercase;
+  font-family: $varela-round;
+  font-size: 1.5em;
   font-weight: 600;
-  font-family: $sans-serif-font-family;
   letter-spacing: 2px;
-  font-size: 1.25em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
 }
 
 .poll-share-url {
-  overflow: auto;
-  margin-bottom: .625em;
+  @include display(flex);
+  @include align-items(center);
   background-color: $white;
-  white-space: nowrap;
   box-shadow: $base-box-shadow;
+  margin-bottom: .625em;
+  overflow: auto;
+  white-space: nowrap;
 
   i {
-    padding: .625em;
-    font-size: 20px;
     background-color: lighten($base-accent-color, 10);
+    font-size: 20px;
+    padding: .625em;
   }
 
   p {

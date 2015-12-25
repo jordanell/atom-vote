@@ -1,0 +1,36 @@
+%button {
+  @include appearance(none);
+  background-color: $boulder;
+  border-radius: 2em;
+  border: 0;
+  color: $white;
+  cursor: pointer;
+  font-family: $varela-round;
+  font-size: .9em;
+  -webkit-font-smoothing: antialiased;
+  height: 2.5em;
+  line-height: 2.5em;
+  letter-spacing: .5px;
+  outline: 0;
+  padding: 0 1.75em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .5;
+  }
+
+  &:focus,
+  &:hover {
+    opacity: .85;
+    box-shadow: $base-box-shadow;
+  }
+
+  &:active {
+    opacity: .75;
+  }
+}

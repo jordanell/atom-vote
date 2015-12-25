@@ -1,23 +1,7 @@
-form {
-  ol,
-  ul {
-    margin-bottom: $base-spacing * 2;
-  }
-
-  h3 {
-    margin-bottom: $base-spacing / 2;
-    text-transform: uppercase;
-  }
-}
-
-//
-// Inputs
-//
 #{$all-text-inputs},
 #{$all-text-inputs-focus},
 #{$all-text-inputs-hover} {
   outline: 0;
-  font-size: inherit;
 }
 
 #{$all-text-inputs},
@@ -27,10 +11,18 @@ textarea {
   border: 1px solid transparent;
   color: $base-font-color;
   font-size: inherit;
+  font-family: $open-sans;
   margin-bottom: 8px;
   outline: 0;
   padding: .75em 1em;
   width: 100%;
+}
+
+// Input hover
+#{$all-text-inputs-hover},
+textarea {
+  border: 1px solid $boulder;
+  color: $base-font-color;
 }
 
 // Input focus
@@ -45,9 +37,3 @@ textarea {
   }
 }
 
-// Input hover
-#{$all-text-inputs-hover},
-textarea {
-  border: 1px solid $boulder;
-  color: $base-font-color;
-}

@@ -21,7 +21,6 @@ input[type="radio"] {
   // Hover radio button styles
   & + label:hover {
     color: darken($boulder, 17);
-    font-weight: 600;
 
     &::before {
       content: '\f111';

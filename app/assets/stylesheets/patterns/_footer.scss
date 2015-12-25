@@ -5,17 +5,16 @@
 }
 
 .footer-content {
-  @include align-items(flex-end);
   @include display(flex);
-  @include justify-content(space-between);
+  @include align-items(center);
 
   @include media($small-viewport) {
-    @include align-items(center);
     @include flex-direction(column);
     @include justify-content(space-around);
   }
 
   @include media($medium-viewport-up) {
+    @include justify-content(space-between);
     margin-bottom: $base-spacing;
   }
 }
@@ -29,20 +28,16 @@
   }
 }
 
-.footer-icon {
-  height: 40px;
-  width: 40px;
-  margin-right: 16px;
-
-  img {
-    max-width: 100%;
-  }
-}
-
 .footer-links {
   text-align: center;
   list-style: none;
   padding-left: 0;
+
+  .new-poll-link {
+    color: $white;
+    font-weight: 600;
+    border-bottom: 1px dotted $white;
+  }
 
   a {
     color: $white;

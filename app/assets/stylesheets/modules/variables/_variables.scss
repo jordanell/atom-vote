@@ -1,5 +1,3 @@
-$base-spacing: 1.5rem;
-
 $black: #000;
 $mine-shaft: #262626;
 $boulder: #777;
@@ -11,6 +9,13 @@ $sulu: #C7F464;
 $portage: #7c7aee;
 $golden-tainoi: #fc6;
 $malibu: #61dafb;
+
+// TODO: better fallback stack here
+$serif-font-stack: Arial, Helvetica, sans-serif;
+$varela-round: 'Varela Round', $serif-font-stack;
+$open-sans: 'Open Sans', Arial, Helvetica, sans-serif;
+
+$base-spacing: 1.5rem;
 
 $base-accent-color: $malibu;
 $base-background-color: $athens-gray;

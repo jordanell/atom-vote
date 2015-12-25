@@ -1,0 +1,18 @@
+// Put all your shameful hacks in here until so they don't get lost
+// *da-ding-ding* *da-ding-ding* SHAME *da-ding-ding*
+.poll-content {
+  background-color: $white;
+  margin-bottom: $base-spacing;
+  padding: 2em;
+}
+
+// TODO: Errors wrapper needs to be the same width as form.
+// TODO: Suppress the simple form classes and put my own, a la new_vote
+// TODO: keep vote buttons disabled until vote has been put in.
+// TODO: consolidate white well styles.
+// TODO: have question and answer labels on the new poll form
+// TODO: have meta data in a 3 or 4 column container. or pice chart straddled with meta. need more than two.
+// TODO: align footer to be bottom left and flex box row more padding on top of header
+// TODO: add some texture to the share section. eg darker theme blue circles around
+// TODO: share poll background should be grey on vote page, blue on results
+// TODO: multi line questions and ansers on vote page
