@@ -29,7 +29,7 @@
     </div>
 
   render: ->
-    <section className="option-result" data-num-votes={ @props.option.votes_count }>
+    <li className="option-result" data-num-votes={ @props.option.votes_count }>
       <h6 className="option-label">{ @props.option.text }</h6>
       <div className="option-stats">
         { @renderBar() }
@@ -43,4 +43,4 @@
           </p>
         </div>
       </div>
-    </section>
+    </li>

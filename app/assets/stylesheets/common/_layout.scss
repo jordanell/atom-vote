@@ -9,3 +9,14 @@
   margin-right: auto;
   padding: 0 14px;
 }
+
+
+.flex-footer {
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 100vh;
+}
+
+.main-flex {
+  flex: 1;
+}

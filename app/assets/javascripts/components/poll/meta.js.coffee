@@ -33,8 +33,8 @@
     data = google.visualization.arrayToDataTable(data)
 
     options =
-      title:    'My Daily Activities'
-      pieHole:  0.2
+      title: 'My Daily Activities'
+      pieHole: 0.2
       legend: 'none'
       backgroundColor: 'transparent'
       colors: @state.colors

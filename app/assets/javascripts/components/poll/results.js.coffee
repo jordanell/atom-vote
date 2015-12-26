@@ -39,9 +39,9 @@
       <div className='poll-result-data'>
         <h2 className='poll-result-question'>{ @state.poll.question }</h2>
         <div className='poll-result-viz'>
-          <div className='poll-result'>
+          <ul className='poll-result-list'>
             { @renderOptions() }
-          </div>
+          </ul>
           <PollMeta poll={ @state.poll } />
         </div>
       </div>

@@ -1,9 +1,23 @@
 .error-page-wrapper {
 }
 
-.error-content {
-  background-color: lighten($pomegranate, 17);
-  border: 1px solid $pomegranate;
+.error-page-content {
+  background-color: $white;
   margin-bottom: $base-spacing;
+  max-width: 600px;
   padding: 2em 1em;
+  box-shadow: $base-box-shadow;
+}
+
+.error-page-title {
+  font-size: 1.8em;
+  margin-bottom: .75em;
+  padding-bottom: .25em;
+  border-bottom: 4px solid $pomegranate;
+  display: inline-block;
+}
+
+.error-code {
+  color: $pomegranate;
+  font-weight: 800;
 }

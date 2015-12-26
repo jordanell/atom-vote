@@ -20,9 +20,11 @@
       });
     </script>
   </head>
-  <body>
+  <body class='flex-footer'>
     <%= render partial: 'shared/header' %>
-    <%= yield %>
+    <div class='main-flex'>
+      <%= yield %>
+    </div>
     <%= render partial: 'shared/footer' %>
   </body>
 </html>
