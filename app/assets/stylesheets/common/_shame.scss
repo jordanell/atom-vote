@@ -14,10 +14,6 @@
   font-weight: 800;
 }
 
-.intro-content ul {
-  margin-bottom: $base-spacing;
-}
-
 input + .error {
   display: block;
   text-align: right;
@@ -34,3 +30,5 @@ input + .error {
 // TODO: Handle case where 0 votes wont render the donut chart
 
 // TODO: opacity in buttons needs ot change background color so shdow doesnt get too light and look gray.
+
+// TODO: something like this http://stackoverflow.com/questions/24876497/animate-svg-electron-around-ring
