@@ -4,7 +4,7 @@ describe 'shared/_footer.html.erb' do
   it 'should display the logo' do
     render partial: 'shared/footer'
 
-    rendered.should have_css("img[alt*='AtomVote']")
+    rendered.should have_content('AtomVote')
   end
 
   it 'should display the correct link' do

@@ -9,13 +9,13 @@ describe 'polls/_share.html.erb' do
     it 'should display the share text' do
       render partial: 'polls/share'
 
-      rendered.should have_content('Share this poll')
+      rendered.should have_content('Share This Poll')
     end
 
     it 'should display the input' do
       render partial: 'polls/share'
 
-      rendered.should have_selector('input')
+      rendered.should have_content(@poll.uuid)
     end
   end
 

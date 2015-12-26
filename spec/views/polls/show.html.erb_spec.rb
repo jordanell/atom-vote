@@ -31,10 +31,10 @@ describe 'polls/show.html.erb' do
       end
     end
 
-    it 'should display the go to results button' do
+    it 'should display the "View Results" button' do
       render
 
-      rendered.should have_selector("input[value='Go To Results']")
+      rendered.should have_content('View Results')
     end
   end
 
