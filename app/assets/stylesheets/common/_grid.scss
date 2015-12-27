@@ -1,13 +1,6 @@
 .grid {
   @include display(flex);
   @include flex-wrap(wrap);
-
-  /* could repplace grid cell with
-  > * {
-    @include flex(1);
-  }
-  // That way i'd only have to declare the classes ont he parent container
-  */
 }
 
 .grid-cell {

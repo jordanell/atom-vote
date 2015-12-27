@@ -38,10 +38,11 @@
     <div className='poll-results-content'>
       <div className='poll-result-data'>
         <h2 className='poll-result-question'>{ @state.poll.question }</h2>
-        <div className='poll-result-viz'>
-          <ul className='poll-result-list'>
+        <div className='grid'>
+          <ul className='poll-result-list grid-cell'>
             { @renderOptions() }
           </ul>
+          <DonutChart poll={ @state.poll } />
           <PollMeta poll={ @state.poll } />
         </div>
       </div>

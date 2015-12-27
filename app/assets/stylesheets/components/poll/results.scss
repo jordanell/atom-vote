@@ -10,11 +10,6 @@
   line-height: 1.5em;
 }
 
-.poll-result-viz {
-  @include display(flex);
-  @include justify-content(space-around);
-}
-
 .poll-result-data {
   background-color: $white;
   padding: 2em;
