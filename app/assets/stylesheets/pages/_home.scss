@@ -3,17 +3,12 @@
 }
 
 .intro-content {
-  @include display(flex);
-  @include justify-content(space-around);
-  @include flex-flow(row wrap);
+
 }
 
 .intro-text {
-  margin-right: 3em;
-
-  + * {
-    flex: 1;
-  }
+  margin-bottom: $base-spacing;
+  padding-right: 3em;
 }
 
 // TODO consolidate this with page-cotnent h1 they are the same - uppercase, pool-question too

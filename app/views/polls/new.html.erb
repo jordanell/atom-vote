@@ -1,6 +1,6 @@
 <div class='intro-wrapper'>
-  <div class='intro-content'>
-    <div class='intro-text'>
+  <div class='intro-content grid grid--full small-grid--full medium-grid--1of2 large-grid--fit'>
+    <div class='intro-text grid-cell'>
       <h1 class='intro-text-header'>Welcome!</h1>
       <ul>
         <li>Enter your question and answers here.</li>
@@ -8,8 +8,7 @@
         <li>You'll also be able to vote.</li>
       </ul>
     </div>
-
-    <%= simple_form_for(@poll) do |f| %>
+    <%= simple_form_for @poll, html: { class: 'grid-cell' } do |f| %>
       <%= render partial: 'shared/form_errors', locals: { object: @poll } %>
       <div class='question-input-wrapper'>
         <%= f.input :question, label: false, placeholder: 'Enter your question here', autofocus: true %>

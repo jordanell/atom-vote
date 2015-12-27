@@ -1,0 +1,39 @@
+.grid {
+  @include display(flex);
+  @include flex-wrap(wrap);
+
+  /* could repplace grid cell with
+  > * {
+    @include flex(1);
+  }
+  // That way i'd only have to declare the classes ont he parent container
+  */
+}
+
+.grid-cell {
+  @include flex(1);
+}
+
+@include media($small-viewport) {
+  .small-grid--fit > .grid-cell  { flex: 1; }
+  .small-grid--full > .grid-cell { flex: 0 0 percentage(12/12); }
+  .small-grid--1of2 > .grid-cell { flex: 0 0 percentage(6/12); }
+  .small-grid--1of3 > .grid-cell { flex: 0 0 percentage(4/12); }
+  .small-grid--1of4 > .grid-cell { flex: 0 0 percentage(3/12); }
+}
+
+@include media($medium-viewport) {
+  .medium-grid--fit > .grid-cell  { flex: 1; }
+  .medium-grid--full > .grid-cell { flex: 0 0 percentage(12/12); }
+  .medium-grid--1of2 > .grid-cell { flex: 0 0 percentage(6/12); }
+  .medium-grid--1of3 > .grid-cell { flex: 0 0 percentage(4/12); }
+  .medium-grid--1of4 > .grid-cell { flex: 0 0 percentage(3/12); }
+}
+
+@include media($large-viewport) {
+  .large-grid--fit > .grid-cell  { flex: 1; }
+  .large-grid--full > .grid-cell { flex: 0 0 percentage(12/12); }
+  .large-grid--1of2 > .grid-cell { flex: 0 0 percentage(6/12); }
+  .large-grid--1of3 > .grid-cell { flex: 0 0 percentage(4/12); }
+  .large-grid--1of4 > .grid-cell { flex: 0 0 percentage(3/12); }
+}
