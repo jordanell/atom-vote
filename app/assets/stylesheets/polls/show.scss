@@ -3,6 +3,7 @@
 }
 
 .poll-show-question {
+  @include word-wrap;
   font-size: 1.75em;
   margin-bottom: $base-spacing;
 }

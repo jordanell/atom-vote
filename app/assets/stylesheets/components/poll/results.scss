@@ -1,15 +1,16 @@
 .poll-result-wrapper {
+  margin-bottom: $base-spacing * 2;
+}
+
+.poll-result-content {
+  background-color: $white;
+  padding: 2em;
 }
 
 .poll-result-question {
+  @include word-wrap;
   font-size: 1.5em;
   line-height: 1.5em;
   margin-bottom: .25em;
 }
 
-.poll-result-content {
-  background-color: $white;
-  margin-bottom: $base-spacing;
-  padding-bottom: 2em;
-  padding-top: 2em;
-}

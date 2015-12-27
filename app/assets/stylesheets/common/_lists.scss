@@ -12,27 +12,10 @@
     position: absolute;
     line-height: 1;
     font-weight: 600;
+    font-size: 1.125em;
   }
 
   input {
     padding-left: 2.55em;
-  }
-}
-
-%separated-inline-list {
-  @include clearfix;
-  text-align: center;
-
-  li {
-    float: left;
-  }
-
-  li:not(:last-child)::after {
-    content: '\f111';
-    font-family: FontAwesome;
-    vertical-align: middle;
-    color: $base-accent-color;
-    margin: 0 7px;
-    font-size: 7px;
   }
 }

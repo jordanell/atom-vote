@@ -42,7 +42,9 @@
   render: ->
     <div className='poll-result-wrapper'>
       <div className='poll-result-content'>
-        <h2 className='poll-result-question'>{ @state.poll.question }</h2>
+        <h2 className='poll-result-question'>
+          { @state.poll.question }
+        </h2>
         <PollMetaList poll={ @state.poll } />
         <div className='grid'>
           <div className='grid-cell'>
