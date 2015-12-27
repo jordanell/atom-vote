@@ -1,5 +1,3 @@
-<section class="poll-results-wrapper">
-  <%= react_component('PollResults', { poll: PollSerializer.new(@poll) }) %>
-</section>
+<%= react_component('PollResults', { poll: PollSerializer.new(@poll) }) %>
 
 <%= render partial: 'polls/share' %>

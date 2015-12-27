@@ -29,15 +29,7 @@
 }
 
 .footer-links {
-  text-align: center;
-  list-style: none;
-  padding-left: 0;
-
-  .new-poll-link {
-    color: $white;
-    font-weight: 600;
-    border-bottom: 1px dotted $white;
-  }
+  @extend %separated-inline-list;
 
   a {
     color: $white;
@@ -47,20 +39,10 @@
       color: darken($white, 10);
     }
   }
-
-  i {
-    font-size: 6px;
-    color: $base-accent-color;
-    vertical-align: middle;
-  }
-
-  li {
-    display: inline-block;
-    margin-right: 6px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
 }
 
+.new-poll-link {
+  color: $white;
+  font-weight: 600;
+  border-bottom: 1px dotted $white;
+}

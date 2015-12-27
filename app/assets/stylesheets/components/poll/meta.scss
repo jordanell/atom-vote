@@ -1,17 +1,11 @@
-.poll-meta {
-  width: 30%;
+.poll-meta-list {
+  @extend %separated-inline-list;
+  margin-bottom: $base-spacing / 2;
+  display: inline-block;
+  font-family: $open-sans;
+  color: $black;
 }
 
-.poll-stat {
-  text-align: center;
-  margin-bottom: .625em;
-
-  .data-value {
-    font-weight: 600;
-  }
-
-  .data-label {
-    color: lighten($base-font-color, 30);
-    text-transform: uppercase;
-  }
+.meta-value {
+  color: $boulder;
 }

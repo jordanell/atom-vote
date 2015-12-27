@@ -19,8 +19,8 @@
 
   renderBar: ->
     barStyle =
-      width:            @getWidth()
-      backgroundColor:  @getBarColor()
+      width: @getWidth()
+      backgroundColor: @getBarColor()
 
     <div className="bar-container">
       <div className="bar-progress">

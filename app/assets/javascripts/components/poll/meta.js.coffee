@@ -1,7 +1,7 @@
 # @cjsx React.DOM
 
-@PollMeta = React.createClass
-  displayName: 'PollMeta'
+@PollMetaList = React.createClass
+  displayName: 'PollMetaList'
 
   propTypes:
     poll: React.PropTypes.object.isRequired
@@ -17,16 +17,10 @@
     $(window).off 'resize'
 
   renderLastVote: ->
-    moment(@state.poll.updated_at, "YYYY-MM-DDTHH:mm:ss.Z").fromNow()
+    moment(@state.poll.updated_at, 'YYYY-MM-DDTHH:mm:ss.Z').fromNow()
 
   render: ->
-    <section className="poll-meta">
-      <div className="poll-stat">
-        <span id="data-total" className="data-value">{ @state.poll.votes_count }</span>
-        <p className="data-label">Total Votes</p>
-      </div>
-      <div className="poll-stat">
-        <span id="data-last" className="data-value">{ @renderLastVote() }</span>
-        <p className="data-label">Last Vote</p>
-      </div>
-    </section>
+    <ul className='poll-meta-list'>
+      <li>Total Votes <span className='meta-value'>{ @state.poll.votes_count }</span></li>
+      <li>Last Vote <span className='meta-value'>{ @renderLastVote() }</span></li>
+    </ul>

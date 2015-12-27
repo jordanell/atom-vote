@@ -42,8 +42,8 @@
         top: 0
         height: 600
 
-    chart = new google.visualization.PieChart(document.getElementById('poll-donut-chart'));
+    chart = new google.visualization.PieChart(document.getElementById('js-donut-chart'));
     chart.draw(data, options);
 
   render: ->
-    <div id="poll-donut-chart" />
+    <div id="js-donut-chart" className="donut-chart" />
