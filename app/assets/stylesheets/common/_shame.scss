@@ -14,6 +14,12 @@ input + .error {
   display: none;
 }
 
+// TODO: consolidate this style with new poll form styl..., '-content' should be
+// rethought
+.poll-show-content {
+  max-width: 600px;
+}
+
 // TODO: consolidate white well styles.
 // TODO: add some texture to the share section. eg darker theme blue circles around
 // TODO: multi line questions and ansers on vote page

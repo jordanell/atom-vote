@@ -33,14 +33,11 @@
     data = google.visualization.arrayToDataTable(data)
 
     options =
-      title: 'My Daily Activities'
+      title: null
       pieHole: 0.2
       legend: 'none'
       backgroundColor: 'transparent'
       colors: @state.colors
-      chartArea:
-        top: 0
-        height: 600
 
     chart = new google.visualization.PieChart(document.getElementById('js-donut-chart'));
     chart.draw(data, options);

@@ -1,18 +1,20 @@
 .footer-wrapper {
   background-color: $mine-shaft;
-  padding-top: $base-spacing * 2;
+}
+
+.footer-content-wrapper {
+  padding: $base-spacing * 2 0 2em 0;
 }
 
 .footer-content {
   @include display(flex);
   @include align-items(center);
   @include justify-content(space-between);
-  margin-bottom: $base-spacing;
 }
 
 .footer-content .new-poll-link {
-  border: 1px dashed $athens-gray;
-  color: $athens-gray;
+  border: 1px dashed $wild-sand;
+  color: $wild-sand;
 
   &:hover {
     border: 1px dashed $white;
@@ -35,7 +37,7 @@
 }
 
 .footer-links-wrapper {
-  background-color: $black;
+  background-color: darken($mine-shaft, 3);
   padding: 4px 0;
 }
 

@@ -1,7 +1,7 @@
 input[type="radio"] {
   display: none;
 
-  // Radio button label
+  // Common radio styles
   & + label {
     cursor: pointer;
     display: block;
@@ -14,20 +14,26 @@ input[type="radio"] {
       font-family: FontAwesome;
       vertical-align: middle;
       font-weight: initial;
-      content: '\f10c';
     }
   }
 
-  // Hover radio button styles
+  // Neutral radio state
+  & + label {
+    &::before {
+      content: '\f1db';
+    }
+  }
+
+  // Hover radio state
   & + label:hover {
     color: darken($boulder, 17);
 
     &::before {
-      content: '\f111';
+      content: '\f10c';
     }
   }
 
-  // Checked radio button styles
+  // Checked radio state
   &:checked + label {
     color: $mine-shaft;
     font-weight: 600;

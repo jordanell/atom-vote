@@ -38,7 +38,6 @@
       }
     </ul>
 
-
   render: ->
     <div className='poll-result-wrapper'>
       <div className='poll-result-content'>
