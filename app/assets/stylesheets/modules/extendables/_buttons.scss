@@ -2,7 +2,6 @@
   @include appearance(none);
   border-radius: 2em;
   border: 0;
-  color: $white;
   cursor: pointer;
   font-family: $varela-round;
   font-size: .9em;
@@ -24,11 +23,6 @@
 
   &:focus,
   &:hover {
-    opacity: .85;
     box-shadow: $base-box-shadow;
-  }
-
-  &:active {
-    opacity: .75;
   }
 }

@@ -11,7 +11,7 @@
             <li>
               <%= f.hidden_field(:poll_id, value: @poll.id) %>
               <%= f.radio_button :option_id, option.id %>
-              <label class="vote-option-text" for="vote_option_id_<%= option.id %>">
+              <label for="vote_option_id_<%= option.id %>">
                 <%= option.text %>
               </label>
             </li>
@@ -20,7 +20,7 @@
       </div>
       <div class="button-group">
         <%= link_to 'View Results', results_poll_path(@poll.uuid), class: 'view-results-link' %>
-        <%= f.button :submit, 'Vote', class: 'vote-button' %>
+        <%= f.button :submit, 'Vote' %>
       </div>
     <% end %>
   </div>

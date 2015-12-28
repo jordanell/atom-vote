@@ -1,14 +1,21 @@
-.new-poll-button,
 button[type=submit],
 input[type=submit] {
   @extend %button;
+  @include colorize-button-background($base-accent-color);
+  color: $white;
   font-weight: 800;
 }
 
-.new-poll-button,
-.create-poll-button,
-.vote-button {
-  background-color: $base-accent-color; // SHAMEFUL
+.new-poll-button {
+  @extend %button;
+  border: 1px dashed $boulder;
+  color: $mine-shaft;
+  font-weight: 800;
+
+  &:hover {
+    border: 1px dashed $black;
+    color: $black;
+  }
 }
 
 .new_vote {

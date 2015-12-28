@@ -12,7 +12,6 @@ textarea {
   color: $base-font-color;
   font-size: inherit;
   font-family: $open-sans;
-  margin-bottom: 8px;
   outline: 0;
   padding: .75em 1em;
   width: 100%;
@@ -37,3 +36,36 @@ textarea {
   }
 }
 
+.input-add-on {
+  @include display(flex);
+  margin-bottom: 8px;
+}
+
+.input-add-on-item {
+  background-color: $base-accent-color;
+  color: $white;
+  font-weight: 800;
+  padding: .75em 1.125em;
+  vertical-align: middle;
+}
+
+.input-add-on-field {
+  @include flex(1);
+}
+
+.input-label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  color: $mine-shaft;
+}
+
+.label-hint {
+  color: $boulder;
+  font-size: .9em;
+}
+
+// Question input
+.question-input {
+  margin-bottom: $base-spacing;
+}

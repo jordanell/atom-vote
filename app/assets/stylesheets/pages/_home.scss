@@ -3,17 +3,5 @@
 }
 
 .intro-content {
-}
-
-.intro-text {
-  margin-bottom: $base-spacing;
-  padding-right: 3em;
-}
-
-// TODO consolidate this with page-cotnent h1 they are the same - uppercase, pool-question too
-.intro-text-header {
-  border-bottom: 4px solid $base-accent-color;
-  padding-bottom: .625em;
-  margin-bottom: 1em;
-  display: inline-block;
+  max-width: 600px;
 }

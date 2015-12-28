@@ -28,10 +28,9 @@ class Poll
 
   addOption: ->
     # Append the new input
-    input =  "<li>" +
-                "<div class='input string required poll_options_text'>" +
-                  "<input class='string required' placeholder='Enter poll option' type='text' name='poll[options_attributes][#{@lastOptionIndex}][text]' id='poll_options_attributes_#{@lastOptionIndex}_text'>" +
-                "</div>" +
+    input =  "<li class='input-add-on'>" +
+                "<span class='input-add-on-item'>#{@lastOptionIndex + 1}</span>" +
+                "<input class='string input-add-on-field' placeholder='Enter poll option' type='text' name='poll[options_attributes][#{@lastOptionIndex}][text]' id='poll_options_attributes_#{@lastOptionIndex}_text'>" +
               "</li>"
     $(input).appendTo("#js-add-option")
 

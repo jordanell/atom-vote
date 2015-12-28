@@ -3,3 +3,10 @@ a {
   text-decoration: none;
   outline: none;
 }
+
+.view-results-link {
+  @extend %button;
+  background-color: $boulder;
+  font-weight: 800;
+  color: $white;
+}

@@ -6,14 +6,6 @@
   padding: 2em;
 }
 
-// Had to change the button_to to a link becasue
-// button_to creates a form and submit its parent form
-.view-results-link {
-  @extend %button;
-  background-color: $boulder;
-  font-weight: 800;
-}
-
 input + .error {
   display: block;
   text-align: right;
@@ -22,9 +14,7 @@ input + .error {
   display: none;
 }
 
-// TODO: keep vote buttons disabled until vote has been put in.
 // TODO: consolidate white well styles.
-// TODO: have question and answer labels on the new poll form
 // TODO: add some texture to the share section. eg darker theme blue circles around
 // TODO: multi line questions and ansers on vote page
 // TODO: Handle case where 0 votes wont render the donut chart
