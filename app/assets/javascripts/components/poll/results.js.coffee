@@ -49,9 +49,6 @@
           <div className='grid-cell'>
             { @renderOptions() }
           </div>
-          <div className='grid-cell'>
-            <DonutChart poll={ @state.poll } />
-          </div>
         </div>
       </div>
     </div>

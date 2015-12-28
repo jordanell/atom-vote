@@ -16,15 +16,17 @@ input + .error {
 
 // TODO: consolidate this style with new poll form styl..., '-content' should be
 // rethought
+.poll-result-content,
 .poll-show-content {
-  max-width: 600px;
+  max-width: $small-breakpoint;
 }
 
 // TODO: consolidate white well styles.
 // TODO: add some texture to the share section. eg darker theme blue circles around
 // TODO: multi line questions and ansers on vote page
 // TODO: Handle case where 0 votes wont render the donut chart
-
-// TODO: opacity in buttons needs ot change background color so shdow doesnt get too light and look gray.
-
 // TODO: something like this http://stackoverflow.com/questions/24876497/animate-svg-electron-around-ring
+// TOD: have change view tabs on results page, change between pie and bar, dont need both.
+// TODO make the ipnut prepend grey bg for > 2 ? until filled
+// TODO: Last Vote a minute ago even when 0 votes
+// todo option to sort results by largest ot smallest vice versa.... combine into toolbar with views?

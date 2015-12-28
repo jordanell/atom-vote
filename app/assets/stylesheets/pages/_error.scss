@@ -4,7 +4,7 @@
 .error-page-content {
   background-color: $white;
   margin-bottom: $base-spacing;
-  max-width: 600px;
+  max-width: $small-breakpoint;
   padding: 2em 1em;
   box-shadow: $base-box-shadow;
 }
