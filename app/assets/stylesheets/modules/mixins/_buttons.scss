@@ -8,4 +8,9 @@
   &:active {
     background-color: $color;
   }
+
+  &:focus,
+  &:hover {
+    box-shadow: $base-box-shadow;
+  }
 }

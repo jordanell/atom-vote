@@ -1,20 +1,25 @@
 .footer-wrapper {
   background-color: $mine-shaft;
-  padding-bottom: $base-spacing;
-  padding-top: $base-spacing * 3;
+  padding-top: $base-spacing * 2;
 }
 
 .footer-content {
   @include display(flex);
   @include align-items(center);
+  @include justify-content(space-between);
+  margin-bottom: $base-spacing;
+}
 
-  @include media($small-viewport) {
-    @include flex-direction(column);
-    @include justify-content(space-around);
+.footer-content .new-poll-link {
+  border: 1px dashed $athens-gray;
+  color: $athens-gray;
+
+  &:hover {
+    border: 1px dashed $white;
+    color: $white;
   }
 
-  @include media($medium-viewport-up) {
-    @include justify-content(space-between);
+  @include media($small-viewport) {
     margin-bottom: $base-spacing;
   }
 }
@@ -24,12 +29,21 @@
   color: $white;
 
   @include media($small-viewport) {
+    @include av-logo(45px);
     margin-bottom: $base-spacing;
   }
 }
 
+.footer-links-wrapper {
+  background-color: $black;
+  padding: 4px 0;
+}
+
 .footer-links {
   @extend %separated-inline-list;
+  @include display(flex);
+  @include justify-content(center);
+  padding: 0 14px;
 
   a {
     color: $white;

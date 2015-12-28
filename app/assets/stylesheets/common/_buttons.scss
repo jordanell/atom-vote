@@ -5,22 +5,3 @@ input[type=submit] {
   color: $white;
   font-weight: 800;
 }
-
-.new-poll-button {
-  @extend %button;
-  border: 1px dashed $boulder;
-  color: $mine-shaft;
-  font-weight: 800;
-
-  &:hover {
-    border: 1px dashed $black;
-    color: $black;
-  }
-}
-
-.new_vote {
-  border-radius: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 600px;
-}

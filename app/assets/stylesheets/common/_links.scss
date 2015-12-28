@@ -10,3 +10,8 @@ a {
   font-weight: 800;
   color: $white;
 }
+
+.new-poll-link {
+  @extend %button;
+  font-weight: 800;
+}
