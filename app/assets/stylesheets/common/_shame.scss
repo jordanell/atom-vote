@@ -21,14 +21,31 @@ input + .error {
   max-width: $small-breakpoint;
 }
 
-// TODO: consolidate white well styles.
-// TODO: add some texture to the share section. eg darker theme blue circles around
+// TODO: need to maintain the padding of the buttons outside small viewport res
+.new-poll-link {
+  @include media($small-viewport) {
+    padding: .25em 1em;
+    font-size: 1.125em;
+
+    span {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+// TODO: add some texture to the intro page. eg darker theme blue circles around
 // TODO: multi line questions and ansers on vote page
 // TODO: Handle case where 0 votes wont render the donut chart
 // TODO: something like this http://stackoverflow.com/questions/24876497/animate-svg-electron-around-ring
-// TOD: have change view tabs on results page, change between pie and bar, dont need both.
+// TOD: have change view tabs on results page, change between pie and bar,
+// dont need both. On large-viewport+ have them side by side?
 // TODO make the ipnut prepend grey bg for > 2 ? until filled
+// TODO: if share poll section is offscreen then have a fixed footer come up on the bottom?? bottom is an
+// awkward place for anything.
 // TODO: Last Vote a minute ago even when 0 votes
 // todo option to sort results by largest ot smallest vice versa.... combine into toolbar with views?
 // https://github.com/h5bp/html5-boilerplate
 // TODO : Mobile view in chrome emulate and fix
+// TODO: #feature have share this result?
+// TODO: new poll button in header and footer needs to collapse down to a + with a dashed line around it. no text.
+//  ^ this will look vauguely like the bohr model.

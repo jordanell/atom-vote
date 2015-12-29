@@ -3,10 +3,11 @@ input[type="radio"] {
 
   // Common radio styles
   & + label {
+    color: $boulder;
     cursor: pointer;
+    font-family: $open-sans;
     display: block;
     position: relative;
-    color: $boulder;
 
     &::before {
       margin-right: 8px;
