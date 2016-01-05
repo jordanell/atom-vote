@@ -1,10 +1,12 @@
 .poll-meta-list {
   @extend %separated-inline-list;
-  margin-bottom: $base-spacing;
-  font-family: $open-sans;
   color: $black;
+  font-family: $open-sans;
+  margin-bottom: $base-spacing;
+  text-transform: uppercase;
 }
 
 .meta-value {
   color: $boulder;
+  text-transform: none;
 }
