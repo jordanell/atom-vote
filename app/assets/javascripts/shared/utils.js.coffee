@@ -20,7 +20,7 @@ class Utils
     else if window.getSelection
       range = document.createRange()
       range.selectNode document.getElementById(container.id)
-      window.getSelection().addRange range
+      window.getSelection().addRange(range)
 
 initializeUtils = ->
   window.Utils = new Utils $(this)

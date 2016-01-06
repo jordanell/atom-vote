@@ -44,11 +44,13 @@
         <h2 className='poll-result-question'>
           { @state.poll.question }
         </h2>
-        <PollMetaList poll={ @state.poll } />
+      </div>
+      <div className='poll-result-content'>
         <div className='grid'>
           <div className='grid-cell'>
             { @renderOptions() }
           </div>
         </div>
       </div>
+      <PollMetaList poll={ @state.poll } />
     </div>

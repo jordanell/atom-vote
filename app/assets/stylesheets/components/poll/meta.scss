@@ -1,12 +1,23 @@
 .poll-meta-list {
-  @extend %separated-inline-list;
-  color: $black;
+  @include display(flex);
+  @include justify-content(space-around);
+  @include align-items(center);
   font-family: $open-sans;
-  margin-bottom: $base-spacing;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 550px;
+  padding: 1.25em 2em;
+  text-align: center;
+}
+
+.meta-label {
+  color: $black;
+  font-size: .8125em;
   text-transform: uppercase;
 }
 
 .meta-value {
   color: $boulder;
+  font-size: 1.15em;
   text-transform: none;
 }

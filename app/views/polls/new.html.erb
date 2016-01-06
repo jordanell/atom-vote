@@ -4,7 +4,7 @@
       <%= render partial: 'shared/form_errors', locals: { object: @poll } %>
       <div class='question-input'>
         <label class='input-label'>Question</label>
-        <%= f.input_field :question, placeholder: 'Enter your question here', autofocus: true, class: 'input-add-on-field' %>
+        <%= f.input_field :question, placeholder: 'Enter your question here', autofocus: true %>
       </div>
       <label class='input-label'>Options <span class='label-hint'>(2+)</span></label>
       <ol id='js-add-option' class='poll-options-list'>

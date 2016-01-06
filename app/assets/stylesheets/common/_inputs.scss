@@ -4,6 +4,10 @@
   outline: 0;
 }
 
+.has-value {
+  background-color: black;
+}
+
 #{$all-text-inputs},
 textarea {
   @include transition(all .25s ease-out);

@@ -21,6 +21,12 @@
 
   render: ->
     <ul className='poll-meta-list'>
-      <li>Total Votes <span className='meta-value'>{ @state.poll.votes_count }</span></li>
-      <li>Last Vote <span className='meta-value'>{ @renderLastVote() }</span></li>
+      <li>
+        <div className='meta-value'>{ @state.poll.votes_count }</div>
+        <div className='meta-label'>Total Votes</div>
+      </li>
+      <li>
+        <div className='meta-value'>{ @renderLastVote() }</div>
+        <div className='meta-label'>Last Vote</div>
+      </li>
     </ul>
