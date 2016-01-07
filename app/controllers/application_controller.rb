@@ -16,14 +16,14 @@ class ApplicationController < ActionController::Base
                     title:        'AtomVote',
                     type:         'website',
                     url:          'http://atomvote.com',
-                    image:        'https://s3.amazonaws.com/atomvote-production/meta/atom_vote_logo_100.png',
+                    image:        'https://s3.amazonaws.com/atomvote-production/meta/av-logo-100.png',
                     description:  'Create a simple poll to share with the world.'
                   },
                   twitter: {
                     card:         'summary',
                     url:          'http://atomvote.com',
                     title:        'AtomVote',
-                    image:        'https://s3.amazonaws.com/atomvote-production/meta/atom_vote_logo_100.png',
+                    image:        'https://s3.amazonaws.com/atomvote-production/meta/av-logo-100.png',
                     description:  'Create a simple poll to share with the world.'
                   }
   end
