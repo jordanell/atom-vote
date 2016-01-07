@@ -1,5 +1,8 @@
+// This file must be .css.scss because we are using sass helpers
+// to locate the logo image files.
+
 @mixin av-logo($height: 60px) {
-  background-image: url(logos/av-logo.svg);
+  background-image: image-url('logos/av-logo.svg');
   background-repeat: no-repeat;
   background-size: $height $height;
   display: block;
