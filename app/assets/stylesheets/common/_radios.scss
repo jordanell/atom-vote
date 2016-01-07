@@ -41,6 +41,7 @@ input[type="radio"] {
     pointer-events: none;
 
     &::before {
+      @include animation(fadeIn .125s cubic-bezier(0.8, 0.065, 0.335, 1));
       color: $base-accent-color;
       content: '\f111';
     }
