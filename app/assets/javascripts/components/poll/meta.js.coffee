@@ -28,12 +28,15 @@
 
   renderTotalVotes: ->
     <span className='meta-value'>
-      { Utils.formatVotesCount(@state.poll.votes_count) } vote{ if @state.poll.votes_count > 1 then 's' else '' }
+      { Utils.formatVotesCount(@state.poll.votes_count) } { pluralize('vote', @state.poll.votes_count) }
     </span>
 
   render: ->
     <ul className='poll-meta-list'>
       <li>This poll was created { @renderPollCreation() }</li>
-      <li>The last vote was { @renderLastVote() }</li>
+      {
+        if @state.poll.votes_count > 1
+          <li>The last vote was { @renderLastVote() }</li>
+      }
       <li>There has been a total of { @renderTotalVotes() }</li>
     </ul>
