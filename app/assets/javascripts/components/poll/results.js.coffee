@@ -51,6 +51,7 @@
             { @renderOptions() }
           </div>
         </div>
+        <hr/>
+        <PollMetaList poll={ @state.poll } />
       </div>
-      <PollMetaList poll={ @state.poll } />
     </div>

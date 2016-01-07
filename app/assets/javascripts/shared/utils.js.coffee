@@ -22,6 +22,9 @@ class Utils
       range.selectNode document.getElementById(container.id)
       window.getSelection().addRange(range)
 
+  formatVotesCount: (num) ->
+    num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+
 initializeUtils = ->
   window.Utils = new Utils $(this)
 

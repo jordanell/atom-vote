@@ -1,23 +1,18 @@
 .poll-meta-list {
-  @include display(flex);
-  @include justify-content(space-around);
-  @include align-items(center);
   font-family: $open-sans;
   margin-left: auto;
   margin-right: auto;
   max-width: 550px;
-  padding: 1.25em 2em;
-  text-align: center;
-}
-
-.meta-label {
-  color: $black;
-  font-size: .8125em;
   text-transform: uppercase;
+
+  li {
+    margin-bottom: 4px;
+    color: $boulder;
+    font-size: .8125em;
+  }
 }
 
 .meta-value {
-  color: $boulder;
-  font-size: 1.15em;
-  text-transform: none;
+  color: $black;
+  border-bottom: 1px dashed $boulder;
 }
