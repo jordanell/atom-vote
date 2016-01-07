@@ -29,6 +29,21 @@ RSpec.describe Option, type: :model do
   it { should respond_to(:poll) }
   it { should respond_to(:votes) }
 
+  # Validations
+  it 'should have text' do
+    @option.text = nil
+
+    @option.should_not be_valid
+  end
+
+  it 'should have correct error message with no text' do
+    @option.text = nil
+
+    @option.should_not be_valid
+
+    @option.errors.messages[:text][0].should eq('The poll option can\'t be blank.')
+  end
+
   # Public methods
   describe '#percentage_of_votes' do
     it 'should return the correct non zero percentage' do

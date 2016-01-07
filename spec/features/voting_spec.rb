@@ -7,17 +7,19 @@ feature 'Vote gets created' do
 
   scenario 'with valid selection', js: true do
     visit poll_path(@poll.uuid)
+
     page.should have_content(@poll.question)
 
     select_option(@poll.options.first.id)
 
     click_button 'Vote'
 
-    page.should have_content('Total')
+    page.should have_content('This poll was created')
   end
 
   scenario 'with invalid selection' do
     visit poll_path(@poll.uuid)
+
     page.should have_content(@poll.question)
 
     click_button 'Vote'
@@ -33,10 +35,11 @@ feature 'Vote gets skipped' do
 
   scenario 'with go to results', js: true do
     visit poll_path(@poll.uuid)
+
     page.should have_content(@poll.question)
 
     click_link 'View Results'
 
-    page.should have_content('Total')
+    page.should have_content('This poll was created')
   end
 end

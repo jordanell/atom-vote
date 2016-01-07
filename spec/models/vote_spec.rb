@@ -32,16 +32,30 @@ RSpec.describe Vote, type: :model do
   it { should respond_to(:option) }
 
   # Validations
-  it 'should have vote_uuid' do
+  it 'should have voter_uuid' do
     @vote.voter_uuid = nil
 
     @vote.should_not be_valid
   end
 
-  it 'should have a option' do
+  it 'should have a poll_id' do
+    @vote.poll_id = nil
+
+    @vote.should_not be_valid
+  end
+
+  it 'should have a option_id' do
     @vote.option_id = nil
 
     @vote.should_not be_valid
+  end
+
+  it 'should have correct error message with no option_id' do
+    @vote.option_id = nil
+
+    @vote.should_not be_valid
+
+    @vote.errors.messages[:option_id][0].should eq('You must select an option.')
   end
 
   it 'should be unique to the poll' do

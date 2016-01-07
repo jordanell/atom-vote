@@ -79,4 +79,3 @@ group :staging, :production do
   # Use Unicorn as the app server
   gem 'unicorn'
 end
-

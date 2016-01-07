@@ -1,6 +1,6 @@
 class Utils
-
-  # These colors should be the same as their respective declaration in _variables.scss
+  # These colors should be the same as their respective declaration
+  # in _variables.scss
   colors: [
             '#FFCC66',  # yellow
             '#7C7AEE',  # purple

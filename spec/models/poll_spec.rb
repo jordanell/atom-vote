@@ -35,10 +35,32 @@ RSpec.describe Poll, type: :model do
     @poll.should_not be_valid
   end
 
+  it 'should have a question' do
+    @poll.question = nil
+
+    @poll.should_not be_valid
+  end
+
+  it 'should have correct error message with no question' do
+    @poll.question = nil
+
+    @poll.should_not be_valid
+
+    @poll.errors.messages[:question][0].should eq('You must enter a question.')
+  end
+
   it 'should have at least two valid options' do
     @poll.options = []
 
     @poll.should_not be_valid
+  end
+
+  it 'should have correct error message with less than two valid options' do
+    @poll.options = []
+
+    @poll.should_not be_valid
+
+    @poll.errors.messages[:options][0].should eq('You must have at least two options.')
   end
 
   # Public methods
