@@ -35,7 +35,7 @@
     <ul className='poll-meta-list'>
       <li>This poll was created { @renderPollCreation() }</li>
       {
-        if @state.poll.votes_count > 1
+        if @state.poll.votes_count > 0
           <li>The last vote was { @renderLastVote() }</li>
       }
       <li>There has been a total of { @renderTotalVotes() }</li>
