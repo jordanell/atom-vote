@@ -27,7 +27,7 @@ describe 'polls/new.html.erb' do
 
       render
 
-      rendered.should have_content('Your poll had the following errors:')
+      rendered.should have_content('Error')
     end
   end
 

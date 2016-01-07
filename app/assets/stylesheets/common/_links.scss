@@ -1,0 +1,22 @@
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+.view-results-link {
+  @extend %button;
+  border: 1px solid $boulder;
+  color: $mine-shaft;
+  font-weight: 800;
+
+  &:hover {
+    border: 1px solid $black;
+    color: $black;
+  }
+}
+
+.new-poll-link {
+  @extend %button;
+  font-weight: 800;
+}

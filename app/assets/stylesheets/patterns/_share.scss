@@ -1,0 +1,57 @@
+.poll-share-wrapper {
+  background-color: $base-accent-color;
+  padding: $base-spacing * 2 0;
+  text-align: center;
+}
+
+.poll-share-content {
+  @include display(flex);
+  @include align-items(center);
+  @include flex-direction(column);
+}
+
+.poll-share-title {
+  color: $white;
+  font-family: $varela-round;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+
+  @include media($small-viewport) {
+    font-size: 1.25em;
+  }
+  @include media($medium-viewport-up) {
+    font-size: 1.5em;
+  }
+}
+
+.poll-share-url {
+  @include display(flex);
+  @include align-items(center);
+  background-color: $white;
+  box-shadow: $base-box-shadow;
+  margin-bottom: .625em;
+  overflow: auto;
+  white-space: nowrap;
+
+  @include media($small-viewport) {
+    font-size: .8125em;
+  }
+
+  i {
+    background-color: lighten($base-accent-color, 10);
+    font-size: 20px;
+    padding: .625em;
+  }
+
+  p {
+    display: inline;
+    padding: 0 8px;
+  }
+}
+
+.poll-share-hint {
+  font-size: .8125em;
+  font-weight: 600;
+}

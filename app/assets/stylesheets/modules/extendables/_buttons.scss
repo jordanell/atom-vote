@@ -1,0 +1,22 @@
+%button {
+  @include appearance(none);
+  border-radius: 2em;
+  border: 0;
+  cursor: pointer;
+  font-family: $varela-round;
+  font-size: .9em;
+  line-height: 2em;
+  letter-spacing: .5px;
+  outline: 0;
+  padding: .25em 1.75em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .5;
+  }
+}

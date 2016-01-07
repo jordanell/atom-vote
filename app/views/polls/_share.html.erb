@@ -1,6 +1,12 @@
-<div class="poll-share-wrapper">
-  <div class="poll-share-inner">
-    <h3>Share this poll</h3>
-    <input type="text" name="share-link" value='<%= request.base_url + "/polls/#{@poll.uuid}" %>' onClick="this.select();">
-  </div>
-</div>
+<% content_for :post_main do %>
+  <section class="poll-share-wrapper">
+    <div class="poll-share-content">
+      <h3 class="poll-share-title">Share This Poll</h3>
+      <div id="js-share-url" class="poll-share-url" onclick="Utils.selectText(this)">
+        <i class="fa fa-link"></i>
+        <p><%= request.base_url + "/polls/#{@poll.uuid}" %></p>
+      </div>
+      <p class='poll-share-hint'>Copy + Paste this link to share however you want.</p>
+    </div>
+  </section>
+<% end %>

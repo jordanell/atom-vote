@@ -1,7 +1,16 @@
-.poll-result {
-  @include span-columns(8);
-
-  @media screen and (max-width: $small-screen) {
-    @include span-columns(12);
-  }
+.poll-result-wrapper {
+  margin-bottom: $base-spacing * 2;
 }
+
+.poll-result-content {
+  background-color: $white;
+  padding: 2em;
+  margin-bottom: $base-spacing;
+}
+
+.poll-result-question {
+  @include word-wrap;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+

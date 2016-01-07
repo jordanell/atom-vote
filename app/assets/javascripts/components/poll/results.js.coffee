@@ -26,14 +26,32 @@
       @setState poll: data.poll
 
   renderOptions: ->
-    for option, index in @state.poll.options
-      <OptionResult key={ option.id } poll={ @state.poll } option={ option } index={ index } />
+    <ul className='poll-results-list'>
+      {
+        for option, index in @state.poll.options
+          <OptionResult
+            key={ option.id }
+            poll={ @state.poll }
+            option={ option }
+            index={ index }
+          />
+      }
+    </ul>
 
   render: ->
-    <div>
-      <section className="poll-result">
-        <h2>{ @state.poll.question }</h2>
-        { @renderOptions() }
-      </section>
-      <PollMeta poll={ @state.poll } />
+    <div className='poll-result-wrapper'>
+      <div className='poll-result-content'>
+        <h2 className='poll-result-question'>
+          { @state.poll.question }
+        </h2>
+      </div>
+      <div className='poll-result-content'>
+        <div className='grid'>
+          <div className='grid-cell'>
+            { @renderOptions() }
+          </div>
+        </div>
+        <hr/>
+        <PollMetaList poll={ @state.poll } />
+      </div>
     </div>

@@ -1,30 +1,19 @@
-// Vendor imports
 @import 'bourbon';
+@import 'modules/variables/grid-settings';
 @import 'neat';
+
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
-// Global imports
-@import 'global/variables';
-@import 'global/global';
+@import 'modules/all';
+@import 'common/all';
+@import 'patterns/all';
 
-// Error imports
-@import 'errors/show';
-
-// Shared imports
-@import 'shared/header';
-@import 'shared/footer';
-@import 'shared/stats';
-@import 'shared/ads';
-
-// Poll imports
-@import 'polls/new';
-@import 'polls/show';
-@import 'polls/results';
-@import 'polls/share';
-
-// Page imports
+// Pages
+@import 'pages/home';
+@import 'pages/error';
 @import 'pages/show';
+@import 'polls/show';
 
 // React components
 @import 'components/option/result';

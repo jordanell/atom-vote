@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20150805031316) do
     t.integer  "votes_count", default: 0
   end
 
+  add_index "options", ["poll_id"], name: "index_options_on_poll_id", using: :btree
+
   create_table "polls", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -31,6 +33,8 @@ ActiveRecord::Schema.define(version: 20150805031316) do
     t.string   "question"
     t.integer  "votes_count", default: 0
   end
+
+  add_index "polls", ["uuid"], name: "index_polls_on_uuid", unique: true, using: :btree
 
   create_table "votes", force: :cascade do |t|
     t.integer  "option_id"
@@ -40,6 +44,8 @@ ActiveRecord::Schema.define(version: 20150805031316) do
     t.integer  "poll_id"
   end
 
+  add_index "votes", ["option_id"], name: "index_votes_on_option_id", using: :btree
+  add_index "votes", ["poll_id"], name: "index_votes_on_poll_id", using: :btree
   add_index "votes", ["voter_uuid", "poll_id"], name: "index_votes_on_voter_uuid_and_poll_id", unique: true, using: :btree
 
 end

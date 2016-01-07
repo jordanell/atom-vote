@@ -1,69 +1,53 @@
 .option-result {
-  $bar-height: 20px;
-
-  margin-bottom: 20px;
+  margin-bottom: $base-spacing;
 
   &:last-child {
     margin-bottom: 0;
   }
 
-  .option-text {
-    font-size: 18px;
+  &[data-num-votes="0"] {
+    opacity: .5;
   }
+}
 
-  .option-stats {
-    @include outer-container;
-    margin-top: 10px;
+.option-label {
+  font-size: 1.125em;
+  margin-bottom: .625em;
+  padding: 0 8px;
+}
 
-    .option-count{
-      margin-right: 10px;
-    }
-  }
+.option-count {
+  font-weight: 600;
+}
 
-  .stat-container {
-    @include span-columns(5);
+.stat-container {
+  text-align: right;
+  padding: 0 8px;
 
-    @media screen and (max-width: $medium-screen) {
-      @include span-columns(6);
-    }
-
-    @media screen and (max-width: $small-screen) {
-      @include span-columns(12);
-
-      margin: 8px 0;
-    }
-  }
-
-  .stat-container > span {
+  p {
     display: inline-block;
   }
 
-  .bar-container {
-    @include span-columns(7);
-
-    display: inline-block;
-    margin-right: 10px;
-    vertical-align: bottom;
-
-    @media screen and (max-width: $medium-screen) {
-      @include span-columns(6);
-    }
-
-    @media screen and (max-width: $small-screen) {
-      @include span-columns(12);
-    }
+  .votes-word {
+    margin: 0 4px;
   }
+}
 
-  .bar-progress {
-    overflow: hidden;
-    background-color: $background-color-light;
-    border-radius: $border-radius;
-  }
+.votes-precentage {
+  color: $boulder;
+}
 
-  .bar-fill {
-    width: 60%;
-    height: $bar-height;
-    background-color: $blue;
-  }
+.bar-container {
+  margin-bottom: 6px;
+}
+
+.bar-progress {
+  background-color: $base-background-color;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 25px;
+  width: 60%;
 }
 

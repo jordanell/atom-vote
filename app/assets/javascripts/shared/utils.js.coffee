@@ -1,8 +1,29 @@
 class Utils
-  # These are taken from the default Google Charts colors
-  colors: ['#3366cc','#dc3912','#ff9900',
-            '#109618','#990099','#0099c6',
-            '#dd4477','#66aa00']
+
+  # These colors should be the same as their respective declaration in _variables.scss
+  colors: [
+            '#FFCC66',  # yellow
+            '#7C7AEE',  # purple
+            '#61DAFB',  # theme blue
+            '#C7F464',  # green
+            '#FF6B6B',  # red
+          ]
+
+  getColors: ->
+    return @colors
+
+  selectText: (container) ->
+    if document.selection
+      range = document.body.createTextRange()
+      range.moveToElementText document.getElementById(container.id)
+      range.select()
+    else if window.getSelection
+      range = document.createRange()
+      range.selectNode document.getElementById(container.id)
+      window.getSelection().addRange(range)
+
+  formatVotesCount: (num) ->
+    num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
 initializeUtils = ->
   window.Utils = new Utils $(this)

@@ -22,7 +22,7 @@ feature 'Vote gets created' do
 
     click_button 'Vote'
 
-    page.should have_content('Your vote had the following errors:')
+    page.should have_content('You must select an option')
   end
 end
 
@@ -35,7 +35,7 @@ feature 'Vote gets skipped' do
     visit poll_path(@poll.uuid)
     page.should have_content(@poll.question)
 
-    click_button 'Go To Results'
+    click_link 'View Results'
 
     page.should have_content('Total')
   end

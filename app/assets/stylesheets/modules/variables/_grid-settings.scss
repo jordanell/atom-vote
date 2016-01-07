@@ -1,0 +1,15 @@
+@import 'neat-helpers';
+
+$column: 90px;
+$gutter: 30px;
+
+$small-breakpoint: 550px;
+$medium-breakpoint: 800px;
+$large-breakpoint: 1000px;
+
+$small-viewport: new-breakpoint(max-width em($medium-breakpoint));
+$medium-viewport: new-breakpoint(min-width em($medium-breakpoint + 1) max-width em($large-breakpoint));
+$large-viewport: new-breakpoint(min-width em($large-breakpoint + 1));
+
+$medium-viewport-up: new-breakpoint(min-width em($medium-breakpoint));
+$large-viewport-up: new-breakpoint(min-width em($large-breakpoint));

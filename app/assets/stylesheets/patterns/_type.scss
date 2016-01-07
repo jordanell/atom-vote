@@ -1,0 +1,134 @@
+.av-type-system {
+  @include clearfix;
+  font-family: $open-sans;
+  text-align: left;
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  hr {
+    border-bottom: 1px solid $boulder;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: $base-spacing 0;
+    width: 3em;
+  }
+
+  p {
+    color: $base-font-color;
+    line-height: $base-line-height;
+  }
+
+  a {
+    color: $base-accent-color;
+    text-decoration: none;
+  }
+
+  strong {
+    font-weight: 800;
+  }
+
+  .type {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $open-sans;
+    font-size: .7em;
+    font-weight: 800;
+    margin-bottom: 2em;
+    padding: .3em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: $varela-round;
+    font-size: 1.8em;
+    margin-bottom: .75em;
+    padding-bottom: .25em;
+    border-bottom: 4px solid $base-accent-color;
+    display: inline-block;
+
+    @include media($medium-viewport) {
+      font-size: 2.4em;
+    }
+  }
+
+  h2 {
+    font-family: $varela-round;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: .9em;
+
+    @include media($medium-viewport) {
+      font-size: 1.4em;
+    }
+  }
+
+  code {
+    background: $wild-sand;
+    border-radius: 3px;
+    border: 1px solid darken($wild-sand, 17);
+    font-family: monaco;
+    font-size: .7em;
+    font-style: normal;
+    padding: .1em .4em;
+    white-space: nowrap;
+  }
+
+
+  h3 {
+    font-family: $varela-round;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: .4em;
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $open-sans;
+    font-size: .9em;
+    margin-bottom: .3em;
+  }
+
+  p {
+    font-family: $open-sans;
+    font-size: 1.05em;
+    font-weight: 300;
+    line-height: 1.4em;
+    margin-bottom: 1.5em;
+
+    span {
+      font-family: $varela-round;
+      font-size: .8em;
+      text-transform: uppercase;
+    }
+  }
+
+  a.read-more {
+    display: inline-block;
+    font-family: $varela-round;
+    font-size: .8em;
+    font-weight: 700;
+    margin-left: .2em;
+    position: relative;
+    text-transform: uppercase;
+
+    span {
+      font-size: 1.5em;
+      position: absolute;
+      right: -12px;
+      top: -1px;
+    }
+  }
+
+  p.author {
+    font-family: $open-sans;
+  }
+}

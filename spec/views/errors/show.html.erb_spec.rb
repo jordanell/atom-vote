@@ -9,7 +9,7 @@ describe 'errors/show.html.erb' do
     it 'should display the page' do
       render
 
-      rendered.should have_selector('div.error-wrapper')
+      rendered.should have_selector('div.errors-wrapper')
     end
 
     it 'should display the error code' do

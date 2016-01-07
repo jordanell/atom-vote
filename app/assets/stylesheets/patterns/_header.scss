@@ -1,0 +1,30 @@
+.header-wrapper {
+  padding-top: $base-spacing * 2;
+  padding-bottom: $base-spacing;
+  margin-bottom: $base-spacing;
+}
+
+.header-content {
+  @include display(flex);
+  @include justify-content(space-between);
+  @include align-items(center);
+}
+
+.header-content .new-poll-link {
+  border: 1px dashed $boulder;
+  color: $mine-shaft;
+
+  &:hover {
+    border: 1px dashed $black;
+    color: $black;
+  }
+}
+
+.header-title {
+  @include av-logo;
+  color: $black;
+
+  @include media($small-viewport) {
+    @include av-logo(45px);
+  }
+}

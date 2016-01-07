@@ -1,0 +1,42 @@
+// Put all your shameful hacks in here until so they don't get lost
+// *da-ding-ding* *da-ding-ding* SHAME *da-ding-ding*
+.poll-content {
+  background-color: $white;
+  margin-bottom: $base-spacing;
+  padding: 2em;
+}
+
+// TODO: consolidate this style with new poll form styl..., '-content' should be
+// rethought
+.poll-result-content,
+.poll-show-content {
+  max-width: $small-breakpoint;
+}
+
+// TODO: need to maintain the padding of the buttons outside small viewport res
+.new-poll-link {
+  @include media($small-viewport) {
+    padding: .25em 1em;
+    font-size: 1.125em;
+
+    span {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+
+// TODO: add some texture to the intro page. eg darker theme blue circles around
+// TODO: multi line questions and ansers on vote page
+// TODO: Handle case where 0 votes wont render the donut chart
+// TODO: something like this http://stackoverflow.com/questions/24876497/animate-svg-electron-around-ring
+// TOD: have change view tabs on results page, change between pie and bar,
+// dont need both. On large-viewport+ have them side by side?
+// TODO make the ipnut prepend grey bg for > 2 ? until filled
+// TODO: if share poll section is offscreen then have a fixed footer come up on the bottom?? bottom is an
+// awkward place for anything.
+// TODO: Last Vote a minute ago even when 0 votes
+// todo option to sort results by largest ot smallest vice versa.... combine into toolbar with views?
+// https://github.com/h5bp/html5-boilerplate
+// TODO : Mobile view in chrome emulate and fix
+// TODO: #feature have share this result?

@@ -1,0 +1,17 @@
+%dot-separated-inline-list {
+  @include clearfix;
+  text-align: center;
+
+  li {
+    float: left;
+  }
+
+  li:not(:last-child)::after {
+    content: '\f111';
+    font-family: FontAwesome;
+    vertical-align: middle;
+    color: $base-accent-color;
+    margin: 0 7px;
+    font-size: 7px;
+  }
+}

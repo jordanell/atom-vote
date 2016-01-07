@@ -1,0 +1,15 @@
+@mixin av-logo($height: 60px) {
+  background-image: url(logos/av-logo.svg);
+  background-repeat: no-repeat;
+  background-size: $height $height;
+  display: block;
+  font-family: $varela-round;
+  font-size: $height * .6;
+  font-weight: 300;
+  height: $height;
+  line-height: $height;
+  letter-spacing: -2px; // NOTE: specific to varela round font
+  padding-left: $height;
+  text-decoration: none;
+  white-space: nowrap;
+}

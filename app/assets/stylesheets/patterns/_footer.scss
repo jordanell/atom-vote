@@ -1,0 +1,58 @@
+.footer-wrapper {
+  background-color: $mine-shaft;
+}
+
+.footer-content-wrapper {
+  padding: $base-spacing * 2 0 2em 0;
+}
+
+.footer-content {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+
+.footer-content .new-poll-link {
+  border: 1px dashed $wild-sand;
+  color: $wild-sand;
+
+  &:hover {
+    border: 1px dashed $white;
+    color: $white;
+  }
+
+  @include media($small-viewport) {
+    margin-bottom: $base-spacing;
+  }
+}
+
+.footer-title {
+  @include av-logo;
+  color: $white;
+
+  @include media($small-viewport) {
+    @include av-logo(45px);
+    margin-bottom: $base-spacing;
+  }
+}
+
+.footer-links-wrapper {
+  background-color: darken($mine-shaft, 3);
+  padding: 4px 0;
+}
+
+.footer-links {
+  @extend %dot-separated-inline-list;
+  @include display(flex);
+  @include justify-content(center);
+  padding: 0 14px;
+
+  a {
+    color: $white;
+    font-size: .8125em;
+
+    &:hover {
+      color: darken($white, 10);
+    }
+  }
+}

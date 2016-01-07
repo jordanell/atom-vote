@@ -1,0 +1,17 @@
+@include keyframes(fadeIn) {
+  0% {
+    @include transform(scale(0));
+  }
+  100% {
+    @include transform(scale(1));
+  }
+}
+
+@include keyframes(fadeOut) {
+  0% {
+    @include transform(scale(1));
+  }
+  100% {
+    @include transform(scale(0));
+  }
+}

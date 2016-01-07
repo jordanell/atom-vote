@@ -1,28 +1,25 @@
-<div class="poll-form-wrapper">
-  <%= simple_form_for(@poll) do |f| %>
-    <!-- Render all the errors if needed -->
-    <% if @poll.errors.full_messages.length > 0 %>
-      <div class="errors-wrapper">
-        <h5>Your poll had the following errors:</h5>
-        <ul>
-          <% @poll.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
+<div class='intro-wrapper'>
+  <div class='intro-content grid'>
+    <%= simple_form_for @poll, html: { class: 'grid-cell' } do |f| %>
+      <%= render partial: 'shared/form_errors', locals: { object: @poll } %>
+      <div class='question-input'>
+        <label class='input-label'>Question</label>
+        <%= f.input_field :question, placeholder: 'Enter your question here', autofocus: true %>
+      </div>
+      <label class='input-label'>Options <span class='label-hint'>(2+)</span></label>
+      <ol id='js-add-option' class='poll-options-list'>
+        <% @poll.options.each_with_index do |option, index| %>
+          <%= f.simple_fields_for :options, option do |o| %>
+            <li class='input-add-on'>
+              <span class='input-add-on-item'><%= index + 1 %></span>
+              <%= o.input_field :text, placeholder: 'Enter poll option', class: 'input-add-on-field' %>
+            </li>
           <% end %>
-        </ul>
+        <% end %>
+      </ol>
+      <div class='button-group'>
+        <%= f.button :button, type: :submit do %>Create Poll<% end %>
       </div>
     <% end %>
-
-    <!-- Render the question input -->
-    <%= f.input :question, label: 'Poll Question', placeholder: 'Type your question here, options below', autofocus: true %>
-
-    <!-- Render all the options -->
-    <% @poll.options.each_with_index do |option, index| %>
-      <%= f.simple_fields_for :options, option do |o| %>
-        <span class="option-label"><%= "#{index+1}." %></span>
-        <%= o.input :text, label: 'Poll Option', placeholder: 'Enter poll option' %>
-      <% end %>
-    <% end %>
-
-    <%= f.button :submit %>
-  <% end %>
+  </div>
 </div>

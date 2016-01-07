@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'Poll gets created' do
-  scenario 'with valid quesiton and options' do
+  scenario 'with valid question and options' do
     visit root_path
     page.should have_content('AtomVote')
 
@@ -11,7 +11,7 @@ feature 'Poll gets created' do
 
     click_button 'Create Poll'
 
-    page.should have_content('Share this poll')
+    page.should have_content('Share This Poll')
   end
 
   scenario 'with invalid question' do
@@ -23,7 +23,7 @@ feature 'Poll gets created' do
 
     click_button 'Create Poll'
 
-    page.should have_content('Your poll had the following errors:')
+    page.should have_content('Error')
   end
 
   scenario 'with invalid question and extra options', js: true do
@@ -35,7 +35,7 @@ feature 'Poll gets created' do
 
     click_button 'Create Poll'
 
-    page.should have_content('Your poll had the following errors:')
+    page.should have_content('ERROR')
   end
 
   scenario 'with only 1 option' do
@@ -47,7 +47,7 @@ feature 'Poll gets created' do
 
     click_button 'Create Poll'
 
-    page.should have_content('Your poll had the following errors:')
+    page.should have_content('Error')
   end
 end
 
@@ -69,6 +69,6 @@ feature 'Poll being built' do
 
     click_button 'Create Poll'
 
-    page.should have_content('Share this poll')
+    page.should have_content('SHARE THIS POLL')
   end
 end

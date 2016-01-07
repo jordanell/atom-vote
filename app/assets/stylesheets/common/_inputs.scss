@@ -1,0 +1,76 @@
+#{$all-text-inputs},
+#{$all-text-inputs-focus},
+#{$all-text-inputs-hover} {
+  outline: 0;
+}
+
+.has-value {
+  background-color: black;
+}
+
+#{$all-text-inputs},
+textarea {
+  @include transition(all .25s ease-out);
+  background-color: $white;
+  border: 1px solid transparent;
+  color: $base-font-color;
+  font-size: inherit;
+  font-family: $open-sans;
+  outline: 0;
+  padding: .75em 1em;
+  width: 100%;
+}
+
+// Input hover
+#{$all-text-inputs-hover},
+textarea {
+  border: 1px solid lighten($boulder, 17);
+  color: $base-font-color;
+}
+
+// Input focus
+#{$all-text-inputs-focus},
+textarea {
+  color: $base-font-color;
+  box-shadow: $base-box-shadow;
+
+  &,
+  &:hover {
+    border: 1px solid $boulder;
+  }
+}
+
+.input-add-on {
+  @include display(flex);
+  margin-bottom: 10px;
+}
+
+.input-add-on-item {
+  background-color: $base-accent-color;
+  color: $white;
+  font-weight: 800;
+  padding: .75em 1.125em;
+  vertical-align: middle;
+}
+
+.input-add-on-field {
+  @include flex(1);
+}
+
+.input-label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  color: $mine-shaft;
+  vertical-align: middle;
+}
+
+.label-hint {
+  color: $boulder;
+  font-size: .9em;
+}
+
+// Question input
+.question-input {
+  margin-bottom: $base-spacing;
+}

@@ -1,12 +1,10 @@
-<div class="error-wrapper">
-  <h2>Whoops!</h2>
-
-  <p>
-    A <%= @status_code %> error was caused by your request.
-  <p>
-
-  <p>
-    Please make sure you are visiting the correct page, or please
-    try again.
-  </p>
+<div class='error-page-wrapper'>
+  <div class='error-page-content'>
+    <h1 class='error-page-title'>Whoops!</h1>
+    <h5>A <span class='error-code'><%= @status_code %></span> error was caused by your request.<h5>
+    <p>
+      Please make sure you are visiting the correct page, or please
+      try again.
+    </p>
+  </div>
 </div>

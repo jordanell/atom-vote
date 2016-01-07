@@ -1,0 +1,28 @@
+@import 'animations';
+@import 'buttons';
+@import 'errors';
+@import 'forms';
+@import 'grid';
+@import 'inputs';
+@import 'layout';
+@import 'links';
+@import 'lists';
+@import 'radios';
+@import 'reset';
+@import 'shame';
+@import 'type';
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-color: $base-background-color;
+  color: $base-font-color;
+  line-height: $base-line-height;
+  font-family: $varela-round;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,49 @@
+input[type="radio"] {
+  display: none;
+
+  // Common radio styles
+  & + label {
+    color: $boulder;
+    cursor: pointer;
+    font-family: $open-sans;
+    display: block;
+    position: relative;
+
+    &::before {
+      margin-right: 8px;
+      font-size: 1.5em;
+      font-family: FontAwesome;
+      vertical-align: middle;
+      font-weight: initial;
+    }
+  }
+
+  // Neutral radio state
+  & + label {
+    &::before {
+      content: '\f1db';
+    }
+  }
+
+  // Hover radio state
+  & + label:hover {
+    color: darken($boulder, 17);
+
+    &::before {
+      content: '\f10c';
+    }
+  }
+
+  // Checked radio state
+  &:checked + label {
+    color: $mine-shaft;
+    font-weight: 600;
+    pointer-events: none;
+
+    &::before {
+      @include animation(fadeIn .125s cubic-bezier(.29,.91,.9,.53));
+      color: $base-accent-color;
+      content: '\f111';
+    }
+  }
+}

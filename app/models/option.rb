@@ -14,7 +14,7 @@ class Option < ActiveRecord::Base
 
   has_many :votes
 
-  validates :text, presence: true
+  validates :text, presence: { message: 'The poll option can\'t be blank.' }
 
   def percentage_of_votes
     poll_votes_total = poll.votes.size
