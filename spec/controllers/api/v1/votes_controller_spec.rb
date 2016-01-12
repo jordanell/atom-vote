@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe VotesController, type: :controller do
+RSpec.describe Api::V1::VotesController, type: :controller do
   describe '#create' do
     before(:each) do
       @poll = FactoryGirl.create(:poll)
@@ -17,18 +17,18 @@ RSpec.describe VotesController, type: :controller do
       expect { post :create, @params }.to change(Vote, :count).by(1)
     end
 
-    it 'should redirect to the poll results page' do
+    it 'should render vote' do
       post :create, @params
 
-      response.should redirect_to results_poll_path(@poll.uuid)
+      json_response['voter_uuid'].should_not be_nil
     end
 
-    it 'should fail creating vote and render poll show' do
+    it 'should fail creating poll and render message' do
       @params[:vote]['option_id'] = nil
 
-      expect { post :create, @params }.to_not change(Vote, :count)
+      post :create, @params
 
-      response.should render_template('polls/show')
+      json_response['message'].should eq('Vote creation failed')
     end
 
     it 'should 404 when poll does not exist' do
@@ -36,7 +36,8 @@ RSpec.describe VotesController, type: :controller do
 
       post :create, @params
 
-      response.should render_template('errors/show')
+      json_response['message'].should eq('An error has occurred')
+      response.status.should eq(404)
     end
   end
 end

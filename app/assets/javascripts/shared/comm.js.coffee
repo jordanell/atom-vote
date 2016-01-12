@@ -13,8 +13,6 @@ class Comm
 
   # Wrapper around the jquery ajax call
   send: (url, method = "GET", data = {}, success, error) ->
-    data.format = 'json'
-
     setup =
       url: url
       method: method

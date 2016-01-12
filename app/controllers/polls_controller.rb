@@ -15,10 +15,7 @@ class PollsController < ApplicationController
     if @poll.save
       send_event('Polls', 'Create')
 
-      respond_to do |format|
-        format.html { redirect_to poll_path(@poll.uuid) }
-        format.json { render json: { poll: PollSerializer.new(@poll) } }
-      end
+      redirect_to poll_path(@poll.uuid)
     else
       if supplied_options.length > 3
         @poll.pad_options(1)
@@ -26,26 +23,16 @@ class PollsController < ApplicationController
         @poll.pad_options(4-supplied_options.length)
       end
 
-      respond_to do |format|
-        format.html { render template: 'polls/new' }
-        format.json { render json: { message: 'Poll creation failed', errors: @poll.errors.full_messages }, status: 422 }
-      end
+      render template: 'polls/new'
     end
   end
 
   def show
     if @poll.votes.map(&:voter_uuid).include?(session.try(:id)) && !request.xhr?
-      respond_to do |format|
-        format.html { return redirect_to results_poll_path(@poll.uuid) }
-      end
+      return redirect_to results_poll_path(@poll.uuid)
     end
 
     @vote = @poll.votes.build
-
-    respond_to do |format|
-      format.html
-      format.json { render json: { poll: PollSerializer.new(@poll) } }
-    end
   end
 
   def results

@@ -2,10 +2,18 @@ Rails.application.routes.draw do
   # Root
   root to: 'polls#new'
 
-  # Slack API
+  # API
   namespace :api do
+    # Integrations
     namespace :slack do
       resource :polls, only: [:create]
+    end
+
+    # Public V1
+    namespace :v1 do
+      resources :polls, only: [:create, :show]
+
+      resources :votes, only: [:create]
     end
   end
 

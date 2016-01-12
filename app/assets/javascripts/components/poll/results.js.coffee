@@ -19,11 +19,11 @@
     clearInterval(@poller)
 
   fetchPoll: ->
-    Comm.get '/polls', { id: @state.poll.uuid }, @updatePoll
+    Comm.get "/api/v1/polls/#{@state.poll.uuid}", {}, @updatePoll
 
   updatePoll: (data) ->
-    if data.poll
-      @setState poll: data.poll
+    if data
+      @setState poll: data
 
   renderOptions: ->
     <ul className='poll-results-list'>

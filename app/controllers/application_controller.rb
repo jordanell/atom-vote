@@ -31,9 +31,6 @@ class ApplicationController < ActionController::Base
   def render_error(code)
     @status_code = code
 
-    respond_to do |format|
-      format.html { render 'errors/show', status: code }
-      format.json { render json: { message: 'An error has occurred' }, status: code }
-    end
+    render 'errors/show', status: code
   end
 end
