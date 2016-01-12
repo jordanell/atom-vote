@@ -41,6 +41,8 @@ GEM
     annotate (2.6.10)
       activerecord (>= 3.2, <= 4.3)
       rake (~> 10.4)
+    apipie-rails (0.3.5)
+      json
     arel (6.0.0)
     babel-source (5.8.23)
     babel-transpiler (0.7.0)
@@ -215,6 +217,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   annotate
+  apipie-rails (= 0.3.5)
   better_errors
   binding_of_caller
   bourbon

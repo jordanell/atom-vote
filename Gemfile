@@ -53,6 +53,9 @@ group :development do
 
   # Annotate all models with DB schema
   gem 'annotate'
+
+  # Generating documentation
+  gem 'apipie-rails', '0.3.5'
 end
 
 group :development, :test do
