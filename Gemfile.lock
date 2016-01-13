@@ -118,6 +118,8 @@ GEM
     rack (1.6.1)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack-throttle (0.3.0)
+      rack (>= 1.0.0)
     rails (4.2.1)
       actionmailer (= 4.2.1)
       actionpack (= 4.2.1)
@@ -233,6 +235,7 @@ DEPENDENCIES
   meta-tags
   neat (= 1.7.2)
   pg (= 0.15.1)
+  rack-throttle (= 0.3.0)
   rails (= 4.2.1)
   react-rails (= 1.2.0)
   rspec-rails (= 3.3.3)

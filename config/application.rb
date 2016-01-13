@@ -2,6 +2,9 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+# Get our custom API throttler
+require File.expand_path('../../lib/api/throttle.rb', __FILE__)
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -25,5 +28,8 @@ module AtomVote
 
     # We handle our own 404 and 500 pages.
     config.exceptions_app = self.routes
+
+    # Max 5000 requests per hour per ip
+    config.middleware.use ApiThrottle, max: 5000
   end
 end

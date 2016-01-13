@@ -49,6 +49,9 @@ gem 'es5-shim-rails'
 # Generating documentation
 gem 'apipie-rails', '0.3.5'
 
+# Rate limigitng
+gem 'rack-throttle', '0.3.0'
+
 group :development do
   # Access errors in the web browser
   gem 'better_errors'
