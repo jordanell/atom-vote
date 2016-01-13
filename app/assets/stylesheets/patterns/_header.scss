@@ -14,8 +14,12 @@
   border: 1px dashed $boulder;
   color: $mine-shaft;
 
+  @-moz-document url-prefix() {
+    border-style: solid;
+  }
+
   &:hover {
-    border: 1px dashed $black;
+    border-color: $black;
     color: $black;
   }
 }

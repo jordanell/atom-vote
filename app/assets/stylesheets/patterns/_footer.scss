@@ -16,8 +16,12 @@
   border: 1px dashed $wild-sand;
   color: $wild-sand;
 
+  @-moz-document url-prefix() {
+    border-style: solid;
+  }
+
   &:hover {
-    border: 1px dashed $white;
+    border-color: $white;
     color: $white;
   }
 
