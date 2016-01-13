@@ -18,7 +18,7 @@
 
   renderPollCreation: ->
     <span className='meta-value'>
-      { moment().subtract('days', @state.poll.created_at).calendar() }
+      { moment(@state.poll.created_at, 'YYYY-MM-DDTHH:mm:ss.Z').fromNow() }
     </span>
 
   renderLastVote: ->
