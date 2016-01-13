@@ -4,9 +4,9 @@ RSpec.describe Api::V1::PollsController, type: :controller do
   describe '#create' do
     before(:each) do
       @params = {
-        'poll': {
-          'question': 'My test poll question',
-          'options_attributes': {
+        poll: {
+          question: 'My test poll question',
+          options_attributes: {
             '0': {
               text: 'Option 1'
             },

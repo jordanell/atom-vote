@@ -6,9 +6,9 @@ RSpec.describe Api::V1::VotesController, type: :controller do
       @poll = FactoryGirl.create(:poll)
 
       @params = {
-        'vote': {
-          'poll_id': @poll.id,
-          'option_id': "#{@poll.options.first.id}"
+        vote: {
+          poll_uuid: @poll.uuid,
+          option_id: @poll.options.first.id
         }
       }
     end
@@ -52,7 +52,7 @@ RSpec.describe Api::V1::VotesController, type: :controller do
     end
 
     it 'should 404 when poll does not exist' do
-      @params[:vote]['poll_id'] = "#{@poll.id + 1}"
+      @params[:vote]['poll_uuid'] = 'wrong'
 
       post :create, @params
 

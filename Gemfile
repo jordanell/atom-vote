@@ -46,6 +46,9 @@ gem 'react-rails', '1.2.0'
 gem 'sprockets-coffee-react'
 gem 'es5-shim-rails'
 
+# Generating documentation
+gem 'apipie-rails', '0.3.5'
+
 group :development do
   # Access errors in the web browser
   gem 'better_errors'
@@ -53,9 +56,6 @@ group :development do
 
   # Annotate all models with DB schema
   gem 'annotate'
-
-  # Generating documentation
-  gem 'apipie-rails', '0.3.5'
 end
 
 group :development, :test do

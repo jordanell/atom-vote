@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= favicon_link_tag 'favicon.png' %>
+    <%= Apipie.include_stylesheets %>
+    <%= stylesheet_link_tag 'documentation', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+    <title>AtomVote | Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Open Sans', 'Varela Round']
+        }
+      });
+    </script>
+  </head>
+  <body class='flex-footer'>
+    <%= render partial: 'shared/header' %>
+    <div class='grid-cell'>
+      <div class='documentation-content'>
+        <%= yield %>
+      </div>
+    </div>
+    <%= yield :post_main %>
+    <%= render partial: 'shared/footer' %>
+  </body>
+</html>

@@ -10,7 +10,7 @@ describe 'shared/_footer.html.erb' do
   it 'should display the correct link' do
     render partial: 'shared/footer'
 
-    ['New Poll', 'Terms of Service', 'Privacy Policy'].each do |link|
+    ['New Poll', 'Terms of Service', 'Privacy Policy', 'API', 'Issues'].each do |link|
       rendered.should have_selector('a', text: link)
     end
   end

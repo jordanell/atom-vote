@@ -5,8 +5,31 @@ module Api
 
       before_filter :fetch_poll, only: [:create]
 
+      resource_description do
+        short 'Votes'
+        formats ['json']
+        api_version 'v1'
+      end
+
+      api :POST, '/votes', 'Create vote'
+      description 'Create a vote on a poll.'
+      param :vote, Hash, required: true, desc: 'Vote information' do
+        param :poll_uuid, String, required: true, desc: 'The uuid of the poll to be voted on'
+        param :option_id, Integer, required: true, desc: 'The id of the poll option to cast a vote for'
+      end
+      error 404, 'Not found'
+      error 422, 'Unprocessable entity'
+      example <<-EOS
+        {
+          vote: {
+            poll_uuid: '123abc',
+            option_id: 555
+          }
+        }
+      EOS
       def create
         @vote = Vote.new(vote_params)
+        @vote.poll = @poll
 
         # Attach the session id
         # If they don't have a session ID something bad has happened
@@ -25,7 +48,7 @@ module Api
       private
 
       def fetch_poll
-        @poll = Poll.find(params[:vote].try(:[], 'poll_id'))
+        @poll = Poll.find_by!(uuid: params[:vote].try(:[], 'poll_uuid'))
 
       rescue ActiveRecord::RecordNotFound
         return render_error(404)
